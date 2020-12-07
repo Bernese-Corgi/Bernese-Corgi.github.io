@@ -168,7 +168,7 @@ template {
 }
 ::selection {
   background: #d9b469;
-  color: #f5f5f5;
+  color: $ffffff;
 }
 html,
 body {
@@ -961,7 +961,7 @@ pre .javascript .function {
   padding: 0 10px;
 }
 .headband {
-  background: #222;
+  background: #ecebdf;
   height: 3px;
 }
 .site-meta {
@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #d6faff;
+  background: #79fc2d;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
