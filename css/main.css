@@ -168,7 +168,7 @@ template {
 }
 ::selection {
   background: #d9b469;
-  color: $ffffff;
+  color: #fff;
 }
 html,
 body {
@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #79fc2d;
+  background: #86229c;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
