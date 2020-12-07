@@ -196,7 +196,7 @@ h6 {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: bold;
   line-height: 1.5;
-  margin: 20px 0 15px;
+  margin: 40px 0 15px;
 }
 h1 {
   font-size: 1.5em;
@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #86229c;
+  background: #38ff03;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
