@@ -20,28 +20,39 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Bernese-Corgi">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="자바스크립트 객체의 분류자바스크립트 객체는 다음과 같이 크게 3개의 객체로 분류할 수 있다.  표준 빌트인 객체  standard built-in objects &#x2F; native objects &#x2F; global objects  ECMAScript 사양에 정의된 객체  애플리케이션 전역의 공통 기능을 제공한다.  표준 빌트인 객체는 ECMAScript 사양에 정">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript를 공부하기 전에...">
+<meta property="og:url" content="http://example.com/2020/10/15/JavaScript/JavaScript21/index.html">
 <meta property="og:site_name" content="Bernese-Corgi">
+<meta property="og:description" content="자바스크립트 객체의 분류자바스크립트 객체는 다음과 같이 크게 3개의 객체로 분류할 수 있다.  표준 빌트인 객체  standard built-in objects &#x2F; native objects &#x2F; global objects  ECMAScript 사양에 정의된 객체  애플리케이션 전역의 공통 기능을 제공한다.  표준 빌트인 객체는 ECMAScript 사양에 정">
 <meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="http://example.com/Users/choijin-yeong/Downloads/21-1.png">
+<meta property="og:image" content="https://poiemaweb.com/assets/fs-images/21-2.png">
+<meta property="article:published_time" content="2020-10-15T07:30:56.000Z">
+<meta property="article:modified_time" content="2020-12-07T12:14:12.882Z">
 <meta property="article:author" content="Bernese-Corgi">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="프론트엔드">
+<meta property="article:tag" content="프론트엔드 개발에 필요한 기술">
+<meta property="article:tag" content="프로그래밍 학습 방향">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/Users/choijin-yeong/Downloads/21-1.png">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2020/10/15/JavaScript/JavaScript21/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'ko'
   };
 </script>
 
-  <title>Bernese-Corgi</title>
+  <title>JavaScript를 공부하기 전에... | Bernese-Corgi</title>
   
 
 
@@ -149,217 +160,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/16/JavaScript/JavaScript01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Bernese-Corgi">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bernese-Corgi">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/16/JavaScript/JavaScript01/" class="post-title-link" itemprop="url">JavaScript를 공부하기 전에...</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">작성일</span>
-
-              <time title="Post created: 2020-10-16 16:30:56" itemprop="dateCreated datePublished" datetime="2020-10-16T16:30:56+09:00">2020-10-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Updated at: 2020-12-07 00:13:07" itemprop="dateModified" datetime="2020-12-07T00:13:07+09:00">2020-12-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%ED%95%99%EC%8A%B5-%EB%B0%A9%ED%96%A5/" itemprop="url" rel="index"><span itemprop="name">프로그래밍 학습 방향</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="프론트엔드-개발에-필요한-기술"><a href="#프론트엔드-개발에-필요한-기술" class="headerlink" title="프론트엔드 개발에 필요한 기술"></a>프론트엔드 개발에 필요한 기술</h1><h2 id="1-필수적으로-필요한-기술들"><a href="#1-필수적으로-필요한-기술들" class="headerlink" title="1. 필수적으로 필요한 기술들"></a>1. 필수적으로 필요한 기술들</h2><p>html : tag &amp; attributes, semantic web</p>
-<p>css : layout ( float , flex, grid ) , transition . animation , 반응형 웹 , Preprocessor (Sass, Less, Stlus, PostCSS) , CSS 방법론, CSS 프레임원크</p>
-<p>크로스브라우징</p>
-<p>JavaScript : <strong>ES5, ES6</strong> (ES6가 ES5를 포함하고 있다.) (바닐라 자바스크립트, 가장 기본이지만 얘만가지고 만들기엔 한계가 있음, 가장 기본이기 때문에 제대로 이해하고 있어야한다.), ES Next, DOM/Event, Ajax, 동작원리 (브라우저 -html. css를 어떻게 해석하는지도 알아야 함-, 자바스크립트 엔진) , node.js</p>
-<ul>
-<li>let/const 가 변수를 제어하는 함수, 이전에는 var가 있었다. var로 충분하다면 let, const가 나올 이유가 없었을것이다. 즉, var의 문제점을 알아야 한다.</li>
-<li>ES5도 같은 관점으로 바라보자. 코딩은 ES6로 하고 중점도 그에 두되, ES5의 문제점과 사용법은 알아야한다.</li>
-</ul>
-<p>HTTP : 서버와 브라우저 간의 요청/응답하는 동작원리인 http라는 프로토콜에 대해 이해할 필요가 있다.</p>
-<p>Tools : Git, Webpack, Babel, ESLint, npm …</p>
-<p>툴들을 설치하고 응용할 줄 아는 능력도 중요한 능력이다.</p>
-<p>Library / Framework : SPA (Angular, React - 최근 가장 많이 요구되는 프레임워크- , Vue.js), TypeScript, jQuery - 배우진 않을것, 알면좋지 - , Lodash, Axios…</p>
-<p>TDD (Testa Driven Development) : karma / jasmine , mocha , chai</p>
-<h2 id="2-졸업-후-독학해야할것"><a href="#2-졸업-후-독학해야할것" class="headerlink" title="2. 졸업 후 독학해야할것!"></a>2. 졸업 후 독학해야할것!</h2><p>알고리즘 / 자료구조</p>
-<ul>
-<li><p>단기간에 공부가 안된다. 시간이 오래걸리는 공부</p>
-</li>
-<li><p>대기업일수록 많이 본다.</p>
-</li>
-</ul>
-<h2 id="3-개발자가-알아야할-툴-및-언어-목록"><a href="#3-개발자가-알아야할-툴-및-언어-목록" class="headerlink" title="3. 개발자가 알아야할 툴 및 언어 목록"></a>3. 개발자가 알아야할 툴 및 언어 목록</h2><p><a target="_blank" rel="noopener" href="https://github.com/kamranahmedse/developer-roadmap">https://github.com/kamranahmedse/developer-roadmap</a></p>
-<p>css 의 레이아웃을 잘 잡는것은 꼭 기억해야한다.</p>
-<p>→ 화면의 원하는 위치에 배치하는 것은 잘 이해하고 있어야 한다.</p>
-<p>→ float , flex , grid …</p>
-<h1 id="회사가-신입-개발자에게-요구하는-능력"><a href="#회사가-신입-개발자에게-요구하는-능력" class="headerlink" title="회사가 신입 개발자에게 요구하는 능력"></a>회사가 신입 개발자에게 요구하는 능력</h1><p>너무 기초적인 것 (기본적인 용어와 개념, 주력 언어의 기본 문법, 아주 기본적인 알고리즘/자료구조, git 등) 까지 알려주기는 싫다</p>
-<p>빨리 배울까? 가르치기 쉬울까? 말을 알아들을까? 하나를 가르치면 열을 알았으면 좋겠다.</p>
-<p>회사 분위기를 망치지는 않을까?</p>
-<p>말을 잘 들을까?</p>
-<h1 id="초심자가-경험하는-3가지의-어려움"><a href="#초심자가-경험하는-3가지의-어려움" class="headerlink" title="초심자가 경험하는 3가지의 어려움"></a>초심자가 경험하는 3가지의 어려움</h1><ol>
-<li><p>책이나 수업의 내용이 무슨 말인지 하나도 모르겠다. 주변 개발자의 말을 알아 들을 수 없다.</p>
-<p>배경지식 : 기본적 cs(컴퓨터 사이언스) 지식 + 용어에 대한 이해 + 기본 상식</p>
-</li>
-<li><p>어떻게 만들어야 할 지 감조차 오지 않는다.</p>
-<p>문제 해결 능력 (problem solving) : 문제(해결과제)가 무엇인지 알아채는 능력 + computational thinking + 알고리즘 / 자료 구조 + 경험</p>
-<p>*문제해결능력 = 해결 과제(문제/요구사항)의 명확한 이해 → 복잡함을 단순하게 분해 → 자료를 정리하고 구분 (modeling) → 순서에 맞게 행위 배열</p>
-</li>
-<li><p>어떻게 만들어야 할 지는 알겠는데 막상 코딩하려니까 한 줄도 못짜겠다.</p>
-<p>인터넷에서 긁어온 코드를 도무지 수정할 수 없다</p>
-<p>구현능력 : 문법에 대한 정확한 이해 + 연습</p>
-</li>
-</ol>
-<h1 id="프로그래밍-학습-방법"><a href="#프로그래밍-학습-방법" class="headerlink" title="프로그래밍 학습 방법"></a>프로그래밍 학습 방법</h1><ol>
-<li>하지말아야 할것 : 라이브 코딩 감상, 예제 단순 타이핑, 현재 자신의 능력으로 쉽게 해결 가능한 것을 반복 연습</li>
-<li>자신의 능력을 살짝 넘어서는 도전을 지속적으로 → 쉬운 도전 X</li>
-<li>시행착오 : “ 무엇을 알고 무엇을 모르는지 “</li>
-<li>시도하고 실패하는 의식적인 연습을 반복</li>
-<li>구체적인 목표 , 학습하고 작은 성취를 반복</li>
-<li>본질에서 벗어난 학습 X , 적절한 지점을 찾아내 균형을 잡는 것도 능력이다.</li>
-<li>피드백에 겸손하고 적극적으로 반응</li>
-</ol>
-<h1 id="프로그래밍-학습-방향"><a href="#프로그래밍-학습-방향" class="headerlink" title="프로그래밍 학습 방향"></a>프로그래밍 학습 방향</h1><ol>
-<li><p>기본개념과 동작원리</p>
-<p>이해의 영역 : 용어 / 개념 , 문법 , computational thinking</p>
-</li>
-<li><p>코딩 스킬</p>
-<p>숙달의 영역 : 의도적 연습 , API , Framework / Library</p>
-</li>
-<li><p>프로젝트</p>
-<p>경험의 영역 : 미니 프로젝트를 통해 가상 경험</p>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/16/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Bernese-Corgi">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bernese-Corgi">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/16/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">작성일</span>
-
-              <time title="Post created: 2020-10-16 16:23:35" itemprop="dateCreated datePublished" datetime="2020-10-16T16:23:35+09:00">2020-10-16</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
@@ -375,10 +179,9 @@
       <meta itemprop="name" content="Bernese-Corgi">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/15/JavaScript/JavaScript21/" class="post-title-link" itemprop="url">JavaScript를 공부하기 전에...</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          JavaScript를 공부하기 전에...
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -421,7 +224,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="자바스크립트-객체의-분류"><a href="#자바스크립트-객체의-분류" class="headerlink" title="자바스크립트 객체의 분류"></a>자바스크립트 객체의 분류</h1><p>자바스크립트 객체는 다음과 같이 크게 3개의 객체로 분류할 수 있다.</p>
+        <h1 id="자바스크립트-객체의-분류"><a href="#자바스크립트-객체의-분류" class="headerlink" title="자바스크립트 객체의 분류"></a>자바스크립트 객체의 분류</h1><p>자바스크립트 객체는 다음과 같이 크게 3개의 객체로 분류할 수 있다.</p>
 <ol>
 <li><p>표준 빌트인 객체</p>
 <ul>
@@ -783,21 +586,36 @@
 <p>전역 변수는 프로퍼티이지만 delete 연산자로 삭제할 수 없다.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">10</span>; <span class="comment">// 전역 변수</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 선언하지 않은 식별자에 값을 할당</span></span><br><span class="line">  y = <span class="number">20</span>; <span class="comment">// window.y = 20;</span></span><br><span class="line">  <span class="built_in">console</span>.log(x + y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo(); <span class="comment">// 30</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.x); <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.y); <span class="comment">// 20</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> x; <span class="comment">// 전역 변수는 삭제되지 않는다.</span></span><br><span class="line"><span class="keyword">delete</span> y; <span class="comment">// 프로퍼티는 삭제된다.</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.x); <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.y); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-tags">
+              <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+              <a href="/tags/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C/" rel="tag"># 프론트엔드</a>
+              <a href="/tags/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%97%90-%ED%95%84%EC%9A%94%ED%95%9C-%EA%B8%B0%EC%88%A0/" rel="tag"># 프론트엔드 개발에 필요한 기술</a>
+              <a href="/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%ED%95%99%EC%8A%B5-%EB%B0%A9%ED%96%A5/" rel="tag"># 프로그래밍 학습 방향</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/10/16/hello-world/" rel="next" title="Hello World">
+      Hello World <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -850,6 +668,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EA%B0%9D%EC%B2%B4%EC%9D%98-%EB%B6%84%EB%A5%98"><span class="nav-text">자바스크립트 객체의 분류</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%ED%91%9C%EC%A4%80-%EB%B9%8C%ED%8A%B8%EC%9D%B8-%EA%B0%9D%EC%B2%B4"><span class="nav-text">표준 빌트인 객체</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98-%EA%B0%9D%EC%B2%B4%EC%9D%B8-%ED%91%9C%EC%A4%80-%EB%B9%8C%ED%8A%B8%EC%9D%B8-%EA%B0%9D%EC%B2%B4"><span class="nav-text">생성자 함수 객체인 표준 빌트인 객체</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%EC%9B%90%EC%8B%9C%EA%B0%92%EA%B3%BC-%EB%9E%98%ED%8D%BC-%EA%B0%9D%EC%B2%B4"><span class="nav-text">원시값과 래퍼 객체</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%9E%98%ED%8D%BC-%EA%B0%9D%EC%B2%B4"><span class="nav-text">문자열 래퍼 객체</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%88%AB%EC%9E%90-%EB%9E%98%ED%8D%BC-%EA%B0%9D%EC%B2%B4"><span class="nav-text">숫자 래퍼 객체</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%EC%A0%84%EC%97%AD-%EA%B0%9D%EC%B2%B4"><span class="nav-text">전역 객체</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%EB%B9%8C%ED%8A%B8%EC%9D%B8-%EC%A0%84%EC%97%AD-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0"><span class="nav-text">1. 빌트인 전역 프로퍼티</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A0-Infinity"><span class="nav-text">① Infinity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A1-NaN"><span class="nav-text">② NaN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A2-undefined"><span class="nav-text">③ undefined</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%EB%B9%8C%ED%8A%B8%EC%9D%B8-%EC%A0%84%EC%97%AD-%ED%95%A8%EC%88%98"><span class="nav-text">2. 빌트인 전역 함수</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A0-eval"><span class="nav-text">① eval</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A1-isFinite"><span class="nav-text">② isFinite</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A2-isNaN"><span class="nav-text">③ isNaN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A3-parseFloat"><span class="nav-text">④ parseFloat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A4-parseInt"><span class="nav-text">⑤ parseInt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A5-encodeURI-decodeURI"><span class="nav-text">⑥ encodeURI &#x2F; decodeURI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A6-encodeURIComponent-decodeURIComponent"><span class="nav-text">⑦ encodeURIComponent &#x2F; decodeURIComponent</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%EC%95%94%EB%AC%B5%EC%A0%81-%EC%A0%84%EC%97%AD"><span class="nav-text">3. 암묵적 전역</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
