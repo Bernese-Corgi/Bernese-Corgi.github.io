@@ -995,7 +995,9 @@ pre .javascript .function {
 }
 .site-title::before {
   display: block;
-  background: url("../../../image/bernese_logo_ibory.png");
+  width: 10px;
+  height: 20px;
+  background: url("./bernese_logo_ibory.png");
 }
 .site-subtitle {
   color: #ddd;
@@ -1175,7 +1177,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #d1b1c7;
+  background: #370083;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
