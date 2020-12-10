@@ -989,8 +989,13 @@ pre .javascript .function {
 .site-title {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.375em;
-  font-weight: normal;
   margin: 0;
+  font-weight: 500;
+  color: #fff;
+}
+.site-title::before {
+  display: block;
+  background: url("../../../image/bernese_logo_ibory.png");
 }
 .site-subtitle {
   color: #ddd;
@@ -1170,7 +1175,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #8620ff;
+  background: #d1b1c7;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
