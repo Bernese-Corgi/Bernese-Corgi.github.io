@@ -167,8 +167,8 @@ template {
   display: none;
 }
 ::selection {
-  background: #d9b469;
-  color: #fff;
+  background: rgba(217,180,105,0.6);
+  color: inherit;
 }
 html,
 body {
@@ -194,9 +194,10 @@ h4,
 h5,
 h6 {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-weight: bold;
   line-height: 1.5;
   margin: 40px 0 15px;
+  font-weight: 600;
+  color: #849b96;
 }
 h1 {
   font-size: 1.5em;
@@ -403,7 +404,7 @@ code {
   word-wrap: break-word;
 }
 .highlight *::selection {
-  background: #515151;
+  background: #41361f;
 }
 .highlight pre {
   border: 0;
@@ -1169,7 +1170,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffc84b;
+  background: #617913;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
