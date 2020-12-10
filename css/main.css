@@ -993,12 +993,6 @@ pre .javascript .function {
   font-weight: 500;
   color: #fff;
 }
-.site-title::before {
-  display: inline-block;
-  width: 10px;
-  height: 20px;
-  background: url("./bernese_logo_ibory.png");
-}
 .site-subtitle {
   color: #ddd;
   font-size: 0.8125em;
@@ -1177,7 +1171,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #b1b4df;
+  background: #e2ff52;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
