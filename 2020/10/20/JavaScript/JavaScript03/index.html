@@ -20,26 +20,30 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="프로그래밍  프로그래밍 언어를 사용해 컴퓨터에게 실행을 요구하는 일종의 커뮤니케이션 0과 1밖에 알지 못하는 기계가 실행할 수 있을 정도로 정확하고 상세하게 요구사항을 설명하는 작업 → 결과물은 코드    문제의 해결  프로그래밍에 앞서 해결해야 할 문제(요구사항)를 명확히 이해한 후 적절한 문제 해결 방안을 정의할 필요가 있다. 문제 해결 능력 문제">
+  <meta name="description" content="브라우저와 Node.js 모두 자바스크립트의 코어인 ECMAScript를 실행할 수 있지만 브라우저와 Node.js에서 ECMAScript 이외에 추가로 제공하는 기능은 호환되지 않는다.  브라우저✓ 자바스크립트를 해석하고 실행할 수 있는 자바스크립트 엔진을 내장하고 있다. ✓ HTML, CSS, 자바스크립트를 실행해 웹페이지를 브라우저 화면에 렌더링하는">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript_ 프로그래밍">
-<meta property="og:url" content="http://example.com/2020/10/17/JavaScript/JavaScript01/index.html">
+<meta property="og:url" content="http://example.com/2020/10/20/JavaScript/JavaScript03/index.html">
 <meta property="og:site_name" content="Bernese-Corgi">
-<meta property="og:description" content="프로그래밍  프로그래밍 언어를 사용해 컴퓨터에게 실행을 요구하는 일종의 커뮤니케이션 0과 1밖에 알지 못하는 기계가 실행할 수 있을 정도로 정확하고 상세하게 요구사항을 설명하는 작업 → 결과물은 코드    문제의 해결  프로그래밍에 앞서 해결해야 할 문제(요구사항)를 명확히 이해한 후 적절한 문제 해결 방안을 정의할 필요가 있다. 문제 해결 능력 문제">
+<meta property="og:description" content="브라우저와 Node.js 모두 자바스크립트의 코어인 ECMAScript를 실행할 수 있지만 브라우저와 Node.js에서 ECMAScript 이외에 추가로 제공하는 기능은 호환되지 않는다.  브라우저✓ 자바스크립트를 해석하고 실행할 수 있는 자바스크립트 엔진을 내장하고 있다. ✓ HTML, CSS, 자바스크립트를 실행해 웹페이지를 브라우저 화면에 렌더링하는">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:image" content="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ff98c7e5-1024-4bbd-9b6b-dc25854b26b4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5/20210101/us-west-2/s3/aws4_request&X-Amz-Date=20210101T084748Z&X-Amz-Expires=86400&X-Amz-Signature=0e29c47bc8ab04d020e4b328a2224c005ccbe9f44d0d7551b048ae4dcde133eb&X-Amz-SignedHeaders=host&response-content-disposition=filename%20=%22Untitled.png%22">
-<meta property="article:published_time" content="2020-10-17T07:30:56.000Z">
-<meta property="article:modified_time" content="2021-01-01T08:48:37.957Z">
+<meta property="og:image" content="https://poiemaweb.com/assets/fs-images/3-1.png">
+<meta property="article:published_time" content="2020-10-20T07:30:56.000Z">
+<meta property="article:modified_time" content="2021-01-01T11:01:39.884Z">
 <meta property="article:author" content="Bernese-Corgi">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="프론트엔드">
-<meta property="article:tag" content="프로그래밍">
-<meta property="article:tag" content="컴파일러">
-<meta property="article:tag" content="인터프리터">
+<meta property="article:tag" content="브라우저">
+<meta property="article:tag" content="Node.js">
+<meta property="article:tag" content="npm">
+<meta property="article:tag" content="ECMAScript">
+<meta property="article:tag" content="클라이언트 사이드 Web API">
+<meta property="article:tag" content="DOM API">
+<meta property="article:tag" content="파일 시스템">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ff98c7e5-1024-4bbd-9b6b-dc25854b26b4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5/20210101/us-west-2/s3/aws4_request&X-Amz-Date=20210101T084748Z&X-Amz-Expires=86400&X-Amz-Signature=0e29c47bc8ab04d020e4b328a2224c005ccbe9f44d0d7551b048ae4dcde133eb&X-Amz-SignedHeaders=host&response-content-disposition=filename%20=%22Untitled.png%22">
+<meta name="twitter:image" content="https://poiemaweb.com/assets/fs-images/3-1.png">
 
-<link rel="canonical" href="http://example.com/2020/10/17/JavaScript/JavaScript01/">
+<link rel="canonical" href="http://example.com/2020/10/20/JavaScript/JavaScript03/">
 
 
 <script id="page-configurations">
@@ -167,7 +171,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/17/JavaScript/JavaScript01/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/20/JavaScript/JavaScript03/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -190,14 +194,14 @@
               </span>
               <span class="post-meta-item-text">작성일</span>
 
-              <time title="Post created: 2020-10-17 16:30:56" itemprop="dateCreated datePublished" datetime="2020-10-17T16:30:56+09:00">2020-10-17</time>
+              <time title="Post created: 2020-10-20 16:30:56" itemprop="dateCreated datePublished" datetime="2020-10-20T16:30:56+09:00">2020-10-20</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Updated at: 2021-01-01 17:48:37" itemprop="dateModified" datetime="2021-01-01T17:48:37+09:00">2021-01-01</time>
+                <time title="Updated at: 2021-01-01 20:01:39" itemprop="dateModified" datetime="2021-01-01T20:01:39+09:00">2021-01-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -224,56 +228,25 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ff98c7e5-1024-4bbd-9b6b-dc25854b26b4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5/20210101/us-west-2/s3/aws4_request&X-Amz-Date=20210101T084748Z&X-Amz-Expires=86400&X-Amz-Signature=0e29c47bc8ab04d020e4b328a2224c005ccbe9f44d0d7551b048ae4dcde133eb&X-Amz-SignedHeaders=host&response-content-disposition=filename%20=%22Untitled.png%22" alt="프로그래밍"></p>
-<br>
-
-<p><strong>프로그래밍</strong></p>
-<ul>
-<li>프로그래밍 언어를 사용해 컴퓨터에게 실행을 요구하는 일종의 커뮤니케이션</li>
-<li>0과 1밖에 알지 못하는 기계가 실행할 수 있을 정도로 정확하고 상세하게 요구사항을 설명하는 작업 → 결과물은 코드</li>
-</ul>
-<br>
-
-<p><strong>문제의 해결</strong></p>
-<ul>
-<li>프로그래밍에 앞서 해결해야 할 문제(요구사항)를 명확히 이해한 후 적절한 문제 해결 방안을 정의할 필요가 있다.</li>
-<li>문제 해결 능력<ol>
-<li>문제(요구사항)를 명확히 이해</li>
-<li>복잡함을 단순하게 분해(decomposition)</li>
-<li>자료를 정리하고 구분(modeling)</li>
-<li>순서에 맞게 행위를 배열</li>
-</ol>
-</li>
-<li>문제 해결 능력을 통해 만들어낸 해결 방안 : 프로그래밍 언어의 문법을 사용해 표현</li>
-<li>작성된 코드는 해결 방안의 구체적 구현물</li>
-</ul>
-<br>
-
-<p><strong>프로그래밍 언어</strong></p>
-<ul>
-<li>인간과 컴퓨터(컴파일러 또는 인터프리터) 모두가 이해할 수 있는 약속된 형태의 인공어</li>
-<li>구문(syntax)과 의미(semantics)의 조합으로 표현된다.</li>
-<li>프로그래밍 언어의 문법에 부합하는 것은 물론이고 수행하고자 하는 바를 정확히 수행해야한다</li>
-<li>요구사항이 실현(문제가 해결)되어야 의미가 있다.</li>
-</ul>
-<br>
-
-<p><strong>컴파일러와 인터프리터</strong></p>
-<ul>
-<li>프로그래밍 언어(programming language)를 사용해 프로그램을 작성한 것을<br>컴퓨터가 이해할 수 있는 언어로 명령을 전달해야 한다. = 기계어(machine code)<br>→ 컴퓨터가 이해할 수 있는 기계어로 변환하는 컴파일러(compiler) 혹은 인터프리터(interpreter) 사용해 기계어로 변환한다.</li>
-</ul>
-<br>
-
-<p><strong>프로그래밍은 요구사항의 집합을 분석해서 적절한 자료구조와 함수의 집합으로 변환한 후, 그 흐름을 제어하는 것이다.</strong></p>
-<br>
-
-<ul>
-<li>프로그래밍 언어가 제공하는 문법을 적절히 사용하여 변수를 통해 값을 저장하고 참조하며</li>
-<li>연산자로 값을 연산, 평가하고</li>
-<li>조건문과 반복문에 의한 흐름제어로 코드의 실행 순서를 제어하고</li>
-<li>함수로 재사용 가능한 문의 집합을 만들며</li>
-<li>객체, 배열 등으로 자료를 구조화한다.</li>
-</ul>
+        <p>브라우저와 Node.js 모두 자바스크립트의 코어인 ECMAScript를 실행할 수 있지만 브라우저와 Node.js에서 ECMAScript 이외에 추가로 제공하는 기능은 호환되지 않는다.</p>
+<p><img src="https://poiemaweb.com/assets/fs-images/3-1.png" alt="브라우저와 node.js"></p>
+<h2 id="브라우저"><a href="#브라우저" class="headerlink" title="브라우저"></a>브라우저</h2><p>✓ 자바스크립트를 해석하고 실행할 수 있는 자바스크립트 엔진을 내장하고 있다.</p>
+<p>✓ HTML, CSS, 자바스크립트를 실행해 웹페이지를 브라우저 화면에 렌더링하는 것이 주된 목적이다.</p>
+<p>✓ 파싱된 HTML 요소를 선택하거나 조작하는 기능의 집합인 DOM API를 기본적으로 제공한다.</p>
+<p>✓ 파일 시스템을 지원하지 않는다.<br>(Web API인 FileReader 객체를 사용해 사용자가 지정한 파일을 읽어 들이는 것은 가능하다.)</p>
+<p>✓ 웹 애플리케이션의 자바스크립트는 사용자 컴퓨터의 브라우저에서 동작한다.<br>만약 브라우저를 통해 다운로드되어 실행되는 자바스크립트가 사용자 컴퓨터의 로컬 파일을 삭제하거나 수정하고 생성할 수 있다면 이는 사용자 컴퓨터가 악성 코드에 그대로 노출된 것과 마찬가지다.<br>따라서 보안 상 이유로 브라우저 환경의 자바스크립트는 파일 시스템을 제공하지 않는다.</p>
+<p>✓ 클라이언트 사이드 Web API를 지원한다.<br>DOM, BOM, Canvas, XMLHttpRequest, Fetch, requestAnimationFrame, SVG, Web Storage, Web Component, Web worker</p>
+<h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><p>✓ 자바스크립트 엔진을 내장하고 있다.</p>
+<p>✓ 기본적으로 브라우저에서 동작하는 코드는 Node.js 환경에서도 동일하게 동작한다.</p>
+<p>✓ 브라우저 외부에서 자바스크립트 실행 환경을 제공하는 것이 주된 목적이다.</p>
+<p>✓ DOM API를 제공하지 않는다.<br>(HTML 요소를 파싱해서 객체화한 DOM(Document Object Model)을 직접 다룰 필요가 없기 때문)</p>
+<blockquote>
+<p><strong>웹 크롤링</strong></p>
+<p>서버에서 웹사이트의 콘텐츠를 수집하기 위해 웹사이트에서 HTML 문서를 가져온 다음, 이를 가공해서 필요한 데이터만 추출하는 경우가 있다.<br>서버 환경은 DOM API를 제공하지 않으므로 cheerio와 같은 DOM 라이브러리를 사용해 HTML 문서를 가공하기도 한다.</p>
+</blockquote>
+<p>✓ 파일을 create/read/update/delete할 수 있는 파일 시스템을 기본 제공</p>
+<p>✓ 클라이언트 사이드 Web API를 지원하지 않고 ECMAScript와 Node.js 고유의 Host API를 지원한다.</p>
+<p>✓ 클라이언트 사이드, 즉 브라우저에서 동작하는 간단한 웹 애플리케이션은 브라우저만으로도 개발할 수 있다.<br>하지만 프로젝트의 규모가 커짐에 따라 React, Angular, Lodash 같은 프레임워크 또는 라이브러리를 도입하거나 Babel, Webpack, ESLint 등 여러 가지 도구를 사용할 필요가 있다.<br>이때 Node.js와 npm이 필요하다.</p>
 
     </div>
 
@@ -285,9 +258,13 @@
           <div class="post-tags">
               <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
               <a href="/tags/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C/" rel="tag"># 프론트엔드</a>
-              <a href="/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" rel="tag"># 프로그래밍</a>
-              <a href="/tags/%EC%BB%B4%ED%8C%8C%EC%9D%BC%EB%9F%AC/" rel="tag"># 컴파일러</a>
-              <a href="/tags/%EC%9D%B8%ED%84%B0%ED%94%84%EB%A6%AC%ED%84%B0/" rel="tag"># 인터프리터</a>
+              <a href="/tags/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80/" rel="tag"># 브라우저</a>
+              <a href="/tags/Node-js/" rel="tag"># Node.js</a>
+              <a href="/tags/npm/" rel="tag"># npm</a>
+              <a href="/tags/ECMAScript/" rel="tag"># ECMAScript</a>
+              <a href="/tags/%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-%EC%82%AC%EC%9D%B4%EB%93%9C-Web-API/" rel="tag"># 클라이언트 사이드 Web API</a>
+              <a href="/tags/DOM-API/" rel="tag"># DOM API</a>
+              <a href="/tags/%ED%8C%8C%EC%9D%BC-%EC%8B%9C%EC%8A%A4%ED%85%9C/" rel="tag"># 파일 시스템</a>
           </div>
 
         
@@ -296,12 +273,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/10/16/JavaScript/JavaScript00/" rel="prev" title="JavaScript를 공부하기 전에...">
-      <i class="fa fa-chevron-left"></i> JavaScript를 공부하기 전에...
+    <a href="/2020/10/17/JavaScript/JavaScript01/" rel="prev" title="JavaScript_ 프로그래밍">
+      <i class="fa fa-chevron-left"></i> JavaScript_ 프로그래밍
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/10/20/JavaScript/JavaScript03/" rel="next" title="JavaScript_ 프로그래밍">
-      JavaScript_ 프로그래밍 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/12/07/JavaScript/JavaScript21/" rel="next" title="JavaScript_ 빌트인 객체">
+      JavaScript_ 빌트인 객체 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -361,6 +338,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80"><span class="nav-text">브라우저</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-js"><span class="nav-text">Node.js</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

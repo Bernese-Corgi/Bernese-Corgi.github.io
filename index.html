@@ -2691,6 +2691,102 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/20/JavaScript/JavaScript03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Bernese-Corgi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bernese-Corgi">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/20/JavaScript/JavaScript03/" class="post-title-link" itemprop="url">JavaScript_ 프로그래밍</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+
+              <time title="Post created: 2020-10-20 16:30:56" itemprop="dateCreated datePublished" datetime="2020-10-20T16:30:56+09:00">2020-10-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Updated at: 2021-01-01 20:01:39" itemprop="dateModified" datetime="2021-01-01T20:01:39+09:00">2021-01-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" itemprop="url" rel="index"><span itemprop="name">프로그래밍</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>브라우저와 Node.js 모두 자바스크립트의 코어인 ECMAScript를 실행할 수 있지만 브라우저와 Node.js에서 ECMAScript 이외에 추가로 제공하는 기능은 호환되지 않는다.</p>
+<p><img src="https://poiemaweb.com/assets/fs-images/3-1.png" alt="브라우저와 node.js"></p>
+<h2 id="브라우저"><a href="#브라우저" class="headerlink" title="브라우저"></a>브라우저</h2><p>✓ 자바스크립트를 해석하고 실행할 수 있는 자바스크립트 엔진을 내장하고 있다.</p>
+<p>✓ HTML, CSS, 자바스크립트를 실행해 웹페이지를 브라우저 화면에 렌더링하는 것이 주된 목적이다.</p>
+<p>✓ 파싱된 HTML 요소를 선택하거나 조작하는 기능의 집합인 DOM API를 기본적으로 제공한다.</p>
+<p>✓ 파일 시스템을 지원하지 않는다.<br>(Web API인 FileReader 객체를 사용해 사용자가 지정한 파일을 읽어 들이는 것은 가능하다.)</p>
+<p>✓ 웹 애플리케이션의 자바스크립트는 사용자 컴퓨터의 브라우저에서 동작한다.<br>만약 브라우저를 통해 다운로드되어 실행되는 자바스크립트가 사용자 컴퓨터의 로컬 파일을 삭제하거나 수정하고 생성할 수 있다면 이는 사용자 컴퓨터가 악성 코드에 그대로 노출된 것과 마찬가지다.<br>따라서 보안 상 이유로 브라우저 환경의 자바스크립트는 파일 시스템을 제공하지 않는다.</p>
+<p>✓ 클라이언트 사이드 Web API를 지원한다.<br>DOM, BOM, Canvas, XMLHttpRequest, Fetch, requestAnimationFrame, SVG, Web Storage, Web Component, Web worker</p>
+<h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><p>✓ 자바스크립트 엔진을 내장하고 있다.</p>
+<p>✓ 기본적으로 브라우저에서 동작하는 코드는 Node.js 환경에서도 동일하게 동작한다.</p>
+<p>✓ 브라우저 외부에서 자바스크립트 실행 환경을 제공하는 것이 주된 목적이다.</p>
+<p>✓ DOM API를 제공하지 않는다.<br>(HTML 요소를 파싱해서 객체화한 DOM(Document Object Model)을 직접 다룰 필요가 없기 때문)</p>
+<blockquote>
+<p><strong>웹 크롤링</strong></p>
+<p>서버에서 웹사이트의 콘텐츠를 수집하기 위해 웹사이트에서 HTML 문서를 가져온 다음, 이를 가공해서 필요한 데이터만 추출하는 경우가 있다.<br>서버 환경은 DOM API를 제공하지 않으므로 cheerio와 같은 DOM 라이브러리를 사용해 HTML 문서를 가공하기도 한다.</p>
+</blockquote>
+<p>✓ 파일을 create/read/update/delete할 수 있는 파일 시스템을 기본 제공</p>
+<p>✓ 클라이언트 사이드 Web API를 지원하지 않고 ECMAScript와 Node.js 고유의 Host API를 지원한다.</p>
+<p>✓ 클라이언트 사이드, 즉 브라우저에서 동작하는 간단한 웹 애플리케이션은 브라우저만으로도 개발할 수 있다.<br>하지만 프로젝트의 규모가 커짐에 따라 React, Angular, Lodash 같은 프레임워크 또는 라이브러리를 도입하거나 Babel, Webpack, ESLint 등 여러 가지 도구를 사용할 필요가 있다.<br>이때 Node.js와 npm이 필요하다.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/17/JavaScript/JavaScript01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
