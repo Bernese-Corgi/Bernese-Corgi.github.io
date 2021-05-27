@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
@@ -102,6 +102,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -114,6 +115,11 @@
         <li class="menu-item menu-item-home">
 
     <a href="/" rel="section"><i class="fa fa-igloo fa-fw"></i>홈</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -131,20 +137,41 @@
     <a href="/archives/" rel="section"><i class="fa fa-book-open fa-fw"></i>Today I Learned</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>검색
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="algolia-results">
+  <div id="algolia-stats"></div>
+  <div id="algolia-hits"></div>
+  <div id="algolia-pagination" class="algolia-pagination"></div>
+</div>
+
+      
+    </div>
+  </div>
 
 </div>
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  <div class="reading-progress-bar"></div>
 
 
     <main class="main">
@@ -161,13 +188,153 @@
   <div class="post-block">
     <div class="posts-collapse">
       <div class="collection-title">
-        <span class="collection-header">음..! 총 2개의 포스트 포스트를 마저 작성하세요</span>
+        <span class="collection-header">음..! 총 10개의 포스트 포스트를 마저 작성하세요</span>
       </div>
 
       
     <div class="collection-year">
       <span class="collection-header">2021</span>
     </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2021-05-27T19:39:14+09:00"
+              content="2021-05-27">
+          05-27
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2021/05/27/Tech%20Interview/test/" itemprop="url">
+            <span itemprop="name">제목 없음</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2021-05-27T17:15:30+09:00"
+              content="2021-05-27">
+          05-27
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2021/05/27/Tech%20Interview/%EB%AA%A8%EB%93%88/" itemprop="url">
+            <span itemprop="name">제목 없음</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2021-05-27T17:15:05+09:00"
+              content="2021-05-27">
+          05-27
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2021/05/27/Tech%20Interview/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98%20%EB%8F%99%EC%9E%91%20%EB%B0%A9%EC%8B%9D/" itemprop="url">
+            <span itemprop="name">제목 없음</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2021-05-27T16:38:33+09:00"
+              content="2021-05-27">
+          05-27
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2021/05/27/Tech%20Interview/%EC%8A%A4%EC%BD%94%ED%94%84/" itemprop="url">
+            <span itemprop="name">제목 없음</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2021-05-27T16:35:45+09:00"
+              content="2021-05-27">
+          05-27
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2021/05/27/Tech%20Interview/03.%EC%97%B0%EC%82%B0%EC%9E%90/" itemprop="url">
+            <span itemprop="name">연산자 관련 면접 질문</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2021-05-27T16:18:49+09:00"
+              content="2021-05-27">
+          05-27
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2021/05/27/Tech%20Interview/02.%EB%8D%B0%EC%9D%B4%ED%84%B0%20%ED%83%80%EC%9E%85/" itemprop="url">
+            <span itemprop="name">데이터 타입 관련 면접 질문</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2021-05-27T15:44:42+09:00"
+              content="2021-05-27">
+          05-27
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2021/05/27/Tech%20Interview/01.%EB%B3%80%EC%88%98/" itemprop="url">
+            <span itemprop="name">변수 관련 면접 질문</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
 
   <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -183,6 +350,26 @@
       <div class="post-title">
           <a class="post-title-link" href="/2021/05/26/Network/01.Network%20Basic/" itemprop="url">
             <span itemprop="name">네트워크 기초 지식</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2021-05-26T15:46:21+09:00"
+              content="2021-05-26">
+          05-26
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2021/05/26/Tech%20Interview/00.tech%20interview/" itemprop="url">
+            <span itemprop="name">프론트엔드 개발자 기술 면접 질문 및 답변</span>
           </a>
       </div>
 
@@ -253,13 +440,27 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Bernese-Corgi"
+      src="/images/bernese_logo_yellow.png">
   <p class="site-author-name" itemprop="name">Bernese-Corgi</p>
   <div class="site-description" itemprop="description">초보 프론트엔드 개발자의 개발 공부 이야기</div>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/bernese-corgi" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;bernese-corgi" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:jnyng0621@gmail.com" title="E-Mail → mailto:jnyng0621@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
       </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
 
     </div>
   </aside>
@@ -323,6 +524,13 @@
 
 
 
+  
+<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script>
+<script src="/js/algolia-search.js"></script>
+
+
+
 
 
 
@@ -337,6 +545,16 @@
   
 
   
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'http://example.com/archives/2021/05/',]
+      });
+      });
+  </script>
 
 </body>
 </html>

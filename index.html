@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
@@ -102,6 +102,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -114,6 +115,11 @@
         <li class="menu-item menu-item-home">
 
     <a href="/" rel="section"><i class="fa fa-igloo fa-fw"></i>홈</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -131,20 +137,41 @@
     <a href="/archives/" rel="section"><i class="fa fa-book-open fa-fw"></i>Today I Learned</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>검색
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="algolia-results">
+  <div id="algolia-stats"></div>
+  <div id="algolia-hits"></div>
+  <div id="algolia-pagination" class="algolia-pagination"></div>
+</div>
+
+      
+    </div>
+  </div>
 
 </div>
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  <div class="reading-progress-bar"></div>
 
 
     <main class="main">
@@ -158,10 +185,511 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/27/Tech%20Interview/test/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
+      <meta itemprop="name" content="Bernese-Corgi">
+      <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="녕터디 클럽">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/27/Tech%20Interview/test/" class="post-title-link" itemprop="url">제목 없음</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2021-05-27 19:39:14 / Updated at: 19:47:42" itemprop="dateCreated datePublished" datetime="2021-05-27T19:39:14+09:00">2021-05-27</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          var x;
+const y = null;
+
+console.log(typeof x); // undefined
+console.log(typeof y); // object
+
+console.log(y === null); // true
+console.log(y === undefined); // false
+
+// console.log(typeof undefined);
+// console.log(typeof null);
+
+// console.log(null === undefined);
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/27/Tech%20Interview/%EB%AA%A8%EB%93%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
+      <meta itemprop="name" content="Bernese-Corgi">
+      <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="녕터디 클럽">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/27/Tech%20Interview/%EB%AA%A8%EB%93%88/" class="post-title-link" itemprop="url">제목 없음</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2021-05-27 17:15:30 / Updated at: 17:15:33" itemprop="dateCreated datePublished" datetime="2021-05-27T17:15:30+09:00">2021-05-27</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="자바스크립트의-순환참조란-어떤게-문제이고-해결방법은"><a href="#자바스크립트의-순환참조란-어떤게-문제이고-해결방법은" class="headerlink" title="자바스크립트의 순환참조란? 어떤게 문제이고 해결방법은?"></a>자바스크립트의 순환참조란? 어떤게 문제이고 해결방법은?</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/27/Tech%20Interview/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98%20%EB%8F%99%EC%9E%91%20%EB%B0%A9%EC%8B%9D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
+      <meta itemprop="name" content="Bernese-Corgi">
+      <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="녕터디 클럽">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/27/Tech%20Interview/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98%20%EB%8F%99%EC%9E%91%20%EB%B0%A9%EC%8B%9D/" class="post-title-link" itemprop="url">제목 없음</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2021-05-27 17:15:05 / Updated at: 17:15:35" itemprop="dateCreated datePublished" datetime="2021-05-27T17:15:05+09:00">2021-05-27</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="가비지컬렉터의-역할은-어떻게-동작"><a href="#가비지컬렉터의-역할은-어떻게-동작" class="headerlink" title="가비지컬렉터의 역할은? 어떻게 동작?"></a>가비지컬렉터의 역할은? 어떻게 동작?</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/27/Tech%20Interview/%EC%8A%A4%EC%BD%94%ED%94%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
+      <meta itemprop="name" content="Bernese-Corgi">
+      <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="녕터디 클럽">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/27/Tech%20Interview/%EC%8A%A4%EC%BD%94%ED%94%84/" class="post-title-link" itemprop="url">제목 없음</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2021-05-27 16:38:33 / Updated at: 16:38:37" itemprop="dateCreated datePublished" datetime="2021-05-27T16:38:33+09:00">2021-05-27</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="전역-scope를-사용했을-때-장단점에-관해-설명해주세요"><a href="#전역-scope를-사용했을-때-장단점에-관해-설명해주세요" class="headerlink" title="전역 scope를 사용했을 때 장단점에 관해 설명해주세요."></a>전역 scope를 사용했을 때 장단점에 관해 설명해주세요.</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/27/Tech%20Interview/03.%EC%97%B0%EC%82%B0%EC%9E%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
+      <meta itemprop="name" content="Bernese-Corgi">
+      <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="녕터디 클럽">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/27/Tech%20Interview/03.%EC%97%B0%EC%82%B0%EC%9E%90/" class="post-title-link" itemprop="url">연산자 관련 면접 질문</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2021-05-27 16:35:45 / Updated at: 19:58:34" itemprop="dateCreated datePublished" datetime="2021-05-27T16:35:45+09:00">2021-05-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tech-Interview/" itemprop="url" rel="index"><span itemprop="name">Tech Interview</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="연산자"><a href="#연산자" class="headerlink" title="연산자"></a>연산자</h1><h2 id="와-의-차이점은-무엇인가요"><a href="#와-의-차이점은-무엇인가요" class="headerlink" title="==와 ===의 차이점은 무엇인가요?"></a><code>==</code>와 <code>===</code>의 차이점은 무엇인가요?</h2><p>동등 비교 연산자 <code>==</code>는 <u style="text-decoration: #669966 underline">암묵적 타입 변환</u>을 통해 피연산자의 타입을 일치시킨 후 같은 값인지 비교합니다.<br>피연산자의 타입이 다르더라도 암묵적 타입 변환 후 같은 값이면 true를 반환합니다.</p>
+<p>일치 비교 연산자 <code>===</code>는 암묵적 타입 변환을 하지 않고,<br>타입과 값이 모두 같아야 true를 반환합니다.</p>
+<p><span style="color: #8D93AC">동등 비교 연산자는 결과를 예측하기 어렵고 실수하기 쉽기 때문에 일치 비교 연산자를 사용해야 합니다.</span></p>
+<h2 id="삼항식-Ternary-statement-을-사용하는-이유는-무엇이고-그것을-표현하기-위한-연산자-단어는-무엇인가요"><a href="#삼항식-Ternary-statement-을-사용하는-이유는-무엇이고-그것을-표현하기-위한-연산자-단어는-무엇인가요" class="headerlink" title="삼항식(Ternary statement)을 사용하는 이유는 무엇이고, 그것을 표현하기 위한 연산자 단어는 무엇인가요?"></a>삼항식(Ternary statement)을 사용하는 이유는 무엇이고, 그것을 표현하기 위한 연산자 단어는 무엇인가요?</h2><p>삼항식은 조건식의 평가 결과에 따라 반환할 값을 결정합니다.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/27/Tech%20Interview/02.%EB%8D%B0%EC%9D%B4%ED%84%B0%20%ED%83%80%EC%9E%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
+      <meta itemprop="name" content="Bernese-Corgi">
+      <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="녕터디 클럽">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/27/Tech%20Interview/02.%EB%8D%B0%EC%9D%B4%ED%84%B0%20%ED%83%80%EC%9E%85/" class="post-title-link" itemprop="url">데이터 타입 관련 면접 질문</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2021-05-27 16:18:49 / Updated at: 19:50:03" itemprop="dateCreated datePublished" datetime="2021-05-27T16:18:49+09:00">2021-05-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tech-Interview/" itemprop="url" rel="index"><span itemprop="name">Tech Interview</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="데이터-타입"><a href="#데이터-타입" class="headerlink" title="데이터 타입"></a>데이터 타입</h1><h2 id="자바스크립트의-원시-타입은-몇가지인가-종류는"><a href="#자바스크립트의-원시-타입은-몇가지인가-종류는" class="headerlink" title="자바스크립트의 원시 타입은 몇가지인가? 종류는?"></a>자바스크립트의 원시 타입은 몇가지인가? 종류는?</h2><h2 id="원시-타입과-객체-타입의-차이점"><a href="#원시-타입과-객체-타입의-차이점" class="headerlink" title="원시 타입과 객체 타입의 차이점"></a>원시 타입과 객체 타입의 차이점</h2><h2 id="자바스크립트의-Number-Type은-다른-언어들과-차이점이-무엇인가-왜-하나만-존재하는가"><a href="#자바스크립트의-Number-Type은-다른-언어들과-차이점이-무엇인가-왜-하나만-존재하는가" class="headerlink" title="자바스크립트의 Number Type은 다른 언어들과 차이점이 무엇인가, 왜 하나만 존재하는가?"></a>자바스크립트의 Number Type은 다른 언어들과 차이점이 무엇인가, 왜 하나만 존재하는가?</h2><h2 id="null과-undefined-그리고-undeclared의-차이점은-무엇인가요"><a href="#null과-undefined-그리고-undeclared의-차이점은-무엇인가요" class="headerlink" title="null과 undefined 그리고 undeclared의 차이점은 무엇인가요?"></a>null과 undefined 그리고 undeclared의 차이점은 무엇인가요?</h2><p><code>undefined</code></p>
+<ul>
+<li><code>undefined</code>는 실제 값이 아직 할당되지 않은 변수를 참조하거나 없는 프로퍼티를 참조하는 등 자바스크립트 엔진이 값이 없다는 상태를 나타낼 때 사용되는 값입니다.</li>
+</ul>
+<p><code>null</code></p>
+<ul>
+<li>변수에 값이 없다는 것을 명시하고 싶을 때 개발자는 의도적으로 <code>null</code>을 할당할 수 있습니다.</li>
+<li>이전에 할당되어 있던 값에 대한 참조를 명시적으로 제거할 때 쓸 수 있습니다.</li>
+</ul>
+<p><code>undeclared</code></p>
+<ul>
+<li><code>undeclared</code>는 <code>var</code>, <code>let</code>, <code>const</code> 키워드를 사용해 선언되지 않은 변수를 말합니다.</li>
+<li>아무 값도 할당되지 않은 경우 참조하려고 하면 참조 에러가 납니다.</li>
+<li><code>typeof</code> 연산자를 이용해 데이터 타입을 검사하면 <code>undefined</code>를 반환합니다.</li>
+<li>선언되지 않은 변수에 값을 할당할 경우, 스코프에 상관없이 무조건 전역 변수가 됩니다.</li>
+<li>strict mode인 경우 값이 할당되었다 해도 선언되지 않은 변수를 참조하면 참조에러가 납니다.</li>
+</ul>
+<h2 id="null과-undefined-두개를-구분하기-위해서는-어떻게-하면-될까요"><a href="#null과-undefined-두개를-구분하기-위해서는-어떻게-하면-될까요" class="headerlink" title="null과 undefined 두개를 구분하기 위해서는 어떻게 하면 될까요?"></a>null과 undefined 두개를 구분하기 위해서는 어떻게 하면 될까요?</h2><p><code>null</code>과 <code>undefined</code>인지 구분하기 위해서는 <code>typeof</code> 연산자를 이용해 구분할 수 있습니다.</p>
+<p><code>typeof</code> 연산자</p>
+<ul>
+<li><code>undefined</code> : “<strong>undefined</strong>“를 반환</li>
+<li><code>null</code> : “<strong>object</strong>“를 반환</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x;</span><br><span class="line"><span class="keyword">const</span> y = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> x); <span class="comment">// undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> y); <span class="comment">// object</span></span><br></pre></td></tr></table></figure>
+
+<p>만약, 특정 값이 <code>null</code>인지 확인하고 싶다면 <code>===</code> <span style="color: #669966">(일치 비교 연산자)</span>를 사용해 확인합니다.</p>
+<p><code>undefined</code>의 경우 typeof 연산자를 이용하면 “undefined”를 반환하지만,<br><code>null</code>의 경우 “object”를 반환하기 때문에 확실히 확인하기 위해서는 <code>===</code> <span style="color: #669966">(일치 비교 연산자)</span>를 사용해 확인해야 합니다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x;</span><br><span class="line"><span class="keyword">const</span> y = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(y === <span class="literal">null</span>); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(y === <span class="literal">undefined</span>); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="동적-타입-언어와-정적-타입-언어의-차이"><a href="#동적-타입-언어와-정적-타입-언어의-차이" class="headerlink" title="동적 타입 언어와 정적 타입 언어의 차이"></a>동적 타입 언어와 정적 타입 언어의 차이</h2><h2 id="자바스크립트의-자료형에-대해서-설명해주세요"><a href="#자바스크립트의-자료형에-대해서-설명해주세요" class="headerlink" title="자바스크립트의 자료형에 대해서 설명해주세요"></a>자바스크립트의 자료형에 대해서 설명해주세요</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/27/Tech%20Interview/01.%EB%B3%80%EC%88%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
+      <meta itemprop="name" content="Bernese-Corgi">
+      <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="녕터디 클럽">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/27/Tech%20Interview/01.%EB%B3%80%EC%88%98/" class="post-title-link" itemprop="url">변수 관련 면접 질문</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2021-05-27 15:44:42 / Updated at: 19:29:43" itemprop="dateCreated datePublished" datetime="2021-05-27T15:44:42+09:00">2021-05-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tech-Interview/" itemprop="url" rel="index"><span itemprop="name">Tech Interview</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="변수"><a href="#변수" class="headerlink" title="변수"></a>변수</h1><h2 id="“호이스팅-Hoisting-”에-대해서-설명하세요"><a href="#“호이스팅-Hoisting-”에-대해서-설명하세요" class="headerlink" title="“호이스팅(Hoisting)”에 대해서 설명하세요."></a>“호이스팅(Hoisting)”에 대해서 설명하세요.</h2><p>호이스팅이란 런타임 이전에 변수나 함수의 선언문이 먼저 실행되어 선언된 위치에 상관없이 스코프의 최상단으로 끌어올려지는 현상을 말합니다.</p>
+<p><code>var</code>로 선언된 변수와 let, const로 선언된 변수가 모두 호이스팅이 발생하지만, 다르게 동작합니다.</p>
+<p><code>var</code>로 선언된 선언문는 런타임 이전에 선언 단계와 동시에 암묵적으로 <code>undefined</code>로 초기화 단계가 진행됩니다.</p>
+<p><code>let</code>과 <code>const</code>로 선언된 선언문은 런타임 이전에 선언 단계가 이루어지지만, 선언문을 만나기 전까지는 초기화 단계가 일어나지 않아 TDZ에 갇혀서, 선언문 이전에 참조하게 되는 경우 참조에러가 발생합니다.</p>
+<p>함수 선언문의 경우, <code>function</code> 키워드로 선언한 함수 선언문은 선언과 동시에 함수 객체로 초기화되어 선언문 이전에 해당 함수를 호출할 수 있습니다.</p>
+<h2 id="let-var-const-의-차이점에-대해-설명해주세요"><a href="#let-var-const-의-차이점에-대해-설명해주세요" class="headerlink" title="let, var, const 의 차이점에 대해 설명해주세요."></a>let, var, const 의 차이점에 대해 설명해주세요.</h2><p><code>var</code>, <code>let</code>, <code>const</code>는 모두 변수 선언을 위한 키워드입니다. <span style="color: #cc9999">(공통)</span></p>
+<ul>
+<li><p><code>var</code>는 ES6 이전에 나온 문법이고,<br><code>let</code>, <code>const</code>는 ES6에서 새로 나온 문법입니다.</p>
+</li>
+<li><p><code>var</code>, <code>let</code> 는 재할당이 가능해서 값이 변경될 수 있을 때 사용하고,<br><code>const</code>는 재할당이 금지되어 있는 상수를 선언할 때 사용합니다. <code>const</code>는 선언과 동시에 초기화해야합니다.</p>
+</li>
+<li><p><code>var</code>는 변수 이름을 중복해서 사용할 수 있습니다.<br><code>let</code>, <code>const</code> 는 변수 이름을 중복해서 사용할 수 없습니다.</p>
+</li>
+<li><p><code>var</code>는 함수 레벨 스코프를 가져서 전역 변수가 되는 범위가 커집니다.<br><code>let</code>, <code>const</code>는 블록 레벨 스코프를 가져서 전역 변수의 범위가 좁아집니다.</p>
+</li>
+<li><p><code>var</code> 키워드로 선언한 변수는 전역 객체 <code>window</code>의 프로퍼티가 되어 <code>window.식별자</code>로 접근할 수 있지만,<br><code>let</code>, <code>const</code>로 선언한 변수는 <code>window</code>의 프로퍼티가 되지 않습니다.</p>
+</li>
+<li><p><code>var</code>, <code>let</code>, <code>const</code>는 모두 호이스팅이 발생합니다.<br><code>var</code>는 선언과 초기화가 런타임 이전에 동시에 진행되므로, 선언문 이전에 참조하려 해도 참조 에러를 발생시키지 않고 초기화된 값인 <code>undefined</code>를 출력합니다.<br><code>let</code>, <code>const</code>는 선언은 런타임 이전에, 초기화는 런타임 이후에 변수 선언문을 만났을 때 이루어지므로, 선언문 이전에 참조하려 하면 참조 에러를 발생시킵니다.</p>
+</li>
+<li><p>다만, 재할당 없이 값을 변경할 수 없는 원시값과는 다르게 객체의 경우 재할당이 없어도 값의 변경이 가능하므로 <code>const</code> 키워드로 불변성을 유지할 수 있는 것은 아닙니다.</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/26/Network/01.Network%20Basic/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
       <meta itemprop="name" content="Bernese-Corgi">
       <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
     </span>
@@ -181,10 +709,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">작성일</span>
-              
 
-              <time title="Post created: 2021-05-26 22:04:35 / Updated at: 22:05:40" itemprop="dateCreated datePublished" datetime="2021-05-26T22:04:35+09:00">2021-05-26</time>
+              <time title="Post created: 2021-05-26 22:04:35" itemprop="dateCreated datePublished" datetime="2021-05-26T22:04:35+09:00">2021-05-26</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Updated at: 2021-05-27 15:44:17" itemprop="dateModified" datetime="2021-05-27T15:44:17+09:00">2021-05-27</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -207,15 +741,11 @@
 
       
           <h1 id="네트워크-기초-지식"><a href="#네트워크-기초-지식" class="headerlink" title="네트워크 기초 지식"></a>네트워크 기초 지식</h1><h2 id="네트워크-정의"><a href="#네트워크-정의" class="headerlink" title="네트워크 정의"></a>네트워크 정의</h2><p><span style="background: linen"><strong>네트워크</strong></span> : 컴퓨터와 컴퓨터가 그물망처럼 통신매체로 연결되어서 데이터를 운반</p>
-<h2 id="리소스"><a href="#리소스" class="headerlink" title="리소스"></a>리소스</h2><p><span style="background: linen"><strong>리소스</strong></span> :  컴퓨터 or 사용자가 가진 물리적, 논리적을 따지지 않는 자원</p>
+<h2 id="리소스"><a href="#리소스" class="headerlink" title="리소스"></a>리소스</h2><p><span style="background: linen"><strong>리소스</strong></span> : 컴퓨터 or 사용자가 가진 물리적, 논리적을 따지지 않는 자원</p>
 <h3 id="리소스-공유"><a href="#리소스-공유" class="headerlink" title="리소스 공유"></a>리소스 공유</h3><ul>
 <li>복수의 컴퓨터에서 리소스 공유</li>
 <li>장점<ul>
-<li>한 대의 컴퓨터로 할 수 없었던 일이 가능해진다.<ul>
-<li>프린터 한 대를 여러 대의 PC가 공유한다</li>
-<li>떨어져 있는 사람과 네트워크로 정보를 공유한다.</li>
-</ul>
-</li>
+<li>한 대의 컴퓨터로 할 수 없었던 일이 가능해진다.<br>⎡ 프린터 한 대를 여러 대의 PC가 공유한다<br>⎣ 떨어져 있는 사람과 네트워크로 정보를 공유한다.</li>
 <li>한 곳에 통합할 수 있다. ⇒ 효율적</li>
 </ul>
 </li>
@@ -227,16 +757,111 @@
 <li>컴퓨터 상에서 리소스를 공유하기 위한 정보</li>
 <li>데이터는 비트<span style="color: #669966">bit</span>로 이루어진다.<ul>
 <li><code>0</code> 이나 <code>1</code> 인 상태 유지</li>
-<li>1bit : <code>0</code> , <code>1</code> 의 정보 저장 가능 / 2bit : <code>00</code> , <code>01</code> , <code>10</code> , <code>11</code> 의 정보 저장 가능</li>
-<li>컴퓨터에서는 비트로 모든 정보가 저장된다. </li>
+<li>⎡ 1bit : <code>0</code> , <code>1</code> 의 정보 저장 가능<br>⎣ 2bit : <code>00</code> , <code>01</code> , <code>10</code> , <code>11</code> 의 정보 저장 가능</li>
+<li>컴퓨터에서는 비트로 모든 정보가 저장된다.</li>
 </ul>
 </li>
 </ul>
-<p>데이터 통신 : 네트워크에서 이루어지는 정보를 송수신하는 방법</p>
+<h2 id="데이터-통신"><a href="#데이터-통신" class="headerlink" title="데이터 통신"></a>데이터 통신</h2><ul>
+<li>비트로 만들어진 데이터를 다른 컴퓨터에 보내거나 받는 것</li>
+<li>네트워크를 실행하는 방법</li>
+<li>네트워크에서 이루어지는 정보를 송수신하는 방법</li>
+<li>데이터 통신에 필요한 것<br>⎡ 데이터를 받아들이는 <span style="color: #cc6666">컴퓨터</span><br>⎣ 컴퓨터를 연결하는 <span style="color: #cc6666">통신 매체</span></li>
+</ul>
+<h2 id="인터페이스"><a href="#인터페이스" class="headerlink" title="인터페이스"></a>인터페이스</h2><ul>
+<li>컴퓨터와 통신 매체의 중개를 담당하기 위한 전용 기기 인터페이스</li>
+<li>컴퓨터와 통신 매체를 연결할 때 필요한 접속구</li>
+<li>2개의 서로 다른 시스템 사이에 존재, 정보의 송수신을 중개한다.</li>
+</ul>
+<h2 id="프로토콜"><a href="#프로토콜" class="headerlink" title="프로토콜"></a>프로토콜</h2><ul>
+<li>데이터를 주고 받기 위한 규칙</li>
+<li>데이터를 보내는 쪽과 받는 쪽이 사용하는 규칙을 정한 뒤에 데이터를 주고받아야 한다.<br>→ 보내는 쪽과 받는 쪽이 같은 프로토콜을 사용해야 한다.</li>
+<li>데이터 통신에서 필요한 것을 결정한다.</li>
+</ul>
 <h2 id="회선-교환과-패킷-교환"><a href="#회선-교환과-패킷-교환" class="headerlink" title="회선 교환과 패킷 교환"></a>회선 교환과 패킷 교환</h2><h3 id="회선-교환"><a href="#회선-교환" class="headerlink" title="회선 교환"></a>회선 교환</h3><ul>
 <li>통신 매체를 늘리면 다수의 컴퓨터를 연결할 수 있다.</li>
-<li>교환기를 사용하면 파이프의 수를 줄일 수 있다.</li>
+<li>교환기를 사용하면 파이프(회선)의 수를 줄일 수 있다.</li>
+<li>각각의 컴퓨터는 교환기에만 연결된다.</li>
+<li>다수의 컴퓨터와 접속하고 싶은 경우에도 컴퓨터는 같은 회선을 사용한다.</li>
+<li>교환기와 교환기 사이의 회선을 교체해서 다른 컴퓨터와 접속한다.</li>
+<li>교환기 간의 회선은 많이 만들어둔다.</li>
+<li>회선 교환 : 다른 컴퓨터에 접속하고 싶은 경우에는 교환기가 그 상대와 연결된 교환기에 접속한다.</li>
+<li></li>
 </ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/26/Tech%20Interview/00.tech%20interview/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
+      <meta itemprop="name" content="Bernese-Corgi">
+      <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="녕터디 클럽">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/26/Tech%20Interview/00.tech%20interview/" class="post-title-link" itemprop="url">프론트엔드 개발자 기술 면접 질문 및 답변</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+
+              <time title="Post created: 2021-05-26 15:46:21" itemprop="dateCreated datePublished" datetime="2021-05-26T15:46:21+09:00">2021-05-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Updated at: 2021-05-27 20:06:36" itemprop="dateModified" datetime="2021-05-27T20:06:36+09:00">2021-05-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tech-Interview/" itemprop="url" rel="index"><span itemprop="name">Tech Interview</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>프론트 엔드 개발자 기술 면접 질문 목록</p>
 
       
     </div>
@@ -259,7 +884,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/16/hello/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
       <meta itemprop="name" content="Bernese-Corgi">
       <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
     </span>
@@ -375,13 +1000,27 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Bernese-Corgi"
+      src="/images/bernese_logo_yellow.png">
   <p class="site-author-name" itemprop="name">Bernese-Corgi</p>
   <div class="site-description" itemprop="description">초보 프론트엔드 개발자의 개발 공부 이야기</div>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/bernese-corgi" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;bernese-corgi" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:jnyng0621@gmail.com" title="E-Mail → mailto:jnyng0621@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
       </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
 
     </div>
   </aside>
@@ -445,6 +1084,13 @@
 
 
 
+  
+<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script>
+<script src="/js/algolia-search.js"></script>
+
+
+
 
 
 
@@ -459,6 +1105,16 @@
   
 
   
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'http://example.com/',]
+      });
+      });
+  </script>
 
 </body>
 </html>

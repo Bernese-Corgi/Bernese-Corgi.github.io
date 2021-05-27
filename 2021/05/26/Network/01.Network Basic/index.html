@@ -17,18 +17,18 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="네트워크 기초 지식네트워크 정의네트워크 : 컴퓨터와 컴퓨터가 그물망처럼 통신매체로 연결되어서 데이터를 운반 리소스리소스 :  컴퓨터 or 사용자가 가진 물리적, 논리적을 따지지 않는 자원 리소스 공유 복수의 컴퓨터에서 리소스 공유 장점 한 대의 컴퓨터로 할 수 없었던 일이 가능해진다. 프린터 한 대를 여러 대의 PC가 공유한다 떨어져 있는 사람과 네트워크로">
+  <meta name="description" content="네트워크 기초 지식네트워크 정의네트워크 : 컴퓨터와 컴퓨터가 그물망처럼 통신매체로 연결되어서 데이터를 운반 리소스리소스 : 컴퓨터 or 사용자가 가진 물리적, 논리적을 따지지 않는 자원 리소스 공유 복수의 컴퓨터에서 리소스 공유 장점 한 대의 컴퓨터로 할 수 없었던 일이 가능해진다.⎡ 프린터 한 대를 여러 대의 PC가 공유한다⎣ 떨어져 있는 사람과 네트워크">
 <meta property="og:type" content="article">
 <meta property="og:title" content="네트워크 기초 지식">
 <meta property="og:url" content="http://example.com/2021/05/26/Network/01.Network%20Basic/index.html">
 <meta property="og:site_name" content="녕터디 클럽">
-<meta property="og:description" content="네트워크 기초 지식네트워크 정의네트워크 : 컴퓨터와 컴퓨터가 그물망처럼 통신매체로 연결되어서 데이터를 운반 리소스리소스 :  컴퓨터 or 사용자가 가진 물리적, 논리적을 따지지 않는 자원 리소스 공유 복수의 컴퓨터에서 리소스 공유 장점 한 대의 컴퓨터로 할 수 없었던 일이 가능해진다. 프린터 한 대를 여러 대의 PC가 공유한다 떨어져 있는 사람과 네트워크로">
+<meta property="og:description" content="네트워크 기초 지식네트워크 정의네트워크 : 컴퓨터와 컴퓨터가 그물망처럼 통신매체로 연결되어서 데이터를 운반 리소스리소스 : 컴퓨터 or 사용자가 가진 물리적, 논리적을 따지지 않는 자원 리소스 공유 복수의 컴퓨터에서 리소스 공유 장점 한 대의 컴퓨터로 할 수 없었던 일이 가능해진다.⎡ 프린터 한 대를 여러 대의 PC가 공유한다⎣ 떨어져 있는 사람과 네트워크">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2021-05-26T13:04:35.000Z">
-<meta property="article:modified_time" content="2021-05-26T13:05:40.829Z">
+<meta property="article:modified_time" content="2021-05-27T06:44:17.051Z">
 <meta property="article:author" content="Bernese-Corgi">
 <meta property="article:tag" content="network">
 <meta property="article:tag" content="네트워크">
@@ -125,6 +125,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -137,6 +138,11 @@
         <li class="menu-item menu-item-home">
 
     <a href="/" rel="section"><i class="fa fa-igloo fa-fw"></i>홈</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -154,20 +160,41 @@
     <a href="/archives/" rel="section"><i class="fa fa-book-open fa-fw"></i>Today I Learned</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>검색
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="algolia-results">
+  <div id="algolia-stats"></div>
+  <div id="algolia-hits"></div>
+  <div id="algolia-pagination" class="algolia-pagination"></div>
+</div>
+
+      
+    </div>
+  </div>
 
 </div>
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  <div class="reading-progress-bar"></div>
 
 
     <main class="main">
@@ -185,7 +212,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/26/Network/01.Network%20Basic/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
       <meta itemprop="name" content="Bernese-Corgi">
       <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
     </span>
@@ -204,10 +231,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">작성일</span>
-              
 
-              <time title="Post created: 2021-05-26 22:04:35 / Updated at: 22:05:40" itemprop="dateCreated datePublished" datetime="2021-05-26T22:04:35+09:00">2021-05-26</time>
+              <time title="Post created: 2021-05-26 22:04:35" itemprop="dateCreated datePublished" datetime="2021-05-26T22:04:35+09:00">2021-05-26</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Updated at: 2021-05-27 15:44:17" itemprop="dateModified" datetime="2021-05-27T15:44:17+09:00">2021-05-27</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -230,15 +263,11 @@
 
       
         <h1 id="네트워크-기초-지식"><a href="#네트워크-기초-지식" class="headerlink" title="네트워크 기초 지식"></a>네트워크 기초 지식</h1><h2 id="네트워크-정의"><a href="#네트워크-정의" class="headerlink" title="네트워크 정의"></a>네트워크 정의</h2><p><span style="background: linen"><strong>네트워크</strong></span> : 컴퓨터와 컴퓨터가 그물망처럼 통신매체로 연결되어서 데이터를 운반</p>
-<h2 id="리소스"><a href="#리소스" class="headerlink" title="리소스"></a>리소스</h2><p><span style="background: linen"><strong>리소스</strong></span> :  컴퓨터 or 사용자가 가진 물리적, 논리적을 따지지 않는 자원</p>
+<h2 id="리소스"><a href="#리소스" class="headerlink" title="리소스"></a>리소스</h2><p><span style="background: linen"><strong>리소스</strong></span> : 컴퓨터 or 사용자가 가진 물리적, 논리적을 따지지 않는 자원</p>
 <h3 id="리소스-공유"><a href="#리소스-공유" class="headerlink" title="리소스 공유"></a>리소스 공유</h3><ul>
 <li>복수의 컴퓨터에서 리소스 공유</li>
 <li>장점<ul>
-<li>한 대의 컴퓨터로 할 수 없었던 일이 가능해진다.<ul>
-<li>프린터 한 대를 여러 대의 PC가 공유한다</li>
-<li>떨어져 있는 사람과 네트워크로 정보를 공유한다.</li>
-</ul>
-</li>
+<li>한 대의 컴퓨터로 할 수 없었던 일이 가능해진다.<br>⎡ 프린터 한 대를 여러 대의 PC가 공유한다<br>⎣ 떨어져 있는 사람과 네트워크로 정보를 공유한다.</li>
 <li>한 곳에 통합할 수 있다. ⇒ 효율적</li>
 </ul>
 </li>
@@ -250,15 +279,36 @@
 <li>컴퓨터 상에서 리소스를 공유하기 위한 정보</li>
 <li>데이터는 비트<span style="color: #669966">bit</span>로 이루어진다.<ul>
 <li><code>0</code> 이나 <code>1</code> 인 상태 유지</li>
-<li>1bit : <code>0</code> , <code>1</code> 의 정보 저장 가능 / 2bit : <code>00</code> , <code>01</code> , <code>10</code> , <code>11</code> 의 정보 저장 가능</li>
-<li>컴퓨터에서는 비트로 모든 정보가 저장된다. </li>
+<li>⎡ 1bit : <code>0</code> , <code>1</code> 의 정보 저장 가능<br>⎣ 2bit : <code>00</code> , <code>01</code> , <code>10</code> , <code>11</code> 의 정보 저장 가능</li>
+<li>컴퓨터에서는 비트로 모든 정보가 저장된다.</li>
 </ul>
 </li>
 </ul>
-<p>데이터 통신 : 네트워크에서 이루어지는 정보를 송수신하는 방법</p>
+<h2 id="데이터-통신"><a href="#데이터-통신" class="headerlink" title="데이터 통신"></a>데이터 통신</h2><ul>
+<li>비트로 만들어진 데이터를 다른 컴퓨터에 보내거나 받는 것</li>
+<li>네트워크를 실행하는 방법</li>
+<li>네트워크에서 이루어지는 정보를 송수신하는 방법</li>
+<li>데이터 통신에 필요한 것<br>⎡ 데이터를 받아들이는 <span style="color: #cc6666">컴퓨터</span><br>⎣ 컴퓨터를 연결하는 <span style="color: #cc6666">통신 매체</span></li>
+</ul>
+<h2 id="인터페이스"><a href="#인터페이스" class="headerlink" title="인터페이스"></a>인터페이스</h2><ul>
+<li>컴퓨터와 통신 매체의 중개를 담당하기 위한 전용 기기 인터페이스</li>
+<li>컴퓨터와 통신 매체를 연결할 때 필요한 접속구</li>
+<li>2개의 서로 다른 시스템 사이에 존재, 정보의 송수신을 중개한다.</li>
+</ul>
+<h2 id="프로토콜"><a href="#프로토콜" class="headerlink" title="프로토콜"></a>프로토콜</h2><ul>
+<li>데이터를 주고 받기 위한 규칙</li>
+<li>데이터를 보내는 쪽과 받는 쪽이 사용하는 규칙을 정한 뒤에 데이터를 주고받아야 한다.<br>→ 보내는 쪽과 받는 쪽이 같은 프로토콜을 사용해야 한다.</li>
+<li>데이터 통신에서 필요한 것을 결정한다.</li>
+</ul>
 <h2 id="회선-교환과-패킷-교환"><a href="#회선-교환과-패킷-교환" class="headerlink" title="회선 교환과 패킷 교환"></a>회선 교환과 패킷 교환</h2><h3 id="회선-교환"><a href="#회선-교환" class="headerlink" title="회선 교환"></a>회선 교환</h3><ul>
 <li>통신 매체를 늘리면 다수의 컴퓨터를 연결할 수 있다.</li>
-<li>교환기를 사용하면 파이프의 수를 줄일 수 있다.</li>
+<li>교환기를 사용하면 파이프(회선)의 수를 줄일 수 있다.</li>
+<li>각각의 컴퓨터는 교환기에만 연결된다.</li>
+<li>다수의 컴퓨터와 접속하고 싶은 경우에도 컴퓨터는 같은 회선을 사용한다.</li>
+<li>교환기와 교환기 사이의 회선을 교체해서 다른 컴퓨터와 접속한다.</li>
+<li>교환기 간의 회선은 많이 만들어둔다.</li>
+<li>회선 교환 : 다른 컴퓨터에 접속하고 싶은 경우에는 교환기가 그 상대와 연결된 교환기에 접속한다.</li>
+<li></li>
 </ul>
 
     </div>
@@ -298,10 +348,13 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/10/16/hello/" rel="prev" title="hello">
-      <i class="fa fa-chevron-left"></i> hello
+    <a href="/2021/05/26/Tech%20Interview/00.tech%20interview/" rel="prev" title="프론트엔드 개발자 기술 면접 질문 및 답변">
+      <i class="fa fa-chevron-left"></i> 프론트엔드 개발자 기술 면접 질문 및 답변
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/05/27/Tech%20Interview/01.%EB%B3%80%EC%88%98/" rel="next" title="변수 관련 면접 질문">
+      변수 관련 면접 질문 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -360,19 +413,33 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B8%B0%EC%B4%88-%EC%A7%80%EC%8B%9D"><span class="nav-text">네트워크 기초 지식</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%A0%95%EC%9D%98"><span class="nav-text">네트워크 정의</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%A6%AC%EC%86%8C%EC%8A%A4"><span class="nav-text">리소스</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%A6%AC%EC%86%8C%EC%8A%A4-%EA%B3%B5%EC%9C%A0"><span class="nav-text">리소스 공유</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%8D%B0%EC%9D%B4%ED%84%B0"><span class="nav-text">데이터</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%9A%8C%EC%84%A0-%EA%B5%90%ED%99%98%EA%B3%BC-%ED%8C%A8%ED%82%B7-%EA%B5%90%ED%99%98"><span class="nav-text">회선 교환과 패킷 교환</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%9A%8C%EC%84%A0-%EA%B5%90%ED%99%98"><span class="nav-text">회선 교환</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B8%B0%EC%B4%88-%EC%A7%80%EC%8B%9D"><span class="nav-text">네트워크 기초 지식</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%A0%95%EC%9D%98"><span class="nav-text">네트워크 정의</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%A6%AC%EC%86%8C%EC%8A%A4"><span class="nav-text">리소스</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%A6%AC%EC%86%8C%EC%8A%A4-%EA%B3%B5%EC%9C%A0"><span class="nav-text">리소스 공유</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%8D%B0%EC%9D%B4%ED%84%B0"><span class="nav-text">데이터</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%86%B5%EC%8B%A0"><span class="nav-text">데이터 통신</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4"><span class="nav-text">인터페이스</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C"><span class="nav-text">프로토콜</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%9A%8C%EC%84%A0-%EA%B5%90%ED%99%98%EA%B3%BC-%ED%8C%A8%ED%82%B7-%EA%B5%90%ED%99%98"><span class="nav-text">회선 교환과 패킷 교환</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%9A%8C%EC%84%A0-%EA%B5%90%ED%99%98"><span class="nav-text">회선 교환</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Bernese-Corgi"
+      src="/images/bernese_logo_yellow.png">
   <p class="site-author-name" itemprop="name">Bernese-Corgi</p>
   <div class="site-description" itemprop="description">초보 프론트엔드 개발자의 개발 공부 이야기</div>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/bernese-corgi" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;bernese-corgi" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:jnyng0621@gmail.com" title="E-Mail → mailto:jnyng0621@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
       </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
 
     </div>
   </aside>
@@ -433,6 +500,13 @@
 
   
 
+
+
+
+  
+<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script>
+<script src="/js/algolia-search.js"></script>
 
 
 
