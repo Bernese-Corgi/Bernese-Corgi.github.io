@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"bernese-corgi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="자바스크립트의 순환참조란? 어떤게 문제이고 해결방법은?">
+  <meta name="description" content="변수“호이스팅(Hoisting)”에 대해서 설명하세요.호이스팅이란 런타임 이전에 변수나 함수의 선언문이 먼저 실행되어 선언된 위치에 상관없이 스코프의 최상단으로 끌어올려지는 현상을 말합니다. var로 선언된 변수와 let, const로 선언된 변수가 모두 호이스팅이 발생하지만, 다르게 동작합니다. var로 선언된 선언문는 런타임 이전에 선언 단계와 동시에">
 <meta property="og:type" content="article">
-<meta property="og:title" content="녕터디 클럽">
-<meta property="og:url" content="https://bernese-corgi.github.io/2021/05/27/Tech%20Interview/%EB%AA%A8%EB%93%88/index.html">
+<meta property="og:title" content="변수 관련 면접 질문">
+<meta property="og:url" content="https://bernese-corgi.github.io/2021/05/27/Tech%20Interview/JavaScript/01.%EB%B3%80%EC%88%98/index.html">
 <meta property="og:site_name" content="녕터디 클럽">
-<meta property="og:description" content="자바스크립트의 순환참조란? 어떤게 문제이고 해결방법은?">
+<meta property="og:description" content="변수“호이스팅(Hoisting)”에 대해서 설명하세요.호이스팅이란 런타임 이전에 변수나 함수의 선언문이 먼저 실행되어 선언된 위치에 상관없이 스코프의 최상단으로 끌어올려지는 현상을 말합니다. var로 선언된 변수와 let, const로 선언된 변수가 모두 호이스팅이 발생하지만, 다르게 동작합니다. var로 선언된 선언문는 런타임 이전에 선언 단계와 동시에">
 <meta property="og:locale" content="ko_KR">
-<meta property="article:published_time" content="2021-05-27T08:15:30.564Z">
-<meta property="article:modified_time" content="2021-05-27T08:15:33.912Z">
+<meta property="article:published_time" content="2021-05-27T06:44:42.669Z">
+<meta property="article:modified_time" content="2021-05-27T12:25:05.125Z">
 <meta property="article:author" content="Bernese-Corgi">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://bernese-corgi.github.io/2021/05/27/Tech%20Interview/%EB%AA%A8%EB%93%88/">
+<link rel="canonical" href="https://bernese-corgi.github.io/2021/05/27/Tech%20Interview/JavaScript/01.%EB%B3%80%EC%88%98/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title> | 녕터디 클럽</title>
+  <title>변수 관련 면접 질문 | 녕터디 클럽</title>
   
 
 
@@ -188,7 +188,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://bernese-corgi.github.io/2021/05/27/Tech%20Interview/%EB%AA%A8%EB%93%88/">
+    <link itemprop="mainEntityOfPage" href="https://bernese-corgi.github.io/2021/05/27/Tech%20Interview/JavaScript/01.%EB%B3%80%EC%88%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/bernese_logo_yellow.png">
@@ -201,7 +201,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
+          변수 관련 면접 질문
         </h1>
 
         <div class="post-meta">
@@ -212,7 +212,20 @@
               <span class="post-meta-item-text">작성일</span>
               
 
-              <time title="Post created: 2021-05-27 17:15:30 / Updated at: 17:15:33" itemprop="dateCreated datePublished" datetime="2021-05-27T17:15:30+09:00">2021-05-27</time>
+              <time title="Post created: 2021-05-27 15:44:42 / Updated at: 21:25:05" itemprop="dateCreated datePublished" datetime="2021-05-27T15:44:42+09:00">2021-05-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tech-Interview/" itemprop="url" rel="index"><span itemprop="name">Tech Interview</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tech-Interview/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+                </span>
             </span>
 
           
@@ -226,7 +239,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="자바스크립트의-순환참조란-어떤게-문제이고-해결방법은"><a href="#자바스크립트의-순환참조란-어떤게-문제이고-해결방법은" class="headerlink" title="자바스크립트의 순환참조란? 어떤게 문제이고 해결방법은?"></a>자바스크립트의 순환참조란? 어떤게 문제이고 해결방법은?</h2>
+        <h1 id="변수"><a href="#변수" class="headerlink" title="변수"></a>변수</h1><h2 id="“호이스팅-Hoisting-”에-대해서-설명하세요"><a href="#“호이스팅-Hoisting-”에-대해서-설명하세요" class="headerlink" title="“호이스팅(Hoisting)”에 대해서 설명하세요."></a>“호이스팅(Hoisting)”에 대해서 설명하세요.</h2><p>호이스팅이란 런타임 이전에 변수나 함수의 선언문이 먼저 실행되어 선언된 위치에 상관없이 스코프의 최상단으로 끌어올려지는 현상을 말합니다.</p>
+<p><code>var</code>로 선언된 변수와 let, const로 선언된 변수가 모두 호이스팅이 발생하지만, 다르게 동작합니다.</p>
+<p><code>var</code>로 선언된 선언문는 런타임 이전에 선언 단계와 동시에 암묵적으로 <code>undefined</code>로 초기화 단계가 진행됩니다.</p>
+<p><code>let</code>과 <code>const</code>로 선언된 선언문은 런타임 이전에 선언 단계가 이루어지지만, 선언문을 만나기 전까지는 초기화 단계가 일어나지 않아 TDZ에 갇혀서, 선언문 이전에 참조하게 되는 경우 참조에러가 발생합니다.</p>
+<p>함수 선언문의 경우, <code>function</code> 키워드로 선언한 함수 선언문은 선언과 동시에 함수 객체로 초기화되어 선언문 이전에 해당 함수를 호출할 수 있습니다.</p>
+<h2 id="let-var-const-의-차이점에-대해-설명해주세요"><a href="#let-var-const-의-차이점에-대해-설명해주세요" class="headerlink" title="let, var, const 의 차이점에 대해 설명해주세요."></a>let, var, const 의 차이점에 대해 설명해주세요.</h2><p><code>var</code>, <code>let</code>, <code>const</code>는 모두 변수 선언을 위한 키워드입니다. <span style="color: #cc9999">(공통)</span></p>
+<ul>
+<li><p><code>var</code>는 ES6 이전에 나온 문법이고,<br><code>let</code>, <code>const</code>는 ES6에서 새로 나온 문법입니다.</p>
+</li>
+<li><p><code>var</code>, <code>let</code> 는 재할당이 가능해서 값이 변경될 수 있을 때 사용하고,<br><code>const</code>는 재할당이 금지되어 있는 상수를 선언할 때 사용합니다. <code>const</code>는 선언과 동시에 초기화해야합니다.</p>
+</li>
+<li><p><code>var</code>는 변수 이름을 중복해서 사용할 수 있습니다.<br><code>let</code>, <code>const</code> 는 변수 이름을 중복해서 사용할 수 없습니다.</p>
+</li>
+<li><p><code>var</code>는 함수 레벨 스코프를 가져서 전역 변수가 되는 범위가 커집니다.<br><code>let</code>, <code>const</code>는 블록 레벨 스코프를 가져서 전역 변수의 범위가 좁아집니다.</p>
+</li>
+<li><p><code>var</code> 키워드로 선언한 변수는 전역 객체 <code>window</code>의 프로퍼티가 되어 <code>window.식별자</code>로 접근할 수 있지만,<br><code>let</code>, <code>const</code>로 선언한 변수는 <code>window</code>의 프로퍼티가 되지 않습니다.</p>
+</li>
+<li><p><code>var</code>, <code>let</code>, <code>const</code>는 모두 호이스팅이 발생합니다.<br><code>var</code>는 선언과 초기화가 런타임 이전에 동시에 진행되므로, 선언문 이전에 참조하려 해도 참조 에러를 발생시키지 않고 초기화된 값인 <code>undefined</code>를 출력합니다.<br><code>let</code>, <code>const</code>는 선언은 런타임 이전에, 초기화는 런타임 이후에 변수 선언문을 만났을 때 이루어지므로, 선언문 이전에 참조하려 하면 참조 에러를 발생시킵니다.</p>
+</li>
+<li><p>다만, 재할당 없이 값을 변경할 수 없는 원시값과는 다르게 객체의 경우 재할당이 없어도 값의 변경이 가능하므로 <code>const</code> 키워드로 불변성을 유지할 수 있는 것은 아닙니다.</p>
+</li>
+</ul>
+
     </div>
 
     
@@ -241,12 +276,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/05/27/Tech%20Interview/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98%20%EB%8F%99%EC%9E%91%20%EB%B0%A9%EC%8B%9D/" rel="prev" title="">
-      <i class="fa fa-chevron-left"></i> 
+    <a href="/2021/05/26/Network/01.Network%20Basic/" rel="prev" title="네트워크 기초 지식">
+      <i class="fa fa-chevron-left"></i> 네트워크 기초 지식
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/05/27/Tech%20Interview/test/" rel="next" title="">
-       <i class="fa fa-chevron-right"></i>
+    <a href="/2021/05/27/Tech%20Interview/JavaScript/02.%EB%8D%B0%EC%9D%B4%ED%84%B0%20%ED%83%80%EC%9E%85/" rel="next" title="데이터 타입 관련 면접 질문">
+      데이터 타입 관련 면접 질문 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -306,7 +341,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98-%EC%88%9C%ED%99%98%EC%B0%B8%EC%A1%B0%EB%9E%80-%EC%96%B4%EB%96%A4%EA%B2%8C-%EB%AC%B8%EC%A0%9C%EC%9D%B4%EA%B3%A0-%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95%EC%9D%80"><span class="nav-text">자바스크립트의 순환참조란? 어떤게 문제이고 해결방법은?</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%EB%B3%80%EC%88%98"><span class="nav-text">변수</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%80%9C%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85-Hoisting-%E2%80%9D%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%84%A4%EB%AA%85%ED%95%98%EC%84%B8%EC%9A%94"><span class="nav-text">“호이스팅(Hoisting)”에 대해서 설명하세요.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#let-var-const-%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%97%90-%EB%8C%80%ED%95%B4-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94"><span class="nav-text">let, var, const 의 차이점에 대해 설명해주세요.</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
