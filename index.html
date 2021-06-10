@@ -869,7 +869,7 @@ console.log(y === undefined); // false
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Updated at: 2021-06-01 23:09:07" itemprop="dateModified" datetime="2021-06-01T23:09:07+09:00">2021-06-01</time>
+                <time title="Updated at: 2021-06-10 23:00:44" itemprop="dateModified" datetime="2021-06-10T23:00:44+09:00">2021-06-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1112,14 +1112,28 @@ console.log(y === undefined); // false
 <h2 id="프로토콜-1"><a href="#프로토콜-1" class="headerlink" title="프로토콜"></a>프로토콜</h2><ul>
 <li>데이터 통신에 필요한 프로토콜은 한 개가 아니라 복수의 프로토콜로 이루어진다.</li>
 <li>OSI 참조 모델의 계층마다 각 계층의 역할을 하는 프로토콜이 존재한다.</li>
+</ul>
+<h3 id="인터페이스-구조"><a href="#인터페이스-구조" class="headerlink" title="인터페이스 구조"></a>인터페이스 구조</h3><ul>
+<li>프로토콜과 프로토콜의 중개역을 가리키는 경우도 인터페이스라고 한다.</li>
 <li><strong>인터페이스</strong>는 두가지 의미!<br>⎡ 케이블과 컴퓨터의 중개역<br>⎣ 프로토콜과 프로토콜의 중개역 : 상위 계층 프로토콜이 하위 계층 프로토콜을 이용할 수 있는 구조를 가지고, 하위 계층 프로토콜이 상위 계층 프로토콜에 데이터를 전송할 수 있는 구조</li>
+<li>계층이 독립적이면서도 서로 연결되는 구조를 갖기 위해서 인터페이스 구조가 필요하다.</li>
+<li>인터페이스 구조 : 상, 하위 프로토콜을 연결 1. 상위 계층 프로토콜이 하위 계층 프로토콜을 이용할 수 있음 2. 하위 계층 프로토콜이 상위 계층 프로토콜에 데이터를 전송할 수 있음.</li>
 </ul>
+<img src="https://user-images.githubusercontent.com/72931773/121538091-78996000-ca3f-11eb-93cf-ab5b1abf32ec.png" width="30%">
+
 <h3 id="프로토콜군-Protocol-Suite"><a href="#프로토콜군-Protocol-Suite" class="headerlink" title="프로토콜군 Protocol Suite"></a>프로토콜군 Protocol Suite</h3><ul>
-<li>상위 프로토콜과 하위 프로토콜을 연결하는 인터페이스를 가지고 있으면 7~1계층까지 연결된 프로토콜 그룹이 생긴다.</li>
+<li>프로토콜을 연결하는 인터페이스를 가지고 있으면 7~1 계층까지 연결된 프로토콜 그룹이 생긴다. =&gt; 프로토콜군</li>
 <li>기본적으로 어느 프로토콜군을 사용하는지에 따라 7~1계층까지 사용하는 프로토콜이 정해진다.<br>= 같은 프로토콜군 중에서 계층마다 사용하는 프로토콜이 정해진다.</li>
-<li>데이터 통신은 같은 프로토콜군을 사용하는 컴퓨터나 기기끼리만 가능하다.</li>
+<li>데이터 통신은 <span style="color: #669966">같은 프로토콜군</span>을 사용하는 컴퓨터, 기기끼리만 가능하다.</li>
+<li>TCP/IP가 사실 표준이다.<br>인터넷에서 사용되는 프로토콜군이다.<br>사실표준 : 실제로 제정된 표준 규격은 아니지만 사용 비율이 압도적으로 높아서 표준규격처럼 사용할 수 밖에 없는 상태가 된 것.<br>현재 가장 많이 사용되는 것이 TCP/IP 프로토콜군</li>
 </ul>
-<h3 id="프로토콜의-역할"><a href="#프로토콜의-역할" class="headerlink" title="프로토콜의 역할"></a>프로토콜의 역할</h3>
+<h3 id="프로토콜의-역할"><a href="#프로토콜의-역할" class="headerlink" title="프로토콜의 역할"></a>프로토콜의 역할</h3><p><strong>프로토콜이 결정하는 것</strong></p>
+<ol>
+<li>데이터의 내용을 결정</li>
+<li>어떤 헤더를 붙일지 결정<br>헤더 : 프로토콜이 있는 계층의 역할에 따른 기능이 있고, 그것을 실현하기 위한 정보로서 헤더를 붙인다.<br>헤더의 내용은 프로토콜로 정해져 있다.<br>어떤 헤더를 붙일지는 프로토콜에 따라 각각 다르다.</li>
+<li>데이터를 주고받는 순서를 결정 (송수신의 순서)</li>
+</ol>
+
       
     </div>
 
