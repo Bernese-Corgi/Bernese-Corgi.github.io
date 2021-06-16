@@ -301,10 +301,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">작성일</span>
-              
 
-              <time title="Post created: 2021-05-27 19:39:14 / Updated at: 19:47:42" itemprop="dateCreated datePublished" datetime="2021-05-27T19:39:14+09:00">2021-05-27</time>
+              <time title="Post created: 2021-05-27 19:39:14" itemprop="dateCreated datePublished" datetime="2021-05-27T19:39:14+09:00">2021-05-27</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Updated at: 2021-06-11 04:31:31" itemprop="dateModified" datetime="2021-06-11T04:31:31+09:00">2021-06-11</time>
+              </span>
 
           
 
@@ -317,19 +323,46 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          var x;
-const y = null;
+          Array.prototype.remove = function (item) {
+  const _array = [...this];
 
-console.log(typeof x); // undefined
-console.log(typeof y); // object
+  const index = _array.indexOf(item);
+  if (index !== -1) _array.splice(index, 1);
+  else return _array;
 
-console.log(y === null); // true
-console.log(y === undefined); // false
+  return _array.remove(item);
+};
 
-// console.log(typeof undefined);
-// console.log(typeof null);
+Array.prototype.remove = function (item) {
+  const _array = [...this];
+  while (true) {
+    const index = _array.indexOf(item);
+    if (index !== -1) _array.splice(index, 1);
+    else break;
+  }
 
-// console.log(null === undefined);
+  return _array;
+};
+
+// What if item is a function as filter usercases are
+Array.prototype.remove = function (item) {
+  const res = [];
+  if (typeof item === 'function') {
+    for (let i = 0; i < this.length; i++) {
+      if (item(this[i])) res.push(item);
+    }
+  } else {
+    for (let i = 0; i < this.length; i++) {
+      if (this[i] !== item) res.push(this[i]);
+    }
+    return res;
+  }
+};
+
+const example = [1, 2, 3, 1, 2];
+console.log(example.remove(2));
+console.log(example.remove(1));
+console.log(example);
 
       
     </div>
@@ -869,7 +902,7 @@ console.log(y === undefined); // false
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Updated at: 2021-06-10 23:00:44" itemprop="dateModified" datetime="2021-06-10T23:00:44+09:00">2021-06-10</time>
+                <time title="Updated at: 2021-06-16 23:41:32" itemprop="dateModified" datetime="2021-06-16T23:41:32+09:00">2021-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1125,14 +1158,21 @@ console.log(y === undefined); // false
 <li>프로토콜을 연결하는 인터페이스를 가지고 있으면 7~1 계층까지 연결된 프로토콜 그룹이 생긴다. =&gt; 프로토콜군</li>
 <li>기본적으로 어느 프로토콜군을 사용하는지에 따라 7~1계층까지 사용하는 프로토콜이 정해진다.<br>= 같은 프로토콜군 중에서 계층마다 사용하는 프로토콜이 정해진다.</li>
 <li>데이터 통신은 <span style="color: #669966">같은 프로토콜군</span>을 사용하는 컴퓨터, 기기끼리만 가능하다.</li>
-<li>TCP/IP가 사실 표준이다.<br>인터넷에서 사용되는 프로토콜군이다.<br>사실표준 : 실제로 제정된 표준 규격은 아니지만 사용 비율이 압도적으로 높아서 표준규격처럼 사용할 수 밖에 없는 상태가 된 것.<br>현재 가장 많이 사용되는 것이 TCP/IP 프로토콜군</li>
 </ul>
-<h3 id="프로토콜의-역할"><a href="#프로토콜의-역할" class="headerlink" title="프로토콜의 역할"></a>프로토콜의 역할</h3><p><strong>프로토콜이 결정하는 것</strong></p>
-<ol>
-<li>데이터의 내용을 결정</li>
-<li>어떤 헤더를 붙일지 결정<br>헤더 : 프로토콜이 있는 계층의 역할에 따른 기능이 있고, 그것을 실현하기 위한 정보로서 헤더를 붙인다.<br>헤더의 내용은 프로토콜로 정해져 있다.<br>어떤 헤더를 붙일지는 프로토콜에 따라 각각 다르다.</li>
-<li>데이터를 주고받는 순서를 결정 (송수신의 순서)</li>
-</ol>
+<h3 id="프로토콜의-역할"><a href="#프로토콜의-역할" class="headerlink" title="프로토콜의 역할"></a>프로토콜의 역할</h3><p><span style="background: antiquewhite"><strong>프로토콜이 결정하는 것</strong></span></p>
+<p><strong>① 데이터의 내용을 결정</strong></p>
+<p><strong>② 어떤 헤더를 붙일지 결정</strong></p>
+<ul>
+<li>헤더 : 프로토콜이 있는 계층의 역할에 따른 기능이 있고, 그것을 실현하기 위한 정보로서 헤더를 붙인다.</li>
+<li>헤더의 내용은 프로토콜로 정해져 있다. 어떤 헤더를 붙일지는 프로토콜에 따라 각각 다르다.</li>
+</ul>
+<p><strong>③ 데이터를 주고받는 순서를 결정 (송수신의 순서)</strong></p>
+<h3 id="TCP-IP-프로토콜군"><a href="#TCP-IP-프로토콜군" class="headerlink" title="TCP/IP 프로토콜군"></a>TCP/IP 프로토콜군</h3><ul>
+<li>ISO에서 OSI 참조 모델에 따라서 몇 개의 프로토콜을 제정했으나 실패로 돌아갔다.</li>
+<li>현재 TCP/IP 프로토콜군이 데이터의 통신의 사실표준 프로토콜이 되었다.</li>
+<li>사실표준 : 실제로 제정된 표준 규격은 아니지만 사용 비율이 압도적으로 높아서 표준규격처럼 사용할 수 밖에 없는 상태가 된 것.</li>
+<li>인터넷에서 사용되는 프로토콜군이다.</li>
+</ul>
 
       
     </div>
