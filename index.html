@@ -185,6 +185,173 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://bernese-corgi.github.io/2021/06/19/JavaScript/array/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
+      <meta itemprop="name" content="Bernese-Corgi">
+      <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="녕터디 클럽">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/19/JavaScript/array/" class="post-title-link" itemprop="url">제목 없음</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2021-06-19 01:34:21 / Updated at: 04:19:04" itemprop="dateCreated datePublished" datetime="2021-06-19T01:34:21+09:00">2021-06-19</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://bernese-corgi.github.io/2021/06/19/JavaScript/Array/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
+      <meta itemprop="name" content="Bernese-Corgi">
+      <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="녕터디 클럽">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/19/JavaScript/Array/" class="post-title-link" itemprop="url">배열 (Array)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2021-06-19 01:05:31 / Updated at: 04:55:49" itemprop="dateCreated datePublished" datetime="2021-06-19T01:05:31+09:00">2021-06-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="배열"><a href="#배열" class="headerlink" title="배열"></a>배열</h1><p>배열은 전역 객체로, 배열을 생성할 때 사용하는 리스트 형태의 고수준 객체이다.<br>배열은 프로토타입으로 탐색과 변형 작업을 수행하는 메서드를 가진다.</p>
+<p>자바스크립트에서 배열의 길이와 요소의 자료형은 고정되어 있지 않다.</p>
+<h2 id="배열-요소-참조"><a href="#배열-요소-참조" class="headerlink" title="배열 요소 참조"></a>배열 요소 참조</h2><h3 id="인덱스"><a href="#인덱스" class="headerlink" title="인덱스"></a>인덱스</h3><p>• 인덱스는 객체의 프로퍼티 키와 같은 역할을 한다. ⇒ 인덱스로 값을 참조할 수 있다</p>
+<p>• 자바스크립트의 배열의 인덱스는 0부터 시작한다.<br>⎡ 첫 번째 요소의 인덱스 = <code>0</code><br>⎣ 마지막 요소의 인덱스 = <code>length - 1</code></p>
+<p>• 인덱스는 문자열을 사용할 수 없고, 정수만 허용한다.</p>
+<h3 id="요소"><a href="#요소" class="headerlink" title="요소"></a>요소</h3><h3 id="요소-접근"><a href="#요소-접근" class="headerlink" title="요소 접근"></a>요소 접근</h3><ol>
+<li><p><span style="color: #495F85; font-weight: 700">배열의 요소에 접근할 때는 대괄호 표기법을 사용한다</span><br>• <code>배열리터럴or배열이름[접근할 인덱스]</code><br>• 대괄호 안에 인덱스를 입력한다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruits = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>];</span><br><span class="line"></span><br><span class="line">fruits[<span class="number">0</span>]; <span class="comment">// &#x27;apple&#x27;</span></span><br><span class="line">fruits[<span class="number">1</span>]; <span class="comment">// &#x27;banana&#x27;</span></span><br></pre></td></tr></table></figure>
+<p> <span style="color: gray">왜 대괄호 표기법을 사용해야 할까?</span><br> 자바스크립트 배열의 요소는 프로퍼티의 값 역할을 한다.</p>
+ <img src="https://user-images.githubusercontent.com/72931773/122608079-95283e80-d0b6-11eb-8ea7-a17748b098fc.png" width="40%" style="margin-left: auto; margin-right: auto; display: block"/>
+
+<p> 프로퍼티 키 인덱스는 정수만 가능하므로 문자열 접근 방식인 <code>.</code>으로 접근하면 문법 에러가 발생한다.</p>
+ <img src="https://user-images.githubusercontent.com/72931773/122608105-a5d8b480-d0b6-11eb-8ca0-c331a85a2b77.png" width="60%" style="margin-left: auto; margin-right: auto; display: block"/>
+
+ <br/>
+</li>
+<li><p><span style="color: #495F85; font-weight: 700">정수로 평가되는 표현식이라면 인덱스 대신 사용할 수 있다.</span></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fruits[<span class="number">10</span> - <span class="number">8</span>]; <span class="comment">// &#x27;orange&#x27;</span></span><br></pre></td></tr></table></figure>
+
+ <br/>
+</li>
+<li><p><span style="color: #495F85; font-weight: 700">존재하지 않거나 잘못된 인덱스를 사용하면 <code>undefined</code>를 반환한다.</span><br>배열은 인덱스를 나타내는 문자열을 프로퍼티 키로 갖는 객체라고 볼 수 있다.<br>존재하지 않는 프로퍼티에 접근했을 때 undefined를 반환하는 것처럼 배열 또한 존재하지 않는 요소를 참조하면 undefined를 반환한다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fruits[<span class="string">&#x27;a&#x27;</span>]; <span class="comment">// undefined</span></span><br><span class="line">fruits[<span class="number">4</span>]; <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+
+<p>희소 배열의 존재하지 않는 요소를 참조해도 undefined가 반환된다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sparse = [<span class="number">1</span>, , <span class="number">3</span>];</span><br><span class="line">sparse[<span class="number">1</span>]; <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="length-프로퍼티"><a href="#length-프로퍼티" class="headerlink" title="length 프로퍼티"></a>length 프로퍼티</h2><ul>
+<li><p>배열의 길이를 나타낸다. (배열의 요소 개수)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruits = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>];</span><br><span class="line">fruits.length; <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></li>
+<li><p>요소를 순회할 수 있다 : 배열은 인덱스와 length를 가지기 때문<br><span style="color: #6989bf">▾ for문으로 순회하기</span></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruits = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; fruits.length; i++) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(fruits[i]); <span class="comment">// &#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;orange&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span style="color: #6989bf">▾ forEach 메서드로 순회하기</span></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruits = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>];</span><br><span class="line"></span><br><span class="line">fruits.forEach(<span class="function">(<span class="params">item, index, array</span>) =&gt;</span> <span class="built_in">console</span>.log(item, index)); <span class="comment">// apple 0, banana 1, orange 2</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="배열-생성"><a href="#배열-생성" class="headerlink" title="배열 생성"></a>배열 생성</h2><hr>
+<h2 id="희소-배열"><a href="#희소-배열" class="headerlink" title="희소 배열"></a>희소 배열</h2><p>(희소 배열)<br>배열의 길이는 언제든 늘어나거나 줄어들 수 있기 때문에 자바스크립트의 배열은 밀집도가 보장되지 않는다.<br>이를 보완하려면 typed array를 사용할 수 있다. (형식화 배열)</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
     <link itemprop="mainEntityOfPage" href="https://bernese-corgi.github.io/2021/06/18/Network/02.%20OSI%20%EC%B0%B8%EC%A1%B0%EB%AA%A8%EB%8D%B8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -988,326 +1155,6 @@ console.log(example);
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x;</span><br><span class="line"><span class="keyword">const</span> y = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(y === <span class="literal">null</span>); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(y === <span class="literal">undefined</span>); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="동적-타입-언어와-정적-타입-언어의-차이"><a href="#동적-타입-언어와-정적-타입-언어의-차이" class="headerlink" title="동적 타입 언어와 정적 타입 언어의 차이"></a>동적 타입 언어와 정적 타입 언어의 차이</h2><h2 id="자바스크립트의-자료형에-대해서-설명해주세요"><a href="#자바스크립트의-자료형에-대해서-설명해주세요" class="headerlink" title="자바스크립트의 자료형에 대해서 설명해주세요"></a>자바스크립트의 자료형에 대해서 설명해주세요</h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://bernese-corgi.github.io/2021/05/27/Tech%20Interview/JavaScript/01.%EB%B3%80%EC%88%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
-      <meta itemprop="name" content="Bernese-Corgi">
-      <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="녕터디 클럽">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/05/27/Tech%20Interview/JavaScript/01.%EB%B3%80%EC%88%98/" class="post-title-link" itemprop="url">변수 관련 면접 질문</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">작성일</span>
-              
-
-              <time title="Post created: 2021-05-27 15:44:42 / Updated at: 21:25:05" itemprop="dateCreated datePublished" datetime="2021-05-27T15:44:42+09:00">2021-05-27</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tech-Interview/" itemprop="url" rel="index"><span itemprop="name">Tech Interview</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tech-Interview/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="변수"><a href="#변수" class="headerlink" title="변수"></a>변수</h1><h2 id="“호이스팅-Hoisting-”에-대해서-설명하세요"><a href="#“호이스팅-Hoisting-”에-대해서-설명하세요" class="headerlink" title="“호이스팅(Hoisting)”에 대해서 설명하세요."></a>“호이스팅(Hoisting)”에 대해서 설명하세요.</h2><p>호이스팅이란 런타임 이전에 변수나 함수의 선언문이 먼저 실행되어 선언된 위치에 상관없이 스코프의 최상단으로 끌어올려지는 현상을 말합니다.</p>
-<p><code>var</code>로 선언된 변수와 let, const로 선언된 변수가 모두 호이스팅이 발생하지만, 다르게 동작합니다.</p>
-<p><code>var</code>로 선언된 선언문는 런타임 이전에 선언 단계와 동시에 암묵적으로 <code>undefined</code>로 초기화 단계가 진행됩니다.</p>
-<p><code>let</code>과 <code>const</code>로 선언된 선언문은 런타임 이전에 선언 단계가 이루어지지만, 선언문을 만나기 전까지는 초기화 단계가 일어나지 않아 TDZ에 갇혀서, 선언문 이전에 참조하게 되는 경우 참조에러가 발생합니다.</p>
-<p>함수 선언문의 경우, <code>function</code> 키워드로 선언한 함수 선언문은 선언과 동시에 함수 객체로 초기화되어 선언문 이전에 해당 함수를 호출할 수 있습니다.</p>
-<h2 id="let-var-const-의-차이점에-대해-설명해주세요"><a href="#let-var-const-의-차이점에-대해-설명해주세요" class="headerlink" title="let, var, const 의 차이점에 대해 설명해주세요."></a>let, var, const 의 차이점에 대해 설명해주세요.</h2><p><code>var</code>, <code>let</code>, <code>const</code>는 모두 변수 선언을 위한 키워드입니다. <span style="color: #cc9999">(공통)</span></p>
-<ul>
-<li><p><code>var</code>는 ES6 이전에 나온 문법이고,<br><code>let</code>, <code>const</code>는 ES6에서 새로 나온 문법입니다.</p>
-</li>
-<li><p><code>var</code>, <code>let</code> 는 재할당이 가능해서 값이 변경될 수 있을 때 사용하고,<br><code>const</code>는 재할당이 금지되어 있는 상수를 선언할 때 사용합니다. <code>const</code>는 선언과 동시에 초기화해야합니다.</p>
-</li>
-<li><p><code>var</code>는 변수 이름을 중복해서 사용할 수 있습니다.<br><code>let</code>, <code>const</code> 는 변수 이름을 중복해서 사용할 수 없습니다.</p>
-</li>
-<li><p><code>var</code>는 함수 레벨 스코프를 가져서 전역 변수가 되는 범위가 커집니다.<br><code>let</code>, <code>const</code>는 블록 레벨 스코프를 가져서 전역 변수의 범위가 좁아집니다.</p>
-</li>
-<li><p><code>var</code> 키워드로 선언한 변수는 전역 객체 <code>window</code>의 프로퍼티가 되어 <code>window.식별자</code>로 접근할 수 있지만,<br><code>let</code>, <code>const</code>로 선언한 변수는 <code>window</code>의 프로퍼티가 되지 않습니다.</p>
-</li>
-<li><p><code>var</code>, <code>let</code>, <code>const</code>는 모두 호이스팅이 발생합니다.<br><code>var</code>는 선언과 초기화가 런타임 이전에 동시에 진행되므로, 선언문 이전에 참조하려 해도 참조 에러를 발생시키지 않고 초기화된 값인 <code>undefined</code>를 출력합니다.<br><code>let</code>, <code>const</code>는 선언은 런타임 이전에, 초기화는 런타임 이후에 변수 선언문을 만났을 때 이루어지므로, 선언문 이전에 참조하려 하면 참조 에러를 발생시킵니다.</p>
-</li>
-<li><p>다만, 재할당 없이 값을 변경할 수 없는 원시값과는 다르게 객체의 경우 재할당이 없어도 값의 변경이 가능하므로 <code>const</code> 키워드로 불변성을 유지할 수 있는 것은 아닙니다.</p>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://bernese-corgi.github.io/2021/05/26/Network/01.Network%20Basic/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
-      <meta itemprop="name" content="Bernese-Corgi">
-      <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="녕터디 클럽">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/05/26/Network/01.Network%20Basic/" class="post-title-link" itemprop="url">네트워크의 기초 지식</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">작성일</span>
-
-              <time title="Post created: 2021-05-26 22:04:35" itemprop="dateCreated datePublished" datetime="2021-05-26T22:04:35+09:00">2021-05-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Updated at: 2021-06-18 00:13:52" itemprop="dateModified" datetime="2021-06-18T00:13:52+09:00">2021-06-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Network/" itemprop="url" rel="index"><span itemprop="name">Network</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="네트워크-정의"><a href="#네트워크-정의" class="headerlink" title="네트워크 정의"></a>네트워크 정의</h2><p><span style="background: linen"><strong>네트워크</strong></span> : 컴퓨터와 컴퓨터가 그물망처럼 통신매체로 연결되어서 데이터를 운반</p>
-<img src="https://user-images.githubusercontent.com/72931773/120097704-0ab28600-c16d-11eb-9280-7c54b38ba9af.png" width="70%" />
-
-<h2 id="리소스"><a href="#리소스" class="headerlink" title="리소스"></a>리소스</h2><p><span style="background: linen"><strong>리소스</strong></span> : 컴퓨터 or 사용자가 가진 물리적, 논리적을 따지지 않는 자원</p>
-<h3 id="리소스-공유"><a href="#리소스-공유" class="headerlink" title="리소스 공유"></a>리소스 공유</h3><ul>
-<li>복수의 컴퓨터에서 리소스 공유</li>
-<li>장점<ul>
-<li>한 대의 컴퓨터로 할 수 없었던 일이 가능해진다.<br>⎡ 프린터 한 대를 여러 대의 PC가 공유한다<br>⎣ 떨어져 있는 사람과 네트워크로 정보를 공유한다.</li>
-<li>한 곳에 통합할 수 있다. ⇒ 효율적</li>
-</ul>
-</li>
-<li>리소스를 유용하게 활용하기 위해 리소스를 공유 ⇒ 네트워크의 필요성 (= 리소스를 공유하기 위함)</li>
-<li>리소스 공유 방법 : 데이터 통신으로 컴퓨터가 가진 리소스를 서로 주고 받음으로써 공유한다.</li>
-</ul>
-<h2 id="데이터"><a href="#데이터" class="headerlink" title="데이터"></a>데이터</h2><ul>
-<li>어떤 것에 대한 정보를 컴퓨터 상에서 표현한 것</li>
-<li>컴퓨터 상에서 리소스를 공유하기 위한 정보</li>
-<li>데이터는 비트<span style="color: #669966">bit</span>로 이루어진다.</li>
-<li><code>0</code> 이나 <code>1</code> 인 상태 유지</li>
-<li>⎡ 1bit : <code>0</code> , <code>1</code> 의 정보 저장 가능<br>⎣ 2bit : <code>00</code> , <code>01</code> , <code>10</code> , <code>11</code> 의 정보 저장 가능</li>
-<li>컴퓨터에서는 비트로 모든 정보가 저장된다.</li>
-</ul>
-<h2 id="데이터-통신"><a href="#데이터-통신" class="headerlink" title="데이터 통신"></a>데이터 통신</h2><ul>
-<li>비트로 만들어진 데이터를 다른 컴퓨터에 보내거나 받는 것</li>
-<li>네트워크를 실행하는 방법이라고 할 수 있다.</li>
-<li>네트워크에서 이루어지는 정보를 송수신하는 방법</li>
-<li>데이터 통신에 필요한 것<br>⎡ 데이터를 받아들이는 <span style="color: #cc6666">컴퓨터</span><br>⎣ 컴퓨터를 연결하는 <span style="color: #cc6666">통신 매체</span></li>
-</ul>
-<p><img src="https://user-images.githubusercontent.com/72931773/120097792-6da41d00-c16d-11eb-9aca-73dd9d61a9c5.png" alt="image"></p>
-<h2 id="인터페이스"><a href="#인터페이스" class="headerlink" title="인터페이스"></a>인터페이스</h2><ul>
-<li>컴퓨터와 통신 매체의 중개를 담당하기 위한 전용 기기 인터페이스</li>
-<li>컴퓨터와 통신 매체를 연결할 때 필요한 접속구</li>
-<li>2개의 서로 다른 시스템 사이에 존재, 정보의 송수신을 중개한다.</li>
-</ul>
-<h2 id="프로토콜"><a href="#프로토콜" class="headerlink" title="프로토콜"></a>프로토콜</h2><ul>
-<li>데이터를 주고 받기 위한 규칙</li>
-<li>데이터를 보내는 쪽과 받는 쪽이 사용하는 규칙을 정한 뒤에 데이터를 주고받아야 한다.<br>→ 보내는 쪽과 받는 쪽이 같은 프로토콜을 사용해야 한다.</li>
-<li>데이터 통신에서 필요한 것을 결정한다.</li>
-</ul>
-<img src="https://user-images.githubusercontent.com/72931773/120097923-ff138f00-c16d-11eb-802c-477f92f376ca.png" width="70%" />
-
-<hr>
-<h2 id="회선-교환과-패킷-교환"><a href="#회선-교환과-패킷-교환" class="headerlink" title="회선 교환과 패킷 교환"></a>회선 교환과 패킷 교환</h2><h3 id="회선-교환"><a href="#회선-교환" class="headerlink" title="회선 교환"></a>회선 교환</h3><ul>
-<li>통신 매체를 늘리면 다수의 컴퓨터를 연결할 수 있다.<br><img src="https://user-images.githubusercontent.com/72931773/120098258-d096b380-c16f-11eb-9959-56302e2ab682.png" alt="image"></li>
-<li><span style="background: linen"><strong>교환기</strong></span><br>◦ 교환기를 사용하면 비교적 적은 통신매체를 사용할 수 있다.<br>◦ 각각의 컴퓨터는 교환기에만 연결된다. <span style="color: #aaa">(컴퓨터끼리 연결되지 않는다)</span><br>◦ 다수의 컴퓨터와 접속하고 싶은 경우에도 컴퓨터는 같은 회선<span style="color: #669966">(통신매체)</span>을 사용한다.<br>◦ 교환기와 교환기 사이의 회선을 교체해서 다른 컴퓨터와 접속한다.<br>◦ 교환기 간의 회선은 많이 만들어둔다.</li>
-<li><span style="background: linen"><strong>회선 교환</strong></span><br>◦ 다른 컴퓨터에 접속하고 싶은 경우에는 교환기가 그 상대와 연결된 교환기에 접속한다.<br>⇒ 교환기를 사용해서 통신 매체를 교체해가는 방식</li>
-</ul>
-<h3 id="패킷-교환"><a href="#패킷-교환" class="headerlink" title="패킷 교환"></a>패킷 교환</h3><ul>
-<li><p><strong>패킷</strong><span style="color: #669966">packet</span> : 송신하고 싶은 데이터를 일괄적으로 한번에 보내지 않고 여럿으로 분할해서 송신한다.</p>
-</li>
-<li><p>큰 데이터를 적게 나누어서 송신해서 패킷 1개를 보내는 시간이 짧아진다.<br>= 하나의 패킷이 회선을 점유하는 시간이 짧아진다.<br>⇒ <u style="text-decoration: #999966 underline">복수의 컴퓨터가 회선을 공유할 수 있다.</u></p>
-</li>
-<li><p>패킷 교환은 회선이 1개면 된다.<br>◦ 패킷과 패킷 사이에 다른 패킷을 넣을 수 있다.<br>◦ 그러므로 서로 다른 복수의 패킷이 한 개의 회선을 사용할 수 있다.</p>
-</li>
-<li><p>한 개의 회선에 복수의 컴퓨터가 연결되어 있다.<br>→ 수신처를 각각의 패킷에 붙여야 한다.<br><span style="color: #aaa">(회선 교환에서는 반드시 회선이 연결되어 있는 곳에 연결된다.)</span></p>
-</li>
-<li><p><strong>컴퓨터 네트워크는 패킷 교환 방식을 사용한다.</strong></p>
-</li>
-<li><p><span style="background: linen"><strong>패킷 교환기의 역할</strong></span><br>① 수신처가 연결되어 있는 회선을 골라서 패킷을 송출<br>② 사용하려고 한 회선이 사용중일 경우 일시적으로 저장했다가 회선이 비는 것을 대기</p>
-</li>
-</ul>
-<p><img src="https://user-images.githubusercontent.com/72931773/120101416-f8424780-c180-11eb-826a-ff1800ddcf02.png" alt="image"></p>
-<ul>
-<li><span style="background: gold"><strong>[ 패킷 교환에서 필요한 기기 ]</strong></span><br>① 데이터를 작성해서 송신하는 컴퓨터<br>② 데이터를 수신해서 사용하는 컴퓨터<br>③ 통신 매체<br>④ 인터페이스<br>⑤ 패킷 교환기 (실제 네트워크에서는 <strong>라우터</strong>)</li>
-</ul>
-<h3 id="회선-교환과-패킷-교환의-비교"><a href="#회선-교환과-패킷-교환의-비교" class="headerlink" title="회선 교환과 패킷 교환의 비교"></a>회선 교환과 패킷 교환의 비교</h3><table>
-<thead>
-<tr>
-<th>회선 교환</th>
-<th>패킷 교환</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>동시 통화에 필요한 수 만큼 회선이 필요하다.</td>
-<td>회선이 1개면 된다.</td>
-</tr>
-<tr>
-<td>다수의 컴퓨터가 자유롭게 정보를 송수신하려면 회선 교환 방식으로는 회선의 수가 너무 많이 필요하게 된다.</td>
-<td>복수의 컴퓨터가 회선을 공유할 수 있게 된다.</td>
-</tr>
-<tr>
-<td>반드시 회선이 연결되어 있는 곳에 연결된다.</td>
-<td>한 개의 회선에 복수의 컴퓨터가 연결되어 있어 수신처를 각각의 패킷에 붙여야 한다.</td>
-</tr>
-<tr>
-<td>연결되어 있는 동안에는 확실하게 수신처에 도달하고, 회선을 점유할 수 있다.</td>
-<td>패킷마다 따로 송신하기 때문에 송신 순서를 보장할 수 없다.</td>
-</tr>
-<tr>
-<td>교환기 : 회선을 교체해서 연결</td>
-<td>교환기 : 수신처가 연결되어 있는 회선을 골라서 그곳으로 패킷을 송출하는 역할과, 사용하려고 한 회선이 사용 중일 경우 일시적으로 저장했다가 회선이 비는 것을 기다리는 역할을 한다.</td>
-</tr>
-</tbody></table>
-<h2 id="네트워크의-구조"><a href="#네트워크의-구조" class="headerlink" title="네트워크의 구조"></a>네트워크의 구조</h2><p>네트워크를 구조면에서 분류하면<br>① 멀티액세스 네트워크 ② 포인트 투 포인트 네트워크</p>
-<h3 id="멀티액세스-네트워크"><a href="#멀티액세스-네트워크" class="headerlink" title="멀티액세스 네트워크"></a>멀티액세스 네트워크</h3><ul>
-<li><span style="background: linen"><strong>멀티액세스 네트워크</strong></span><br>◦ 컴퓨터 한 대가 세그먼트 내의 어떤 컴퓨터에도 자유롭게 데이터를 송신할 수 있는 네트워크 구조<br>◦ 복수의 컴퓨터에 의한 데이터 송수신이 가능하다.</li>
-<li><span style="background: linen">액세스</span><br>◦ 컴퓨터가 다른 컴퓨터에 데이터를 송신할 수 있다는 의미</li>
-<li><span style="background: linen">세그먼트 segment</span><br>◦ 패킷 교환 없이 케이블 분배기로 연결되는 범위<br>◦ 세그먼트 범위 내에 있는 컴퓨터는 패킷 교환 없이 직접 데이터를 송수신할 수 있다.</li>
-<li><span style="background: linen">허브 Hub</span><br>◦ 허브를 사용하면 회선 분배가 가능하다.<br>◦ 컴퓨터는 허브에만 회선을 접속한다.</li>
-</ul>
-<img src="https://user-images.githubusercontent.com/72931773/120102799-bbc61a00-c187-11eb-856b-dcb5d90dbea2.png" width="60%"/>
-
-<h3 id="포인트-투-포인트-네트워크"><a href="#포인트-투-포인트-네트워크" class="headerlink" title="포인트 투 포인트 네트워크"></a>포인트 투 포인트 네트워크</h3><ul>
-<li>컴퓨터 한 대가 다른 한 대의 컴퓨터에만 데이터를 보내는 방식</li>
-<li>전용선을 사용하면 고정된 컴퓨터에만 데이터를 보낸다.<br><span style="color: #999966">◦ 전용선 : 고정된 수신처에 접속된 회선</span></li>
-</ul>
-<h3 id="패킷-교환-네트워크-멀티액세스-포인트-투-포인트-네트워크"><a href="#패킷-교환-네트워크-멀티액세스-포인트-투-포인트-네트워크" class="headerlink" title="패킷 교환 네트워크 = 멀티액세스 + 포인트 투 포인트 네트워크"></a>패킷 교환 네트워크 = 멀티액세스 + 포인트 투 포인트 네트워크</h3><ul>
-<li>멀티 액세스 네트워크와 포인트 투 포인트 네트워크를 조합해서 패킷 교환 네트워크가 만들어진다.</li>
-<li>⎡ 컴퓨터 ⟷ 라우터 : 멀티 액세스 네트워크<br>⎣ 라우터 ⟷ 라우터 : 포인트 투 포인트 네트워크</li>
-</ul>
-<img src="https://user-images.githubusercontent.com/72931773/120104468-81f91180-c18f-11eb-8632-f476bb61be8b.png" width="60%"/>
-
-<h2 id="네트워크의-범위"><a href="#네트워크의-범위" class="headerlink" title="네트워크의 범위"></a>네트워크의 범위</h2><p>네트워크를 범위나 규모로 분류하면 <strong>LAN</strong>과 <strong>WAN</strong>으로 분류할 수 있다.</p>
-<h3 id="LAN"><a href="#LAN" class="headerlink" title="LAN"></a>LAN</h3><p>Local Area Network</p>
-<ul>
-<li>비교적 범위가 좁다.</li>
-<li>케이블 설치와 라우터 배치는 사용하는 쪽이 직접 한다.</li>
-<li>사용 요금은 무료.</li>
-<li>통신 속도는 빠른 편이다.</li>
-<li>에러 발생률이 낮다.</li>
-</ul>
-<h3 id="WAN"><a href="#WAN" class="headerlink" title="WAN"></a>WAN</h3><p>Wide Area Network</p>
-<ul>
-<li>데이터 통신 서비스를 제공하는 통신사업자에게 케이블에 데이터를 전송할 권리를 구입해서 네트워크를 구축한다.</li>
-<li>떨어져 있는 지역의 LAN끼리 통신사업자의 통신 케이블을 빌려서 연결한 네트워크이다.</li>
-<li>각 통신사업자의 규모에 따라서 WAN의 크기가 다르다.<br>가장 세계적인 규모는 인터넷이다. (The Internet)</li>
-<li>사용 요금은 유료이다.</li>
-<li>통신 속도는 비교적 저속이고, 또 비교적 에러 발생률이 높지만 통신 사업자 또는 그 계약에 따라 다를 수 있다.</li>
-</ul>
-<p><img src="https://user-images.githubusercontent.com/72931773/120177959-ec6b8980-c243-11eb-95a7-903dceb20d09.png" alt="image"></p>
-<h2 id="네트워크의-형태-요약"><a href="#네트워크의-형태-요약" class="headerlink" title="네트워크의 형태 요약"></a>네트워크의 형태 요약</h2><table>
-<thead>
-<tr>
-<th>항목</th>
-<th>–</th>
-<th>–</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>회선 연결법</td>
-<td>회선을 바꾸어 연결하는 <span style="color: slateblue">회선 교환</span></td>
-<td>패킷을 개별적으로 보내는 <span style="color: slateblue">패킷 교환</span></td>
-</tr>
-<tr>
-<td>회선 분배</td>
-<td>도중에 분배해서 복수로 연결되는 <span style="color: slateblue">멀티 액세스 네트워크</span></td>
-<td>분배하지 않고 1대1로만 연결하는 <span style="color: slateblue">포인트 투 포인트 네트워크</span></td>
-</tr>
-<tr>
-<td>규모와 형태</td>
-<td>자비로 부설하는 구내 한정 네트워크 <span style="color: slateblue">LAN</span></td>
-<td>통신사업자의 통신 서비스를 빌린 광범위 네트워크 <span style="color: slateblue">WAN</span></td>
-</tr>
-</tbody></table>
-
       
     </div>
 
