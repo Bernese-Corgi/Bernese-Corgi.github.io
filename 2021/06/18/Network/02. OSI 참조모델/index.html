@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/bernese_logo_ibory.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/bernese_logo_ibory.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"bernese-corgi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="OSI 참조 모델 데이터 통신에 필요한 것 : 컴퓨터, 통신에 필요한 기기, 프로토콜1960-70년대 업체들 : 자사만의 규격대로 제작 ⇒ 타사와 호환이 되지 않는 문제가 발생→ 데이터 통신, 프로토콜 표준화의 필요성이 대두됐다.→ ISO가 시도했고 실패로 돌아갔으나, OSI 참조 모델을 통해 데이터 통신을 단계별로 설명하는 데에 의의를 세웠다. OSI 참">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OSI 참조 모델">
+<meta property="og:url" content="https://bernese-corgi.github.io/2021/06/18/Network/02.%20OSI%20%EC%B0%B8%EC%A1%B0%EB%AA%A8%EB%8D%B8/index.html">
+<meta property="og:site_name" content="녕터디 클럽">
+<meta property="og:description" content="OSI 참조 모델 데이터 통신에 필요한 것 : 컴퓨터, 통신에 필요한 기기, 프로토콜1960-70년대 업체들 : 자사만의 규격대로 제작 ⇒ 타사와 호환이 되지 않는 문제가 발생→ 데이터 통신, 프로토콜 표준화의 필요성이 대두됐다.→ ISO가 시도했고 실패로 돌아갔으나, OSI 참조 모델을 통해 데이터 통신을 단계별로 설명하는 데에 의의를 세웠다. OSI 참">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://user-images.githubusercontent.com/72931773/120116327-a15d6200-c1c2-11eb-84ee-8a1bf46d6a24.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/72931773/120182175-0491d780-c249-11eb-8fdf-7e0ad7ff77b8.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/72931773/121538091-78996000-ca3f-11eb-93cf-ab5b1abf32ec.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/72931773/122414657-439e8780-cfc2-11eb-9c65-34c42c0a8ead.png">
+<meta property="article:published_time" content="2021-06-17T15:04:56.414Z">
+<meta property="article:modified_time" content="2021-06-17T15:06:51.539Z">
+<meta property="article:author" content="Bernese-Corgi">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/72931773/120116327-a15d6200-c1c2-11eb-84ee-8a1bf46d6a24.png">
+
+<link rel="canonical" href="https://bernese-corgi.github.io/2021/06/18/Network/02.%20OSI%20%EC%B0%B8%EC%A1%B0%EB%AA%A8%EB%8D%B8/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'ko'
+  };
+</script>
+
+  <title>OSI 참조 모델 | 녕터디 클럽</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">녕터디 클럽</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Front-end Study Club</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-igloo fa-fw"></i>홈</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-hashtag fa-fw"></i>태그</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-layer-group fa-fw"></i>카테고리</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-book-open fa-fw"></i>Today I Learned</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>검색
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="algolia-results">
+  <div id="algolia-stats"></div>
+  <div id="algolia-hits"></div>
+  <div id="algolia-pagination" class="algolia-pagination"></div>
+</div>
+
+      
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://bernese-corgi.github.io/2021/06/18/Network/02.%20OSI%20%EC%B0%B8%EC%A1%B0%EB%AA%A8%EB%8D%B8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
+      <meta itemprop="name" content="Bernese-Corgi">
+      <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="녕터디 클럽">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          OSI 참조 모델
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2021-06-18 00:04:56 / Updated at: 00:06:51" itemprop="dateCreated datePublished" datetime="2021-06-18T00:04:56+09:00">2021-06-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Network/" itemprop="url" rel="index"><span itemprop="name">Network</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="OSI-참조-모델"><a href="#OSI-참조-모델" class="headerlink" title="OSI 참조 모델"></a>OSI 참조 모델</h2><ul>
+<li>데이터 통신에 필요한 것 : 컴퓨터, 통신에 필요한 기기, 프로토콜<br>1960-70년대 업체들 : 자사만의 규격대로 제작 ⇒ 타사와 호환이 되지 않는 문제가 발생<br>→ 데이터 통신, 프로토콜 표준화의 필요성이 대두됐다.<br>→ ISO가 시도했고 실패로 돌아갔으나, <strong>OSI 참조 모델</strong>을 통해 <strong>데이터 통신을 단계별로 설명</strong>하는 데에 의의를 세웠다.</li>
+<li>OSI 참조 모델 = 데이터 통신의 단계 구성도 ☞ 데이터 통신 전체의 설계도</li>
+<li>① 각 단계의 순서를 명확히 하고, ② 이 모델을 따라 프로토콜 정의한다.</li>
+</ul>
+<h3 id="계층"><a href="#계층" class="headerlink" title="계층"></a>계층</h3><ul>
+<li><p>데이터 통신을 7개의 단계로 나눈다.</p>
+</li>
+<li><p>각 계층마다 각각의 <strong>역할</strong>과 <strong>규칙</strong>이 있다<br>⇒ 네트워크에 의한 데이터 통신은 단꼐마다 복수의 프로토콜로 실현된다.</p>
+</li>
+<li><p>각 계층은 단계적으로 순서래도 수행한다.<br>⎡ 데이터 송신 측 : 7 → 1계층<br>⎣ 데이터 수신 측 : 1 → 7계층</p>
+</li>
+<li><p>계층의 독립<br>◦ 계층은 각각 독립해 있다.<br>◦ 각 계층에서는 계층의 역할과 프로토콜만 신경쓰면 된다.<br>◦ 어떤 계층의 프로토콜 변경은 다른 계층에 영향을 끼치지 않는다.</p>
+</li>
+<li><p>상위, 하위 계층의 관계<br>◦ 하위 계층은 상위 계층을 위해 일한다.<br>◦ 상위 계층은 하위 계층에 관여하지 않는다.</p>
+<img src="https://user-images.githubusercontent.com/72931773/120116327-a15d6200-c1c2-11eb-84ee-8a1bf46d6a24.png" width="60%" />
+
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>7계층</td>
+<td>응용계층</td>
+<td>사용자에게 네트워크 서비스 제공</td>
+<td>내용표현</td>
+</tr>
+<tr>
+<td>6계층</td>
+<td>표현계층</td>
+<td>데이터의 형식을 결정</td>
+<td>내용표현</td>
+</tr>
+<tr>
+<td>5계층</td>
+<td>세션계층</td>
+<td>데이터 송수신의 순서 등 관리</td>
+<td>내용 표현</td>
+</tr>
+<tr>
+<td>4계층</td>
+<td>전송계층</td>
+<td>신뢰성이 높은<span style="color: #aaa"> (에러가 적은)</span> 전송을 시행</td>
+<td>전송물</td>
+</tr>
+<tr>
+<td>3계층</td>
+<td>네트워크계층</td>
+<td>전송 규칙과 수신처 결정</td>
+<td>전송물</td>
+</tr>
+<tr>
+<td>2계층</td>
+<td>계층</td>
+<td>인접기기 사이의 데이터 전송을 제어</td>
+<td>전송</td>
+</tr>
+<tr>
+<td>1계층</td>
+<td>계층</td>
+<td>전기, 기계적인 부분의 전송을 시행</td>
+<td>전송</td>
+</tr>
+</tbody></table>
+<h2 id="캡슐화"><a href="#캡슐화" class="headerlink" title="캡슐화"></a>캡슐화</h2><h3 id="프로토콜-데이터-유닛-PDU"><a href="#프로토콜-데이터-유닛-PDU" class="headerlink" title="프로토콜 데이터 유닛 PDU"></a>프로토콜 데이터 유닛 PDU</h3><ul>
+<li>데이터를 운반하기 위해서는 데이터 이외에 필요한 것들이 있다<br>◦ 수신처, 송신처의 주소, 데이터 통신을 제어하기 위한 데이터, 각각의 프로토콜에서 필요한 정보 등</li>
+<li>프로토콜 데이터 유닛<span style="color: #669966">(Protocol Data Unit : <strong>PDU</strong>)</span> : 데이터 + 데이터를 보내기 위해 필요한 것들이 통합된 상태</li>
+</ul>
+<h3 id="캡슐화-1"><a href="#캡슐화-1" class="headerlink" title="캡슐화"></a>캡슐화</h3><img src="https://user-images.githubusercontent.com/72931773/120182175-0491d780-c249-11eb-8fdf-7e0ad7ff77b8.png" width="70%" />
+
+<ul>
+<li>데이터는 캡슐화되어 데이터 통신이 된다.</li>
+<li>계층은 단계를 실시할 때마다 필요한 정보를 추가할 수 있다.</li>
+<li>메시지, 세그먼트, 데이터그램 ⇒ 각 계층에서의 PDU 호칭<br>◦ 4계층 PDU = 세그먼트 or 데이터그램 = 4게층의 제어 데이터 + 메시지</li>
+<li>캡슐화 : 데이터에 제어정보를 덧붙여 PDU로 완성하는 것</li>
+<li>⎡ 송신하는 쪽 : 캡슐화<br>⎣ 수신하는 쪽 : 캡슐을 벗긴다.</li>
+<li>⎡ 헤더<span style="color: #669966">Header</span> : 캡슐화에서 앞쪽에 추가되는 제어 데이터<br>⎣ 꼬리부<span style="color: #669966">Trailer</span> : 캡슐화에서 뒤쪽에 추가되는 제어 데이터</li>
+<li>헤더는 그 계층의 프로토콜명이나 계층의 번호를 붙여서 부르기도 한다.<br>ex) “TCP 헤더”, “4계층 헤더”</li>
+</ul>
+<h2 id="프로토콜"><a href="#프로토콜" class="headerlink" title="프로토콜"></a>프로토콜</h2><ul>
+<li>데이터 통신에 필요한 프로토콜은 한 개가 아니라 복수의 프로토콜로 이루어진다.</li>
+<li>OSI 참조 모델의 계층마다 각 계층의 역할을 하는 프로토콜이 존재한다.</li>
+</ul>
+<h3 id="인터페이스-구조"><a href="#인터페이스-구조" class="headerlink" title="인터페이스 구조"></a>인터페이스 구조</h3><ul>
+<li>프로토콜과 프로토콜의 중개역을 가리키는 경우도 인터페이스라고 한다.</li>
+<li><strong>인터페이스</strong>는 두가지 의미!<br>⎡ 케이블과 컴퓨터의 중개역<br>⎣ 프로토콜과 프로토콜의 중개역 : 상위 계층 프로토콜이 하위 계층 프로토콜을 이용할 수 있는 구조를 가지고, 하위 계층 프로토콜이 상위 계층 프로토콜에 데이터를 전송할 수 있는 구조</li>
+<li>계층이 독립적이면서도 서로 연결되는 구조를 갖기 위해서 인터페이스 구조가 필요하다.</li>
+<li>인터페이스 구조 : 상, 하위 프로토콜을 연결 1. 상위 계층 프로토콜이 하위 계층 프로토콜을 이용할 수 있음 2. 하위 계층 프로토콜이 상위 계층 프로토콜에 데이터를 전송할 수 있음.</li>
+</ul>
+<img src="https://user-images.githubusercontent.com/72931773/121538091-78996000-ca3f-11eb-93cf-ab5b1abf32ec.png" width="30%">
+
+<h3 id="프로토콜군-Protocol-Suite"><a href="#프로토콜군-Protocol-Suite" class="headerlink" title="프로토콜군 Protocol Suite"></a>프로토콜군 Protocol Suite</h3><ul>
+<li>프로토콜을 연결하는 인터페이스를 가지고 있으면 7~1 계층까지 연결된 프로토콜 그룹이 생긴다. =&gt; 프로토콜군</li>
+<li>기본적으로 어느 프로토콜군을 사용하는지에 따라 7~1계층까지 사용하는 프로토콜이 정해진다.<br>= 같은 프로토콜군 중에서 계층마다 사용하는 프로토콜이 정해진다.</li>
+<li>데이터 통신은 <span style="color: #669966">같은 프로토콜군</span>을 사용하는 컴퓨터, 기기끼리만 가능하다.</li>
+</ul>
+<h3 id="프로토콜의-역할"><a href="#프로토콜의-역할" class="headerlink" title="프로토콜의 역할"></a>프로토콜의 역할</h3><p><span style="background: antiquewhite"><strong>프로토콜이 결정하는 것</strong></span></p>
+<p><strong>① 데이터의 내용을 결정</strong></p>
+<p><strong>② 어떤 헤더를 붙일지 결정</strong></p>
+<ul>
+<li>헤더 : 프로토콜이 있는 계층의 역할에 따른 기능이 있고, 그것을 실현하기 위한 정보로서 헤더를 붙인다.</li>
+<li>헤더의 내용은 프로토콜로 정해져 있다. 어떤 헤더를 붙일지는 프로토콜에 따라 각각 다르다.</li>
+</ul>
+<p><strong>③ 데이터를 주고받는 순서를 결정 (송수신의 순서)</strong></p>
+<h2 id="TCP-IP-모델"><a href="#TCP-IP-모델" class="headerlink" title="TCP/IP 모델"></a>TCP/IP 모델</h2><ul>
+<li>TCP/IP 모델이 베이스가 되어 TCP/IP 프로토콜군이 만들어졌다.</li>
+<li>TCP/IP 모델은 4계층으로 이루어져 있다.</li>
+<li>OSI 참조 모델과 실제로 관계는 없지만 데이터 통신 관점에서 생각할 때 비슷한 모델이다.</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/72931773/122414657-439e8780-cfc2-11eb-9c65-34c42c0a8ead.png" alt="image"></p>
+<h3 id="TCP-IP-프로토콜군"><a href="#TCP-IP-프로토콜군" class="headerlink" title="TCP/IP 프로토콜군"></a>TCP/IP 프로토콜군</h3><p><u style="text-decoration: #669966 underline"><strong>TCP/IP 프로토콜군이란?</strong></u></p>
+<ul>
+<li>국제인터넷표준화기구<span style="color: #669966">(IETF)</span>가 제정했다.</li>
+<li>IETF에서는 RFC라는 규격 문서를 제정했고, 이 문서에서 TCP/IP 프로토콜군을 규정하고 있다.</li>
+<li>인터넷에서 사용되는 프로토콜군이다.</li>
+<li>프로토콜군의 핵심적인 존재로 사용되는 TCP와 IP 프로토콜의 이름을 따서 명명했다.</li>
+</ul>
+<p><u style="text-decoration: #669966 underline"><strong>TCP/IP 프로토콜군은 사실 표준 프로토콜이다.</strong></u></p>
+<ul>
+<li>ISO에서 OSI 참조 모델에 따라서 몇 개의 프로토콜을 제정했으나 실패로 돌아갔다.</li>
+<li>현재 TCP/IP 프로토콜군이 데이터의 통신의 사실표준 프로토콜이 되었다.</li>
+<li>사실표준 : 실제로 제정된 표준 규격은 아니지만 사용 비율이 압도적으로 높아서 표준규격처럼 사용할 수 밖에 없는 상태가 된 것.</li>
+</ul>
+<p><u style="text-decoration: #669966 underline"><strong>TCP/IP 프로토콜군의 프로토콜</strong></u></p>
+<table>
+<thead>
+<tr>
+<th>계층</th>
+<th>프로토콜</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>4 애플리케이션 계층</td>
+<td>HTTP, FTP, SMTP 등</td>
+</tr>
+<tr>
+<td>3 트랜스포트 계층</td>
+<td><span style="color: #cc6666; font-weight: 700">TCP</span>, UDP</td>
+</tr>
+<tr>
+<td>2 인터넷 계층</td>
+<td><span style="color: #cc6666; font-weight: 700">IP</span>, ARP</td>
+</tr>
+<tr>
+<td>1 인터페이스 계층</td>
+<td>이더넷, 프레임 릴레이, PPP</td>
+</tr>
+</tbody></table>
+<ul>
+<li><span style="color: #555555; font-weight: 700">4계층 : 애플리케이션 계층</span><br>◦ HTTP<span style="color: #669966">(Htper Text Transfer Protocol)</span> : 홈페이지 열람<br>◦ FTP<span style="color: #669966">(File Transfer Protocol)</span> : 파일 전송<br>◦ SMTP<span style="color: #669966">(Simple Mail Transfer Protocol)</span> : 전자메일 송수신</li>
+<li><span style="color: #555555; font-weight: 700">3계층 : 트랜스포트 계층</span><br>◦ <strong>TCP</strong><span style="color: #669966">(Transmission Control Protocol)</span><br>◦ UDP<span style="color: #669966">(User Dalagram Protocol)</span></li>
+<li><span style="color: #555555; font-weight: 700">2계층 : 인터넷 계층</span><br>◦ <strong>IP</strong><span style="color: #669966">(Internet Protocol)</span><br>◦ ARP<span style="color: #669966">(Address Resolution Protocol)</span></li>
+<li><span style="color: #555555; font-weight: 700">1계층 : 인터페이스 계층</span><br>◦ 이더넷<span style="color: #669966">(Ethernet)</span> : 정확하게 말하면 TCP/IP 프로토콜군이 아니라, TCP/IP 프로토콜군이 이들 인터페이스 계층의 프로토콜을 이용할 수 있는 것이다.<br>◦ 프레임 릴레이<span style="color: #669966">(Frame-Relay)</span><br>◦ PPP<span style="color: #669966">(Point-to Point Protocol)</span></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/06/01/JavaScript/OOP,%20FP/" rel="prev" title="함수형 프로그래밍과 객체형 프로그래밍의 비교">
+      <i class="fa fa-chevron-left"></i> 함수형 프로그래밍과 객체형 프로그래밍의 비교
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          목차
+        </li>
+        <li class="sidebar-nav-overview">
+          흝어보기
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#OSI-%EC%B0%B8%EC%A1%B0-%EB%AA%A8%EB%8D%B8"><span class="nav-text">OSI 참조 모델</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EA%B3%84%EC%B8%B5"><span class="nav-text">계층</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%BA%A1%EC%8A%90%ED%99%94"><span class="nav-text">캡슐화</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%9C%A0%EB%8B%9B-PDU"><span class="nav-text">프로토콜 데이터 유닛 PDU</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%BA%A1%EC%8A%90%ED%99%94-1"><span class="nav-text">캡슐화</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C"><span class="nav-text">프로토콜</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4-%EA%B5%AC%EC%A1%B0"><span class="nav-text">인터페이스 구조</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%EA%B5%B0-Protocol-Suite"><span class="nav-text">프로토콜군 Protocol Suite</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%EC%9D%98-%EC%97%AD%ED%95%A0"><span class="nav-text">프로토콜의 역할</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-IP-%EB%AA%A8%EB%8D%B8"><span class="nav-text">TCP&#x2F;IP 모델</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%EA%B5%B0"><span class="nav-text">TCP&#x2F;IP 프로토콜군</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Bernese-Corgi"
+      src="/images/bernese_logo_yellow.png">
+  <p class="site-author-name" itemprop="name">Bernese-Corgi</p>
+  <div class="site-description" itemprop="description">초보 프론트엔드 개발자의 개발 공부 이야기</div>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/bernese-corgi" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;bernese-corgi" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:jnyng0621@gmail.com" title="E-Mail → mailto:jnyng0621@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bernese-Corgi</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script>
+<script src="/js/algolia-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

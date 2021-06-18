@@ -22,7 +22,7 @@
 
   <meta name="description" content="네트워크 정의네트워크 : 컴퓨터와 컴퓨터가 그물망처럼 통신매체로 연결되어서 데이터를 운반   리소스리소스 : 컴퓨터 or 사용자가 가진 물리적, 논리적을 따지지 않는 자원 리소스 공유 복수의 컴퓨터에서 리소스 공유 장점 한 대의 컴퓨터로 할 수 없었던 일이 가능해진다.⎡ 프린터 한 대를 여러 대의 PC가 공유한다⎣ 떨어져 있는 사람과 네트워크로 정보를 공유">
 <meta property="og:type" content="article">
-<meta property="og:title" content="네트워크 기초 지식">
+<meta property="og:title" content="네트워크의 기초 지식">
 <meta property="og:url" content="https://bernese-corgi.github.io/2021/05/26/Network/01.Network%20Basic/index.html">
 <meta property="og:site_name" content="녕터디 클럽">
 <meta property="og:description" content="네트워크 정의네트워크 : 컴퓨터와 컴퓨터가 그물망처럼 통신매체로 연결되어서 데이터를 운반   리소스리소스 : 컴퓨터 or 사용자가 가진 물리적, 논리적을 따지지 않는 자원 리소스 공유 복수의 컴퓨터에서 리소스 공유 장점 한 대의 컴퓨터로 할 수 없었던 일이 가능해진다.⎡ 프린터 한 대를 여러 대의 PC가 공유한다⎣ 떨어져 있는 사람과 네트워크로 정보를 공유">
@@ -35,12 +35,8 @@
 <meta property="og:image" content="https://user-images.githubusercontent.com/72931773/120102799-bbc61a00-c187-11eb-856b-dcb5d90dbea2.png">
 <meta property="og:image" content="https://user-images.githubusercontent.com/72931773/120104468-81f91180-c18f-11eb-8632-f476bb61be8b.png">
 <meta property="og:image" content="https://user-images.githubusercontent.com/72931773/120177959-ec6b8980-c243-11eb-95a7-903dceb20d09.png">
-<meta property="og:image" content="https://user-images.githubusercontent.com/72931773/120116327-a15d6200-c1c2-11eb-84ee-8a1bf46d6a24.png">
-<meta property="og:image" content="https://user-images.githubusercontent.com/72931773/120182175-0491d780-c249-11eb-8fdf-7e0ad7ff77b8.png">
-<meta property="og:image" content="https://user-images.githubusercontent.com/72931773/121538091-78996000-ca3f-11eb-93cf-ab5b1abf32ec.png">
-<meta property="og:image" content="https://user-images.githubusercontent.com/72931773/122414657-439e8780-cfc2-11eb-9c65-34c42c0a8ead.png">
 <meta property="article:published_time" content="2021-05-26T13:04:35.000Z">
-<meta property="article:modified_time" content="2021-06-17T14:58:24.354Z">
+<meta property="article:modified_time" content="2021-06-17T15:13:52.186Z">
 <meta property="article:author" content="Bernese-Corgi">
 <meta property="article:tag" content="network">
 <meta property="article:tag" content="네트워크">
@@ -79,7 +75,7 @@
   };
 </script>
 
-  <title>네트워크 기초 지식 | 녕터디 클럽</title>
+  <title>네트워크의 기초 지식 | 녕터디 클럽</title>
   
 
 
@@ -235,7 +231,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          네트워크 기초 지식
+          네트워크의 기초 지식
         </h1>
 
         <div class="post-meta">
@@ -252,7 +248,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Updated at: 2021-06-17 23:58:24" itemprop="dateModified" datetime="2021-06-17T23:58:24+09:00">2021-06-17</time>
+                <time title="Updated at: 2021-06-18 00:13:52" itemprop="dateModified" datetime="2021-06-18T00:13:52+09:00">2021-06-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -316,6 +312,7 @@
 </ul>
 <img src="https://user-images.githubusercontent.com/72931773/120097923-ff138f00-c16d-11eb-802c-477f92f376ca.png" width="70%" />
 
+<hr>
 <h2 id="회선-교환과-패킷-교환"><a href="#회선-교환과-패킷-교환" class="headerlink" title="회선 교환과 패킷 교환"></a>회선 교환과 패킷 교환</h2><h3 id="회선-교환"><a href="#회선-교환" class="headerlink" title="회선 교환"></a>회선 교환</h3><ul>
 <li>통신 매체를 늘리면 다수의 컴퓨터를 연결할 수 있다.<br><img src="https://user-images.githubusercontent.com/72931773/120098258-d096b380-c16f-11eb-9959-56302e2ab682.png" alt="image"></li>
 <li><span style="background: linen"><strong>교환기</strong></span><br>◦ 교환기를 사용하면 비교적 적은 통신매체를 사용할 수 있다.<br>◦ 각각의 컴퓨터는 교환기에만 연결된다. <span style="color: #aaa">(컴퓨터끼리 연결되지 않는다)</span><br>◦ 다수의 컴퓨터와 접속하고 싶은 경우에도 컴퓨터는 같은 회선<span style="color: #669966">(통신매체)</span>을 사용한다.<br>◦ 교환기와 교환기 사이의 회선을 교체해서 다른 컴퓨터와 접속한다.<br>◦ 교환기 간의 회선은 많이 만들어둔다.</li>
@@ -337,7 +334,7 @@
 </ul>
 <p><img src="https://user-images.githubusercontent.com/72931773/120101416-f8424780-c180-11eb-826a-ff1800ddcf02.png" alt="image"></p>
 <ul>
-<li><span style="background: #ffcc99"><strong>[ 패킷 교환에서 필요한 기기 ]</strong></span><br>① 데이터를 작성해서 송신하는 컴퓨터<br>② 데이터를 수신해서 사용하는 컴퓨터<br>③ 통신 매체<br>④ 인터페이스<br>⑤ 패킷 교환기 (실제 네트워크에서는 <strong>라우터</strong>)</li>
+<li><span style="background: gold"><strong>[ 패킷 교환에서 필요한 기기 ]</strong></span><br>① 데이터를 작성해서 송신하는 컴퓨터<br>② 데이터를 수신해서 사용하는 컴퓨터<br>③ 통신 매체<br>④ 인터페이스<br>⑤ 패킷 교환기 (실제 네트워크에서는 <strong>라우터</strong>)</li>
 </ul>
 <h3 id="회선-교환과-패킷-교환의-비교"><a href="#회선-교환과-패킷-교환의-비교" class="headerlink" title="회선 교환과 패킷 교환의 비교"></a>회선 교환과 패킷 교환의 비교</h3><table>
 <thead>
@@ -404,167 +401,30 @@
 <li>통신 속도는 비교적 저속이고, 또 비교적 에러 발생률이 높지만 통신 사업자 또는 그 계약에 따라 다를 수 있다.</li>
 </ul>
 <p><img src="https://user-images.githubusercontent.com/72931773/120177959-ec6b8980-c243-11eb-95a7-903dceb20d09.png" alt="image"></p>
-<h2 id="OSI-참조-모델"><a href="#OSI-참조-모델" class="headerlink" title="OSI 참조 모델"></a>OSI 참조 모델</h2><ul>
-<li>데이터 통신에 필요한 것 : 컴퓨터, 통신에 필요한 기기, 프로토콜<br>1960-70년대 업체들 : 자사만의 규격대로 제작 ⇒ 타사와 호환이 되지 않는 문제가 발생<br>→ 데이터 통신, 프로토콜 표준화의 필요성이 대두됐다.<br>→ ISO가 시도했고 실패로 돌아갔으나, <strong>OSI 참조 모델</strong>을 통해 <strong>데이터 통신을 단계별로 설명</strong>하는 데에 의의를 세웠다.</li>
-<li>OSI 참조 모델 = 데이터 통신의 단계 구성도 ☞ 데이터 통신 전체의 설계도</li>
-<li>① 각 단계의 순서를 명확히 하고, ② 이 모델을 따라 프로토콜 정의한다.</li>
-</ul>
-<h3 id="계층"><a href="#계층" class="headerlink" title="계층"></a>계층</h3><ul>
-<li><p>데이터 통신을 7개의 단계로 나눈다.</p>
-</li>
-<li><p>각 계층마다 각각의 <strong>역할</strong>과 <strong>규칙</strong>이 있다<br>⇒ 네트워크에 의한 데이터 통신은 단꼐마다 복수의 프로토콜로 실현된다.</p>
-</li>
-<li><p>각 계층은 단계적으로 순서래도 수행한다.<br>⎡ 데이터 송신 측 : 7 → 1계층<br>⎣ 데이터 수신 측 : 1 → 7계층</p>
-</li>
-<li><p>계층의 독립<br>◦ 계층은 각각 독립해 있다.<br>◦ 각 계층에서는 계층의 역할과 프로토콜만 신경쓰면 된다.<br>◦ 어떤 계층의 프로토콜 변경은 다른 계층에 영향을 끼치지 않는다.</p>
-</li>
-<li><p>상위, 하위 계층의 관계<br>◦ 하위 계층은 상위 계층을 위해 일한다.<br>◦ 상위 계층은 하위 계층에 관여하지 않는다.</p>
-<img src="https://user-images.githubusercontent.com/72931773/120116327-a15d6200-c1c2-11eb-84ee-8a1bf46d6a24.png" width="60%" />
-
-</li>
-</ul>
-<table>
+<h2 id="네트워크의-형태-요약"><a href="#네트워크의-형태-요약" class="headerlink" title="네트워크의 형태 요약"></a>네트워크의 형태 요약</h2><table>
 <thead>
 <tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
+<th>항목</th>
+<th>–</th>
+<th>–</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>7계층</td>
-<td>응용계층</td>
-<td>사용자에게 네트워크 서비스 제공</td>
-<td>내용표현</td>
+<td>회선 연결법</td>
+<td>회선을 바꾸어 연결하는 <span style="color: slateblue">회선 교환</span></td>
+<td>패킷을 개별적으로 보내는 <span style="color: slateblue">패킷 교환</span></td>
 </tr>
 <tr>
-<td>6계층</td>
-<td>표현계층</td>
-<td>데이터의 형식을 결정</td>
-<td>내용표현</td>
+<td>회선 분배</td>
+<td>도중에 분배해서 복수로 연결되는 <span style="color: slateblue">멀티 액세스 네트워크</span></td>
+<td>분배하지 않고 1대1로만 연결하는 <span style="color: slateblue">포인트 투 포인트 네트워크</span></td>
 </tr>
 <tr>
-<td>5계층</td>
-<td>세션계층</td>
-<td>데이터 송수신의 순서 등 관리</td>
-<td>내용 표현</td>
-</tr>
-<tr>
-<td>4계층</td>
-<td>전송계층</td>
-<td>신뢰성이 높은<span style="color: #aaa"> (에러가 적은)</span> 전송을 시행</td>
-<td>전송물</td>
-</tr>
-<tr>
-<td>3계층</td>
-<td>네트워크계층</td>
-<td>전송 규칙과 수신처 결정</td>
-<td>전송물</td>
-</tr>
-<tr>
-<td>2계층</td>
-<td>계층</td>
-<td>인접기기 사이의 데이터 전송을 제어</td>
-<td>전송</td>
-</tr>
-<tr>
-<td>1계층</td>
-<td>계층</td>
-<td>전기, 기계적인 부분의 전송을 시행</td>
-<td>전송</td>
+<td>규모와 형태</td>
+<td>자비로 부설하는 구내 한정 네트워크 <span style="color: slateblue">LAN</span></td>
+<td>통신사업자의 통신 서비스를 빌린 광범위 네트워크 <span style="color: slateblue">WAN</span></td>
 </tr>
 </tbody></table>
-<h2 id="캡슐화"><a href="#캡슐화" class="headerlink" title="캡슐화"></a>캡슐화</h2><h3 id="프로토콜-데이터-유닛-PDU"><a href="#프로토콜-데이터-유닛-PDU" class="headerlink" title="프로토콜 데이터 유닛 PDU"></a>프로토콜 데이터 유닛 PDU</h3><ul>
-<li>데이터를 운반하기 위해서는 데이터 이외에 필요한 것들이 있다<br>◦ 수신처, 송신처의 주소, 데이터 통신을 제어하기 위한 데이터, 각각의 프로토콜에서 필요한 정보 등</li>
-<li>프로토콜 데이터 유닛<span style="color: #669966">(Protocol Data Unit : <strong>PDU</strong>)</span> : 데이터 + 데이터를 보내기 위해 필요한 것들이 통합된 상태</li>
-</ul>
-<h3 id="캡슐화-1"><a href="#캡슐화-1" class="headerlink" title="캡슐화"></a>캡슐화</h3><img src="https://user-images.githubusercontent.com/72931773/120182175-0491d780-c249-11eb-8fdf-7e0ad7ff77b8.png" width="70%" />
-
-<ul>
-<li>데이터는 캡슐화되어 데이터 통신이 된다.</li>
-<li>계층은 단계를 실시할 때마다 필요한 정보를 추가할 수 있다.</li>
-<li>메시지, 세그먼트, 데이터그램 ⇒ 각 계층에서의 PDU 호칭<br>◦ 4계층 PDU = 세그먼트 or 데이터그램 = 4게층의 제어 데이터 + 메시지</li>
-<li>캡슐화 : 데이터에 제어정보를 덧붙여 PDU로 완성하는 것</li>
-<li>⎡ 송신하는 쪽 : 캡슐화<br>⎣ 수신하는 쪽 : 캡슐을 벗긴다.</li>
-<li>⎡ 헤더<span style="color: #669966">Header</span> : 캡슐화에서 앞쪽에 추가되는 제어 데이터<br>⎣ 꼬리부<span style="color: #669966">Trailer</span> : 캡슐화에서 뒤쪽에 추가되는 제어 데이터</li>
-<li>헤더는 그 계층의 프로토콜명이나 계층의 번호를 붙여서 부르기도 한다.<br>ex) “TCP 헤더”, “4계층 헤더”</li>
-</ul>
-<h2 id="프로토콜-1"><a href="#프로토콜-1" class="headerlink" title="프로토콜"></a>프로토콜</h2><ul>
-<li>데이터 통신에 필요한 프로토콜은 한 개가 아니라 복수의 프로토콜로 이루어진다.</li>
-<li>OSI 참조 모델의 계층마다 각 계층의 역할을 하는 프로토콜이 존재한다.</li>
-</ul>
-<h3 id="인터페이스-구조"><a href="#인터페이스-구조" class="headerlink" title="인터페이스 구조"></a>인터페이스 구조</h3><ul>
-<li>프로토콜과 프로토콜의 중개역을 가리키는 경우도 인터페이스라고 한다.</li>
-<li><strong>인터페이스</strong>는 두가지 의미!<br>⎡ 케이블과 컴퓨터의 중개역<br>⎣ 프로토콜과 프로토콜의 중개역 : 상위 계층 프로토콜이 하위 계층 프로토콜을 이용할 수 있는 구조를 가지고, 하위 계층 프로토콜이 상위 계층 프로토콜에 데이터를 전송할 수 있는 구조</li>
-<li>계층이 독립적이면서도 서로 연결되는 구조를 갖기 위해서 인터페이스 구조가 필요하다.</li>
-<li>인터페이스 구조 : 상, 하위 프로토콜을 연결 1. 상위 계층 프로토콜이 하위 계층 프로토콜을 이용할 수 있음 2. 하위 계층 프로토콜이 상위 계층 프로토콜에 데이터를 전송할 수 있음.</li>
-</ul>
-<img src="https://user-images.githubusercontent.com/72931773/121538091-78996000-ca3f-11eb-93cf-ab5b1abf32ec.png" width="30%">
-
-<h3 id="프로토콜군-Protocol-Suite"><a href="#프로토콜군-Protocol-Suite" class="headerlink" title="프로토콜군 Protocol Suite"></a>프로토콜군 Protocol Suite</h3><ul>
-<li>프로토콜을 연결하는 인터페이스를 가지고 있으면 7~1 계층까지 연결된 프로토콜 그룹이 생긴다. =&gt; 프로토콜군</li>
-<li>기본적으로 어느 프로토콜군을 사용하는지에 따라 7~1계층까지 사용하는 프로토콜이 정해진다.<br>= 같은 프로토콜군 중에서 계층마다 사용하는 프로토콜이 정해진다.</li>
-<li>데이터 통신은 <span style="color: #669966">같은 프로토콜군</span>을 사용하는 컴퓨터, 기기끼리만 가능하다.</li>
-</ul>
-<h3 id="프로토콜의-역할"><a href="#프로토콜의-역할" class="headerlink" title="프로토콜의 역할"></a>프로토콜의 역할</h3><p><span style="background: antiquewhite"><strong>프로토콜이 결정하는 것</strong></span></p>
-<p><strong>① 데이터의 내용을 결정</strong></p>
-<p><strong>② 어떤 헤더를 붙일지 결정</strong></p>
-<ul>
-<li>헤더 : 프로토콜이 있는 계층의 역할에 따른 기능이 있고, 그것을 실현하기 위한 정보로서 헤더를 붙인다.</li>
-<li>헤더의 내용은 프로토콜로 정해져 있다. 어떤 헤더를 붙일지는 프로토콜에 따라 각각 다르다.</li>
-</ul>
-<p><strong>③ 데이터를 주고받는 순서를 결정 (송수신의 순서)</strong></p>
-<h2 id="TCP-IP-모델"><a href="#TCP-IP-모델" class="headerlink" title="TCP/IP 모델"></a>TCP/IP 모델</h2><ul>
-<li>TCP/IP 모델이 베이스가 되어 TCP/IP 프로토콜군이 만들어졌다.</li>
-<li>TCP/IP 모델은 4계층으로 이루어져 있다.</li>
-<li>OSI 참조 모델과 실제로 관계는 없지만 데이터 통신 관점에서 생각할 때 비슷한 모델이다.</li>
-</ul>
-<p><img src="https://user-images.githubusercontent.com/72931773/122414657-439e8780-cfc2-11eb-9c65-34c42c0a8ead.png" alt="image"></p>
-<h3 id="TCP-IP-프로토콜군"><a href="#TCP-IP-프로토콜군" class="headerlink" title="TCP/IP 프로토콜군"></a>TCP/IP 프로토콜군</h3><p><u style="text-decoration: #669966 underline"><strong>TCP/IP 프로토콜군이란?</strong></u></p>
-<ul>
-<li>국제인터넷표준화기구<span style="color: #669966">(IETF)</span>가 제정했다.</li>
-<li>IETF에서는 RFC라는 규격 문서를 제정했고, 이 문서에서 TCP/IP 프로토콜군을 규정하고 있다.</li>
-<li>인터넷에서 사용되는 프로토콜군이다.</li>
-<li>프로토콜군의 핵심적인 존재로 사용되는 TCP와 IP 프로토콜의 이름을 따서 명명했다.</li>
-</ul>
-<p><u style="text-decoration: #669966 underline"><strong>TCP/IP 프로토콜군은 사실 표준 프로토콜이다.</strong></u></p>
-<ul>
-<li>ISO에서 OSI 참조 모델에 따라서 몇 개의 프로토콜을 제정했으나 실패로 돌아갔다.</li>
-<li>현재 TCP/IP 프로토콜군이 데이터의 통신의 사실표준 프로토콜이 되었다.</li>
-<li>사실표준 : 실제로 제정된 표준 규격은 아니지만 사용 비율이 압도적으로 높아서 표준규격처럼 사용할 수 밖에 없는 상태가 된 것.</li>
-</ul>
-<p><u style="text-decoration: #669966 underline"><strong>TCP/IP 프로토콜군의 프로토콜</strong></u></p>
-<table>
-<thead>
-<tr>
-<th>계층</th>
-<th>프로토콜</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>4 애플리케이션 계층</td>
-<td>HTTP, FTP, SMTP 등</td>
-</tr>
-<tr>
-<td>3 트랜스포트 계층</td>
-<td><span style="color: #cc6666; font-weight: 700">TCP</span>, UDP</td>
-</tr>
-<tr>
-<td>2 인터넷 계층</td>
-<td><span style="color: #cc6666; font-weight: 700">IP</span>, ARP</td>
-</tr>
-<tr>
-<td>1 인터페이스 계층</td>
-<td>이더넷, 프레임 릴레이, PPP</td>
-</tr>
-</tbody></table>
-<ul>
-<li><span style="color: #555555; font-weight: 700">4계층 : 애플리케이션 계층</span><br>◦ HTTP<span style="color: #669966">(Htper Text Transfer Protocol)</span> : 홈페이지 열람<br>◦ FTP<span style="color: #669966">(File Transfer Protocol)</span> : 파일 전송<br>◦ SMTP<span style="color: #669966">(Simple Mail Transfer Protocol)</span> : 전자메일 송수신</li>
-<li><span style="color: #555555; font-weight: 700">3계층 : 트랜스포트 계층</span><br>◦ <strong>TCP</strong><span style="color: #669966">(Transmission Control Protocol)</span><br>◦ UDP<span style="color: #669966">(User Dalagram Protocol)</span></li>
-<li><span style="color: #555555; font-weight: 700">2계층 : 인터넷 계층</span><br>◦ <strong>IP</strong><span style="color: #669966">(Internet Protocol)</span><br>◦ ARP<span style="color: #669966">(Address Resolution Protocol)</span></li>
-<li><span style="color: #555555; font-weight: 700">1계층 : 인터페이스 계층</span><br>◦ 이더넷<span style="color: #669966">(Ethernet)</span> : 정확하게 말하면 TCP/IP 프로토콜군이 아니라, TCP/IP 프로토콜군이 이들 인터페이스 계층의 프로토콜을 이용할 수 있는 것이다.<br>◦ 프레임 릴레이<span style="color: #669966">(Frame-Relay)</span><br>◦ PPP<span style="color: #669966">(Point-to Point Protocol)</span></li>
-</ul>
 
     </div>
 
@@ -668,7 +528,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%A0%95%EC%9D%98"><span class="nav-text">네트워크 정의</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%A6%AC%EC%86%8C%EC%8A%A4"><span class="nav-text">리소스</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%A6%AC%EC%86%8C%EC%8A%A4-%EA%B3%B5%EC%9C%A0"><span class="nav-text">리소스 공유</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%8D%B0%EC%9D%B4%ED%84%B0"><span class="nav-text">데이터</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%86%B5%EC%8B%A0"><span class="nav-text">데이터 통신</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4"><span class="nav-text">인터페이스</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C"><span class="nav-text">프로토콜</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%9A%8C%EC%84%A0-%EA%B5%90%ED%99%98%EA%B3%BC-%ED%8C%A8%ED%82%B7-%EA%B5%90%ED%99%98"><span class="nav-text">회선 교환과 패킷 교환</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%9A%8C%EC%84%A0-%EA%B5%90%ED%99%98"><span class="nav-text">회선 교환</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%8C%A8%ED%82%B7-%EA%B5%90%ED%99%98"><span class="nav-text">패킷 교환</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%9A%8C%EC%84%A0-%EA%B5%90%ED%99%98%EA%B3%BC-%ED%8C%A8%ED%82%B7-%EA%B5%90%ED%99%98%EC%9D%98-%EB%B9%84%EA%B5%90"><span class="nav-text">회선 교환과 패킷 교환의 비교</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%9D%98-%EA%B5%AC%EC%A1%B0"><span class="nav-text">네트워크의 구조</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%A9%80%ED%8B%B0%EC%95%A1%EC%84%B8%EC%8A%A4-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC"><span class="nav-text">멀티액세스 네트워크</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%8F%AC%EC%9D%B8%ED%8A%B8-%ED%88%AC-%ED%8F%AC%EC%9D%B8%ED%8A%B8-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC"><span class="nav-text">포인트 투 포인트 네트워크</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%8C%A8%ED%82%B7-%EA%B5%90%ED%99%98-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%A9%80%ED%8B%B0%EC%95%A1%EC%84%B8%EC%8A%A4-%ED%8F%AC%EC%9D%B8%ED%8A%B8-%ED%88%AC-%ED%8F%AC%EC%9D%B8%ED%8A%B8-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC"><span class="nav-text">패킷 교환 네트워크 &#x3D; 멀티액세스 + 포인트 투 포인트 네트워크</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%9D%98-%EB%B2%94%EC%9C%84"><span class="nav-text">네트워크의 범위</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LAN"><span class="nav-text">LAN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WAN"><span class="nav-text">WAN</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OSI-%EC%B0%B8%EC%A1%B0-%EB%AA%A8%EB%8D%B8"><span class="nav-text">OSI 참조 모델</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EA%B3%84%EC%B8%B5"><span class="nav-text">계층</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%BA%A1%EC%8A%90%ED%99%94"><span class="nav-text">캡슐화</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%9C%A0%EB%8B%9B-PDU"><span class="nav-text">프로토콜 데이터 유닛 PDU</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%BA%A1%EC%8A%90%ED%99%94-1"><span class="nav-text">캡슐화</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C-1"><span class="nav-text">프로토콜</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4-%EA%B5%AC%EC%A1%B0"><span class="nav-text">인터페이스 구조</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%EA%B5%B0-Protocol-Suite"><span class="nav-text">프로토콜군 Protocol Suite</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%EC%9D%98-%EC%97%AD%ED%95%A0"><span class="nav-text">프로토콜의 역할</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-IP-%EB%AA%A8%EB%8D%B8"><span class="nav-text">TCP&#x2F;IP 모델</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%EA%B5%B0"><span class="nav-text">TCP&#x2F;IP 프로토콜군</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%A0%95%EC%9D%98"><span class="nav-text">네트워크 정의</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%A6%AC%EC%86%8C%EC%8A%A4"><span class="nav-text">리소스</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%A6%AC%EC%86%8C%EC%8A%A4-%EA%B3%B5%EC%9C%A0"><span class="nav-text">리소스 공유</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%8D%B0%EC%9D%B4%ED%84%B0"><span class="nav-text">데이터</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%86%B5%EC%8B%A0"><span class="nav-text">데이터 통신</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4"><span class="nav-text">인터페이스</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C"><span class="nav-text">프로토콜</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%9A%8C%EC%84%A0-%EA%B5%90%ED%99%98%EA%B3%BC-%ED%8C%A8%ED%82%B7-%EA%B5%90%ED%99%98"><span class="nav-text">회선 교환과 패킷 교환</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%9A%8C%EC%84%A0-%EA%B5%90%ED%99%98"><span class="nav-text">회선 교환</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%8C%A8%ED%82%B7-%EA%B5%90%ED%99%98"><span class="nav-text">패킷 교환</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%9A%8C%EC%84%A0-%EA%B5%90%ED%99%98%EA%B3%BC-%ED%8C%A8%ED%82%B7-%EA%B5%90%ED%99%98%EC%9D%98-%EB%B9%84%EA%B5%90"><span class="nav-text">회선 교환과 패킷 교환의 비교</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%9D%98-%EA%B5%AC%EC%A1%B0"><span class="nav-text">네트워크의 구조</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%A9%80%ED%8B%B0%EC%95%A1%EC%84%B8%EC%8A%A4-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC"><span class="nav-text">멀티액세스 네트워크</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%8F%AC%EC%9D%B8%ED%8A%B8-%ED%88%AC-%ED%8F%AC%EC%9D%B8%ED%8A%B8-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC"><span class="nav-text">포인트 투 포인트 네트워크</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%8C%A8%ED%82%B7-%EA%B5%90%ED%99%98-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%A9%80%ED%8B%B0%EC%95%A1%EC%84%B8%EC%8A%A4-%ED%8F%AC%EC%9D%B8%ED%8A%B8-%ED%88%AC-%ED%8F%AC%EC%9D%B8%ED%8A%B8-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC"><span class="nav-text">패킷 교환 네트워크 &#x3D; 멀티액세스 + 포인트 투 포인트 네트워크</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%9D%98-%EB%B2%94%EC%9C%84"><span class="nav-text">네트워크의 범위</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LAN"><span class="nav-text">LAN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WAN"><span class="nav-text">WAN</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%9D%98-%ED%98%95%ED%83%9C-%EC%9A%94%EC%95%BD"><span class="nav-text">네트워크의 형태 요약</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
