@@ -208,10 +208,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">작성일</span>
-              
 
-              <time title="Post created: 2021-06-19 01:34:21 / Updated at: 04:19:04" itemprop="dateCreated datePublished" datetime="2021-06-19T01:34:21+09:00">2021-06-19</time>
+              <time title="Post created: 2021-06-19 01:34:21" itemprop="dateCreated datePublished" datetime="2021-06-19T01:34:21+09:00">2021-06-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Updated at: 2021-06-21 05:44:02" itemprop="dateModified" datetime="2021-06-21T05:44:02+09:00">2021-06-21</time>
+              </span>
 
           
 
@@ -224,7 +230,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          function printEntries(arr) {
+  const length = arr.length;
+  for (let i = 0; i < length; i++) {
+    console.log(arr[i]);
+  }
+  console.log('===printed===');
+}
+
+const arr = [1, 2, 3];
+printEntries(arr);
+
+arr.length = 5;
+printEntries(arr);
+
       
     </div>
 
@@ -266,10 +285,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">작성일</span>
-              
 
-              <time title="Post created: 2021-06-19 01:05:31 / Updated at: 04:55:49" itemprop="dateCreated datePublished" datetime="2021-06-19T01:05:31+09:00">2021-06-19</time>
+              <time title="Post created: 2021-06-19 01:05:31" itemprop="dateCreated datePublished" datetime="2021-06-19T01:05:31+09:00">2021-06-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Updated at: 2021-06-21 05:59:38" itemprop="dateModified" datetime="2021-06-21T05:59:38+09:00">2021-06-21</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -291,7 +316,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="배열"><a href="#배열" class="headerlink" title="배열"></a>배열</h1><p>배열은 전역 객체로, 배열을 생성할 때 사용하는 리스트 형태의 고수준 객체이다.<br>배열은 프로토타입으로 탐색과 변형 작업을 수행하는 메서드를 가진다.</p>
+          <h1 id="배열"><a href="#배열" class="headerlink" title="배열"></a>배열</h1><p>배열은 전역 객체로, 배열을 생성할 때 사용하는 리스트 형태의 고수준 객체이다.</p>
+<p>자바스크립트 배열의 타입은 object이다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [];</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> arr); <span class="comment">// object</span></span><br></pre></td></tr></table></figure>
+
+<p>배열은 프로토타입으로 탐색과 변형 작업을 수행하는 메서드를 가진다.<br>  ⎡ 배열의 생성자 함수 : Array<br>  ⎣ 배열의 프로토타입 객체 : Array.prototype</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Array : 배열의 생성자 함수</span></span><br><span class="line"><span class="built_in">console</span>.log(arr.constructor); <span class="comment">// [Function: Array]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Array.prototype : 배열의 프로토타입 객체</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getPrototypeof(arr) === <span class="built_in">Array</span>.prototype); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
 <p>자바스크립트에서 배열의 길이와 요소의 자료형은 고정되어 있지 않다.</p>
 <h2 id="배열-요소-참조"><a href="#배열-요소-참조" class="headerlink" title="배열 요소 참조"></a>배열 요소 참조</h2><h3 id="인덱스"><a href="#인덱스" class="headerlink" title="인덱스"></a>인덱스</h3><p>• 인덱스는 객체의 프로퍼티 키와 같은 역할을 한다. ⇒ 인덱스로 값을 참조할 수 있다</p>
 <p>• 자바스크립트의 배열의 인덱스는 0부터 시작한다.<br>⎡ 첫 번째 요소의 인덱스 = <code>0</code><br>⎣ 마지막 요소의 인덱스 = <code>length - 1</code></p>
@@ -320,9 +351,42 @@
 
 </li>
 </ol>
-<h2 id="length-프로퍼티"><a href="#length-프로퍼티" class="headerlink" title="length 프로퍼티"></a>length 프로퍼티</h2><ul>
-<li><p>배열의 길이를 나타낸다. (배열의 요소 개수)</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruits = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>];</span><br><span class="line">fruits.length; <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></li>
+<h2 id="length-프로퍼티"><a href="#length-프로퍼티" class="headerlink" title="length 프로퍼티"></a>length 프로퍼티</h2><p>Array 인스턴스의 length 속성은 배열의 길이를 반환한다. (배열의 길이 = 배열의 요소 개수)<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruits = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>];</span><br><span class="line">fruits.length; <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
+<p>반환값</p>
+<ul>
+<li>부호 없는 32비트 정수형</li>
+<li>양의 정수 (0 이상의 정수)</li>
+<li>2^32^ 미만의 값을 가진다.</li>
+<li>배열의 최대 인덱스보다 항상 크다.</li>
+</ul>
+<p>length 속성에 값을 설정할 경우 배열의 길이를 변경한다.</p>
+<p>빈 배열인 경우 0을 반환한다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[].length <span class="comment">// ⇒ 0</span></span><br></pre></td></tr></table></figure>
+
+<p>배열 요소를 추가, 삭제하면 자동으로 업데이트 된다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr.length); <span class="comment">// 5</span></span><br><span class="line"></span><br><span class="line">arr.push(<span class="number">6</span>);</span><br><span class="line"><span class="built_in">console</span>.log(arr.length); <span class="comment">// 6</span></span><br><span class="line"></span><br><span class="line">arr.pop();</span><br><span class="line"><span class="built_in">console</span>.log(arr.length); <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
+
+<p>length 프로퍼티 값에 임의의 숫자 값을 명시적으로 할당할 수 있다.</p>
+<p>① 현재 length 값보다 작은 숫자값을 할당할 때</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line">arr.length = <span class="number">3</span>;</span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// [ 1, 2, 3 ]</span></span><br></pre></td></tr></table></figure>
+<p>할당한 숫자값 만큼 배열이 절단되어 갱신된다.</p>
+<p>② 현재 length 값보다 큰 숫자값을 할당할 때</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">arr.length = <span class="number">6</span>;</span><br></pre></td></tr></table></figure>
+
+<p>length 프로퍼티 값은 변경된다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(arr.length); <span class="comment">// 6</span></span><br></pre></td></tr></table></figure>
+
+<p>실제로 배열의 길이가 늘어나지 않는다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// empty items는 실제 배열의 요소가 아니다.</span></span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// [ 1, 2, 3, &lt;3 empty items&gt; ]</span></span><br></pre></td></tr></table></figure>
+
+<p>값 없이 비어 잇는 요소를 위해 메모리 공간을 확보하지 않고, 빈 요소를 생성하지 않는다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getOwnPropertyDescriptors(arr));</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">&#123;</span></span><br><span class="line"><span class="comment">  &#x27;0&#x27;: &#123; value: 1, writable: true, enumerable: true, configurable: true &#125;,</span></span><br><span class="line"><span class="comment">  &#x27;1&#x27;: &#123; value: 2, writable: true, enumerable: true, configurable: true &#125;,</span></span><br><span class="line"><span class="comment">  &#x27;2&#x27;: &#123; value: 3, writable: true, enumerable: true, configurable: true &#125;,</span></span><br><span class="line"><span class="comment">  length: &#123; value: 6, writable: true, enumerable: false, configurable: false &#125;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<p>/—</p>
+<ul>
 <li><p>요소를 순회할 수 있다 : 배열은 인덱스와 length를 가지기 때문<br><span style="color: #6989bf">▾ for문으로 순회하기</span></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruits = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; fruits.length; i++) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(fruits[i]); <span class="comment">// &#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;orange&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -333,6 +397,11 @@
 </ul>
 <h2 id="배열-생성"><a href="#배열-생성" class="headerlink" title="배열 생성"></a>배열 생성</h2><hr>
 <h2 id="희소-배열"><a href="#희소-배열" class="headerlink" title="희소 배열"></a>희소 배열</h2><p>(희소 배열)<br>배열의 길이는 언제든 늘어나거나 줄어들 수 있기 때문에 자바스크립트의 배열은 밀집도가 보장되지 않는다.<br>이를 보완하려면 typed array를 사용할 수 있다. (형식화 배열)</p>
+<h2 id="배열과-객체의-성능-비교"><a href="#배열과-객체의-성능-비교" class="headerlink" title="배열과 객체의 성능 비교"></a>배열과 객체의 성능 비교</h2><p>배열이 일반 객체보다 요소에 접근하는 속도가 빠르다.</p>
+<ol>
+<li>배열의 성능<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arrPerf = [];</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.time(<span class="string">&#x27;Array Perfomance Test&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10000000</span>; i++) &#123;</span><br><span class="line"> arrPerf[i] = i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">&#x27;Array Perfomance Test&#x27;</span>); <span class="comment">// Array Perfomance Test: 313.178ms</span></span><br></pre></td></tr></table></figure></li>
+<li>객체의 성능<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> objPerf = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.time(<span class="string">&#x27;Object Perfomance Test&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10000000</span>; i++) &#123;</span><br><span class="line">  objPerf[i] = i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">&#x27;Object Perfomance Test&#x27;</span>); <span class="comment">// Object Perfomance Test: 518.416ms</span></span><br></pre></td></tr></table></figure></li>
+</ol>
 
       
     </div>
