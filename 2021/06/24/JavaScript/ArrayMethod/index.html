@@ -28,7 +28,7 @@
 <meta property="og:description" content="배열 메서드배열 메서드 개요Array &#x2F; Array.prototype자바스크립트는 다양한 배열 빌트인 메서드를 제공한다. ① Array 생성자 함수 : 정적 메서드 제공 ② Array.prototype : 프로토타입 메서드를 제공 mutator &#x2F; accessor1const arrOrigin &#x3D; [1];   mutator • 원본 배열을 직접 변경하는 메서">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2021-06-24T14:28:16.428Z">
-<meta property="article:modified_time" content="2021-06-24T14:38:51.575Z">
+<meta property="article:modified_time" content="2021-06-24T14:49:35.737Z">
 <meta property="article:author" content="Bernese-Corgi">
 <meta name="twitter:card" content="summary">
 
@@ -212,7 +212,7 @@
               <span class="post-meta-item-text">작성일</span>
               
 
-              <time title="Post created: 2021-06-24 23:28:16 / Updated at: 23:38:51" itemprop="dateCreated datePublished" datetime="2021-06-24T23:28:16+09:00">2021-06-24</time>
+              <time title="Post created: 2021-06-24 23:28:16 / Updated at: 23:49:35" itemprop="dateCreated datePublished" datetime="2021-06-24T23:28:16+09:00">2021-06-24</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -255,7 +255,7 @@
 <li>배열 메서드를 호출한 배열.</li>
 <li>배열 메서드의 구현체 내부에서 this가 가리키는 객체</li>
 </ul>
-<h2 id="배열-메서드-1"><a href="#배열-메서드-1" class="headerlink" title="배열 메서드"></a>배열 메서드</h2><p><code>Array.isArray</code></p>
+<h2 id="배열-메서드-1"><a href="#배열-메서드-1" class="headerlink" title="배열 메서드"></a>배열 메서드</h2><p><span style="color: #495F85; font-weight: 700; font-size: 1.2em">Array.isArray</span></p>
 <ul>
 <li><p>Array 생성자 함수의 정적 메서드</p>
 </li>
@@ -263,9 +263,9 @@
 </li>
 <li><p><code>Array.isArray(배열인지 판명할 것);</code> =&gt; <code>true</code> or <code>false</code></p>
 </li>
-<li><p>인수 : 배열인지 아닌지 판단할 것</p>
+<li><p><strong>인수</strong> : 배열인지 아닌지 판단할 것</p>
 </li>
-<li><p>반환 : boolean. 인수가 배열이면 true, 배열이 아니면 false<br>① true</p>
+<li><p><strong>반환값</strong> : boolean. 인수가 배열이면 true, 배열이 아니면 false<br>① true</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.isArray([]); <span class="comment">// ⇒ true</span></span><br><span class="line"><span class="built_in">Array</span>.isArray([<span class="number">1</span>, <span class="number">2</span>]); <span class="comment">// ⇒ true</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(<span class="keyword">new</span> <span class="built_in">Array</span>()); <span class="comment">// ⇒ true</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(<span class="built_in">Array</span>.of()); <span class="comment">// ⇒ true</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(<span class="built_in">Array</span>.from(&#123; <span class="attr">length</span>: <span class="number">2</span> &#125;)); <span class="comment">// ⇒ true</span></span><br></pre></td></tr></table></figure>
 
 <p>② false</p>
@@ -273,16 +273,30 @@
 
 </li>
 </ul>
-<p>// 2. Array.prototype.indexOf : 원본 배열에서 요소를 검색하여 인덱스를 반환한다.<br>// Array.prototype.indexOf(배열에서 찾을 요소[, 검색을 시작할 인덱스]) // =&gt; 검색한 요소에 해당하는 인덱스 or -1<br>// 인수 : (배열에서 찾을 요소[, 검색을 시작할 인덱스])<br>// 반환값 : 검색한 요소에 해당하는 인덱스 or -1<br>const arrIndexOf = [1, 2, 2, 3];</p>
-<p>// ① 중복되는 요소가 여러 개 있어도 첫번째로 검색된 요소의 인덱스 하나만 반환한다.<br>console.log(arrIndexOf.indexOf(2)); // 1</p>
-<p>// ② 요소가 존재하지 않으면 -1을 반환한다.<br>console.log(arrIndexOf.indexOf(4)); // -1</p>
-<p>// ③ 두번째 인수로 검색을 시작할 인덱스를 전달할 수 있다.<br>console.log(arrOrigin.indexOf(2, 2));<br>// - 생략할 경우 처음부터 검색한다.</p>
-<p>// ④ indexOf는 배열에 특정 요소가 존재하는지 확인할 때 유용하다.<br>const beasts = [‘ant’, ‘bison’, ‘camel’, ‘duck’, ‘bison’];</p>
-<p>// beasts.indexOf(‘crocodile’)이 -1로 평가되면 요소 crocodile이 존재하지 않는 것이다.<br>if (beasts.indexOf(‘crocodile’) === -1) {<br>// beasts 배열에 ‘crocodile’ 요소가 존재하지 않으면 추가한다.<br>beasts.push(‘crocodile’);<br>}</p>
-<p>console.log(beasts); // [ ‘ant’, ‘bison’, ‘camel’, ‘duck’, ‘bison’, ‘crocodile’ ]</p>
-<p>// ⑤ Array.prototype.includes 메서드로 대체할 수 있다.</p>
-<p>// (!beasts.includes(‘owl’))이 true로 평가되면 요소 owl이 존재하지 않는 것이다.<br>if (!beasts.includes(‘owl’)) {<br>// beasts 배열에 ‘owl’ 요소가 존재하지 않으면 추가한다.<br>beasts.push(‘owl’);<br>}</p>
-<p>console.log(beasts); // [ ‘ant’, ‘bison’, ‘camel’, ‘duck’, ‘bison’, ‘crocodile’ ]</p>
+<p><span style="color: #495F85; font-weight: 700; font-size: 1.2em">Array.prototype.indexOf</span></p>
+<ul>
+<li>원본 배열에서 요소를 검색하여 인덱스를 반환한다.</li>
+<li><code>Array.prototype.indexOf(배열에서 찾을 요소[, 검색을 시작할 인덱스])</code><br>⇒ 검색한 요소에 해당하는 인덱스 or -1</li>
+<li><strong>인수</strong> : (배열에서 찾을 요소[, 검색을 시작할 인덱스])</li>
+<li><strong>반환값</strong> : 검색한 요소에 해당하는 인덱스 or -1</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arrIndexOf = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br></pre></td></tr></table></figure>
+
+<p>① 중복되는 요소가 여러 개 있어도 첫번째로 검색된 요소의 인덱스 하나만 반환한다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arrIndexOf.indexOf(<span class="number">2</span>); <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+
+<p>② 요소가 존재하지 않으면 -1을 반환한다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arrIndexOf.indexOf(<span class="number">4</span>); <span class="comment">// -1</span></span><br></pre></td></tr></table></figure>
+
+<p>③ 두번째 인수로 검색을 시작할 인덱스를 전달할 수 있다. 생략할 경우 처음부터 검색한다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arrIndexOf.indexOf(<span class="number">2</span>, <span class="number">2</span>); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+
+<p>④ indexOf는 배열에 특정 요소가 존재하는지 확인할 때 유용하다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> beasts = [<span class="string">&#x27;ant&#x27;</span>, <span class="string">&#x27;bison&#x27;</span>, <span class="string">&#x27;camel&#x27;</span>, <span class="string">&#x27;duck&#x27;</span>, <span class="string">&#x27;bison&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// beasts.indexOf(&#x27;crocodile&#x27;)이 -1로 평가되면 요소 crocodile이 존재하지 않는 것이다.</span></span><br><span class="line"><span class="keyword">if</span> (beasts.indexOf(<span class="string">&#x27;crocodile&#x27;</span>) === <span class="number">-1</span>) &#123;</span><br><span class="line">  <span class="comment">// beasts 배열에 &#x27;crocodile&#x27; 요소가 존재하지 않으면 추가한다.</span></span><br><span class="line">  beasts.push(<span class="string">&#x27;crocodile&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(beasts); <span class="comment">// [ &#x27;ant&#x27;, &#x27;bison&#x27;, &#x27;camel&#x27;, &#x27;duck&#x27;, &#x27;bison&#x27;, &#x27;crocodile&#x27; ]</span></span><br></pre></td></tr></table></figure>
+
+<p>⑤ Array.prototype.includes 메서드로 대체할 수 있다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// (!beasts.includes(&#x27;owl&#x27;))이 true로 평가되면 요소 owl이 존재하지 않는 것이다.</span></span><br><span class="line"><span class="keyword">if</span> (!beasts.includes(<span class="string">&#x27;owl&#x27;</span>)) &#123;</span><br><span class="line">  <span class="comment">// beasts 배열에 &#x27;owl&#x27; 요소가 존재하지 않으면 추가한다.</span></span><br><span class="line">  beasts.push(<span class="string">&#x27;owl&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(beasts); <span class="comment">// [ &#x27;ant&#x27;, &#x27;bison&#x27;, &#x27;camel&#x27;, &#x27;duck&#x27;, &#x27;bison&#x27;, &#x27;crocodile&#x27; ]</span></span><br></pre></td></tr></table></figure>
+
 <p>// 3. Array.prototype.push : 배열의 끝에 하나 이상의 요소를 추가하고, 배열의 새로운 길이를 반환한다.<br>// 인수 : (배열의 끝에 추가할 요소[, … [, 배열의 끝에 추가할 요소]])<br>// 반환 값 : 변경된 배열의 새로운 length 속성<br>// mutator. 원본 배열을 직접 변경한다.<br>const arrPush = [‘pigs’, ‘goats’, ‘sheep’];</p>
 <p>// ① 인수로 전달받은 모든 값을 원본 배열의 마지막 요소로 추가한다.<br>let countPush = arrPush.push(‘cows’, ‘cats’);<br>// ② 변경된 배열의 갱신된 length 프로퍼티 값을 반환한다.<br>console.log(countPush); // 6<br>// ③ 원본 배열이 직접 변경되는 부수 효과가 발생한다.<br>console.log(arrPush); // [ ‘pigs’, ‘goats’, ‘sheep’, ‘cows’, ‘cats’ ]</p>
 <p>// ④ 스프레드 문법으로 대체할 수 있다.<br>const arrSpread = […arrPush, ‘dogs’];<br>console.log(arrSpread); // [ ‘pigs’, ‘goats’, ‘sheep’, ‘cows’, ‘cats’, ‘dogs’ ]</p>
