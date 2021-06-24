@@ -28,7 +28,7 @@
 <meta property="og:description" content="배열 메서드배열 메서드 개요Array &#x2F; Array.prototype자바스크립트는 다양한 배열 빌트인 메서드를 제공한다. ① Array 생성자 함수 : 정적 메서드 제공 ② Array.prototype : 프로토타입 메서드를 제공 mutator &#x2F; accessor1const arrOrigin &#x3D; [1];   mutator • 원본 배열을 직접 변경하는 메서">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2021-06-24T14:28:16.428Z">
-<meta property="article:modified_time" content="2021-06-24T14:53:43.010Z">
+<meta property="article:modified_time" content="2021-06-24T14:59:10.922Z">
 <meta property="article:author" content="Bernese-Corgi">
 <meta name="twitter:card" content="summary">
 
@@ -212,7 +212,7 @@
               <span class="post-meta-item-text">작성일</span>
               
 
-              <time title="Post created: 2021-06-24 23:28:16 / Updated at: 23:53:43" itemprop="dateCreated datePublished" datetime="2021-06-24T23:28:16+09:00">2021-06-24</time>
+              <time title="Post created: 2021-06-24 23:28:16 / Updated at: 23:59:10" itemprop="dateCreated datePublished" datetime="2021-06-24T23:28:16+09:00">2021-06-24</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -320,9 +320,15 @@
 <p>④ 스프레드 문법으로 대체할 수 있다.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arrSpread = [...arrPush, <span class="string">&#x27;dogs&#x27;</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arrSpread); <span class="comment">// [ &#x27;pigs&#x27;, &#x27;goats&#x27;, &#x27;sheep&#x27;, &#x27;cows&#x27;, &#x27;cats&#x27;, &#x27;dogs&#x27; ]</span></span><br></pre></td></tr></table></figure>
 
-<p>// 4. Array.prototype.pop : 배열에서 마지막 요소를 제거하고 그 요소를 반환한다.<br>// 인수 : 없음<br>// 반환값 : 배열에서 제거한 요소를 반환한다. 빈 배열이면 undefined를 반환한다.<br>// mutator : 원본 배열을 직접 변경한다.</p>
-<p>const arrPop = [1, 2];</p>
-<p>// 원본 배열에서 마지막 요소를 제거한다.<br>let elemPop = arrPop.pop();<br>// 제거된 요소를 반환한다.<br>console.log(elemPop); // 2</p>
+<p><span style="color: #495F85; font-weight: 700; font-size: 1.2em">Array.prototype.pop</span></p>
+<ul>
+<li>배열에서 마지막 요소를 제거하고 그 요소를 반환한다.</li>
+<li><strong>인수</strong> : 없음</li>
+<li><strong>반환값</strong> : 배열에서 제거한 요소를 반환한다. 빈 배열이면 undefined를 반환한다.</li>
+<li>mutator : 원본 배열을 직접 변경한다.</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arrPop = [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 원본 배열에서 마지막 요소를 제거한다.</span></span><br><span class="line"><span class="keyword">let</span> elemPop = arrPop.pop();</span><br><span class="line"><span class="comment">// 제거된 요소를 반환한다.</span></span><br><span class="line"><span class="built_in">console</span>.log(elemPop); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+
 <p>// 5. Array.prototype.unshift</p>
 <p>// ①②③④⑤</p>
 
