@@ -185,6 +185,129 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://bernese-corgi.github.io/2021/06/24/JavaScript/ArrayMethod/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
+      <meta itemprop="name" content="Bernese-Corgi">
+      <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="녕터디 클럽">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/24/JavaScript/ArrayMethod/" class="post-title-link" itemprop="url">배열 메서드</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2021-06-24 23:28:16 / Updated at: 23:38:51" itemprop="dateCreated datePublished" datetime="2021-06-24T23:28:16+09:00">2021-06-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="배열-메서드"><a href="#배열-메서드" class="headerlink" title="배열 메서드"></a>배열 메서드</h1><h2 id="배열-메서드-개요"><a href="#배열-메서드-개요" class="headerlink" title="배열 메서드 개요"></a>배열 메서드 개요</h2><h3 id="Array-Array-prototype"><a href="#Array-Array-prototype" class="headerlink" title="Array / Array.prototype"></a>Array / Array.prototype</h3><p>자바스크립트는 다양한 배열 빌트인 메서드를 제공한다.</p>
+<p>① Array 생성자 함수 : 정적 메서드 제공</p>
+<p>② Array.prototype : 프로토타입 메서드를 제공</p>
+<h3 id="mutator-accessor"><a href="#mutator-accessor" class="headerlink" title="mutator / accessor"></a>mutator / accessor</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arrOrigin = [<span class="number">1</span>];</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>mutator</p>
+<p>• 원본 배열을 직접 변경하는 메서드<br>• 외부 상태를 직접 변경하는 부수효과가 있다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mutator = arrOrigin.push(<span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(arrOrigin); <span class="comment">// [ 1, 2 ]</span></span><br><span class="line"><span class="built_in">console</span>.log(mutator); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>accessor<br>• 원본 배열을 직접 변경하지 않고 새로운 배열을 생성하여 반환하는 메서드</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> accesor = arrOrigin.concat(<span class="number">3</span>);</span><br><span class="line"><span class="built_in">console</span>.log(arrOrigin); <span class="comment">// [ 1, 2 ]</span></span><br><span class="line"><span class="built_in">console</span>.log(accesor); <span class="comment">// [ 1, 2, 3 ]</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>❓ 원본 배열</p>
+<ul>
+<li>배열 메서드를 호출한 배열.</li>
+<li>배열 메서드의 구현체 내부에서 this가 가리키는 객체</li>
+</ul>
+<h2 id="배열-메서드-1"><a href="#배열-메서드-1" class="headerlink" title="배열 메서드"></a>배열 메서드</h2><p><code>Array.isArray</code></p>
+<ul>
+<li><p>Array 생성자 함수의 정적 메서드</p>
+</li>
+<li><p>배열인지 아닌지 판단하여 <code>true</code>, <code>false</code>를 반환한다.</p>
+</li>
+<li><p><code>Array.isArray(배열인지 판명할 것);</code> =&gt; <code>true</code> or <code>false</code></p>
+</li>
+<li><p>인수 : 배열인지 아닌지 판단할 것</p>
+</li>
+<li><p>반환 : boolean. 인수가 배열이면 true, 배열이 아니면 false<br>① true</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.isArray([]); <span class="comment">// ⇒ true</span></span><br><span class="line"><span class="built_in">Array</span>.isArray([<span class="number">1</span>, <span class="number">2</span>]); <span class="comment">// ⇒ true</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(<span class="keyword">new</span> <span class="built_in">Array</span>()); <span class="comment">// ⇒ true</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(<span class="built_in">Array</span>.of()); <span class="comment">// ⇒ true</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(<span class="built_in">Array</span>.from(&#123; <span class="attr">length</span>: <span class="number">2</span> &#125;)); <span class="comment">// ⇒ true</span></span><br></pre></td></tr></table></figure>
+
+<p>② false</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.isArray(); <span class="comment">// ⇒ false</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(&#123;&#125;); <span class="comment">// ⇒ false</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(<span class="literal">null</span>); <span class="comment">// ⇒ false</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(<span class="literal">undefined</span>); <span class="comment">// ⇒ false</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(<span class="number">1</span>); <span class="comment">// ⇒ false</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(<span class="string">&#x27;Array&#x27;</span>); <span class="comment">// ⇒ false</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(<span class="literal">true</span>); <span class="comment">// ⇒ false</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(<span class="literal">false</span>); <span class="comment">// ⇒ false</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(&#123; <span class="number">0</span>: <span class="number">1</span>, <span class="attr">length</span>: <span class="number">1</span> &#125;); <span class="comment">// ⇒ false</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>// 2. Array.prototype.indexOf : 원본 배열에서 요소를 검색하여 인덱스를 반환한다.<br>// Array.prototype.indexOf(배열에서 찾을 요소[, 검색을 시작할 인덱스]) // =&gt; 검색한 요소에 해당하는 인덱스 or -1<br>// 인수 : (배열에서 찾을 요소[, 검색을 시작할 인덱스])<br>// 반환값 : 검색한 요소에 해당하는 인덱스 or -1<br>const arrIndexOf = [1, 2, 2, 3];</p>
+<p>// ① 중복되는 요소가 여러 개 있어도 첫번째로 검색된 요소의 인덱스 하나만 반환한다.<br>console.log(arrIndexOf.indexOf(2)); // 1</p>
+<p>// ② 요소가 존재하지 않으면 -1을 반환한다.<br>console.log(arrIndexOf.indexOf(4)); // -1</p>
+<p>// ③ 두번째 인수로 검색을 시작할 인덱스를 전달할 수 있다.<br>console.log(arrOrigin.indexOf(2, 2));<br>// - 생략할 경우 처음부터 검색한다.</p>
+<p>// ④ indexOf는 배열에 특정 요소가 존재하는지 확인할 때 유용하다.<br>const beasts = [‘ant’, ‘bison’, ‘camel’, ‘duck’, ‘bison’];</p>
+<p>// beasts.indexOf(‘crocodile’)이 -1로 평가되면 요소 crocodile이 존재하지 않는 것이다.<br>if (beasts.indexOf(‘crocodile’) === -1) {<br>// beasts 배열에 ‘crocodile’ 요소가 존재하지 않으면 추가한다.<br>beasts.push(‘crocodile’);<br>}</p>
+<p>console.log(beasts); // [ ‘ant’, ‘bison’, ‘camel’, ‘duck’, ‘bison’, ‘crocodile’ ]</p>
+<p>// ⑤ Array.prototype.includes 메서드로 대체할 수 있다.</p>
+<p>// (!beasts.includes(‘owl’))이 true로 평가되면 요소 owl이 존재하지 않는 것이다.<br>if (!beasts.includes(‘owl’)) {<br>// beasts 배열에 ‘owl’ 요소가 존재하지 않으면 추가한다.<br>beasts.push(‘owl’);<br>}</p>
+<p>console.log(beasts); // [ ‘ant’, ‘bison’, ‘camel’, ‘duck’, ‘bison’, ‘crocodile’ ]</p>
+<p>// 3. Array.prototype.push : 배열의 끝에 하나 이상의 요소를 추가하고, 배열의 새로운 길이를 반환한다.<br>// 인수 : (배열의 끝에 추가할 요소[, … [, 배열의 끝에 추가할 요소]])<br>// 반환 값 : 변경된 배열의 새로운 length 속성<br>// mutator. 원본 배열을 직접 변경한다.<br>const arrPush = [‘pigs’, ‘goats’, ‘sheep’];</p>
+<p>// ① 인수로 전달받은 모든 값을 원본 배열의 마지막 요소로 추가한다.<br>let countPush = arrPush.push(‘cows’, ‘cats’);<br>// ② 변경된 배열의 갱신된 length 프로퍼티 값을 반환한다.<br>console.log(countPush); // 6<br>// ③ 원본 배열이 직접 변경되는 부수 효과가 발생한다.<br>console.log(arrPush); // [ ‘pigs’, ‘goats’, ‘sheep’, ‘cows’, ‘cats’ ]</p>
+<p>// ④ 스프레드 문법으로 대체할 수 있다.<br>const arrSpread = […arrPush, ‘dogs’];<br>console.log(arrSpread); // [ ‘pigs’, ‘goats’, ‘sheep’, ‘cows’, ‘cats’, ‘dogs’ ]</p>
+<p>// 4. Array.prototype.pop : 배열에서 마지막 요소를 제거하고 그 요소를 반환한다.<br>// 인수 : 없음<br>// 반환값 : 배열에서 제거한 요소를 반환한다. 빈 배열이면 undefined를 반환한다.<br>// mutator : 원본 배열을 직접 변경한다.</p>
+<p>const arrPop = [1, 2];</p>
+<p>// 원본 배열에서 마지막 요소를 제거한다.<br>let elemPop = arrPop.pop();<br>// 제거된 요소를 반환한다.<br>console.log(elemPop); // 2</p>
+<p>// 5. Array.prototype.unshift</p>
+<p>// ①②③④⑤</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
     <link itemprop="mainEntityOfPage" href="https://bernese-corgi.github.io/2021/06/19/JavaScript/array/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1235,106 +1358,6 @@ console.log(example);
 <p>삼항식은 3개의 피연산자를 가지고, 순서대로 물음표,<br>물음표 앞의 첫 번째 피연산자의 경우 불리언 값으로 평가되는 조건식이 오고,<br>물음표 뒤에 콜론으로 구분되는 두 번째 피연산자에는 조건식이 거짓일 때 실행될 값이 옵니다.<br>가장 마지막에 오는 콜론 뒤의 세 번째 피연산자에는 조건식이 거짓일 떄 실행될 값이 옵니다.</p>
 <p>첫 번째 피연산자인 조건식이 불리언 값으로 평가될 수 없을 때는 불리언 값으로 암묵적 타입 변환되어 평가됩니다.</p>
 
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://bernese-corgi.github.io/2021/05/27/Tech%20Interview/JavaScript/02.%EB%8D%B0%EC%9D%B4%ED%84%B0%20%ED%83%80%EC%9E%85/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
-      <meta itemprop="name" content="Bernese-Corgi">
-      <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="녕터디 클럽">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/05/27/Tech%20Interview/JavaScript/02.%EB%8D%B0%EC%9D%B4%ED%84%B0%20%ED%83%80%EC%9E%85/" class="post-title-link" itemprop="url">데이터 타입 관련 면접 질문</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">작성일</span>
-              
-
-              <time title="Post created: 2021-05-27 16:18:49 / Updated at: 21:25:05" itemprop="dateCreated datePublished" datetime="2021-05-27T16:18:49+09:00">2021-05-27</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tech-Interview/" itemprop="url" rel="index"><span itemprop="name">Tech Interview</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tech-Interview/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="데이터-타입"><a href="#데이터-타입" class="headerlink" title="데이터 타입"></a>데이터 타입</h1><h2 id="자바스크립트의-원시-타입은-몇가지인가-종류는"><a href="#자바스크립트의-원시-타입은-몇가지인가-종류는" class="headerlink" title="자바스크립트의 원시 타입은 몇가지인가? 종류는?"></a>자바스크립트의 원시 타입은 몇가지인가? 종류는?</h2><h2 id="원시-타입과-객체-타입의-차이점"><a href="#원시-타입과-객체-타입의-차이점" class="headerlink" title="원시 타입과 객체 타입의 차이점"></a>원시 타입과 객체 타입의 차이점</h2><h2 id="자바스크립트의-Number-Type은-다른-언어들과-차이점이-무엇인가-왜-하나만-존재하는가"><a href="#자바스크립트의-Number-Type은-다른-언어들과-차이점이-무엇인가-왜-하나만-존재하는가" class="headerlink" title="자바스크립트의 Number Type은 다른 언어들과 차이점이 무엇인가, 왜 하나만 존재하는가?"></a>자바스크립트의 Number Type은 다른 언어들과 차이점이 무엇인가, 왜 하나만 존재하는가?</h2><h2 id="null과-undefined-그리고-undeclared의-차이점은-무엇인가요"><a href="#null과-undefined-그리고-undeclared의-차이점은-무엇인가요" class="headerlink" title="null과 undefined 그리고 undeclared의 차이점은 무엇인가요?"></a>null과 undefined 그리고 undeclared의 차이점은 무엇인가요?</h2><p><code>undefined</code></p>
-<ul>
-<li><code>undefined</code>는 실제 값이 아직 할당되지 않은 변수를 참조하거나 없는 프로퍼티를 참조하는 등 자바스크립트 엔진이 값이 없다는 상태를 나타낼 때 사용되는 값입니다.</li>
-</ul>
-<p><code>null</code></p>
-<ul>
-<li>변수에 값이 없다는 것을 명시하고 싶을 때 개발자는 의도적으로 <code>null</code>을 할당할 수 있습니다.</li>
-<li>이전에 할당되어 있던 값에 대한 참조를 명시적으로 제거할 때 쓸 수 있습니다.</li>
-</ul>
-<p><code>undeclared</code></p>
-<ul>
-<li><code>undeclared</code>는 <code>var</code>, <code>let</code>, <code>const</code> 키워드를 사용해 선언되지 않은 변수를 말합니다.</li>
-<li>아무 값도 할당되지 않은 경우 참조하려고 하면 참조 에러가 납니다.</li>
-<li><code>typeof</code> 연산자를 이용해 데이터 타입을 검사하면 <code>undefined</code>를 반환합니다.</li>
-<li>선언되지 않은 변수에 값을 할당할 경우, 스코프에 상관없이 무조건 전역 변수가 됩니다.</li>
-<li>strict mode인 경우 값이 할당되었다 해도 선언되지 않은 변수를 참조하면 참조에러가 납니다.</li>
-</ul>
-<h2 id="null과-undefined-두개를-구분하기-위해서는-어떻게-하면-될까요"><a href="#null과-undefined-두개를-구분하기-위해서는-어떻게-하면-될까요" class="headerlink" title="null과 undefined 두개를 구분하기 위해서는 어떻게 하면 될까요?"></a>null과 undefined 두개를 구분하기 위해서는 어떻게 하면 될까요?</h2><p><code>null</code>과 <code>undefined</code>인지 구분하기 위해서는 <code>typeof</code> 연산자를 이용해 구분할 수 있습니다.</p>
-<p><code>typeof</code> 연산자</p>
-<ul>
-<li><code>undefined</code> : “<strong>undefined</strong>“를 반환</li>
-<li><code>null</code> : “<strong>object</strong>“를 반환</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x;</span><br><span class="line"><span class="keyword">const</span> y = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> x); <span class="comment">// undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> y); <span class="comment">// object</span></span><br></pre></td></tr></table></figure>
-
-<p>만약, 특정 값이 <code>null</code>인지 확인하고 싶다면 <code>===</code> <span style="color: #669966">(일치 비교 연산자)</span>를 사용해 확인합니다.</p>
-<p><code>undefined</code>의 경우 typeof 연산자를 이용하면 “undefined”를 반환하지만,<br><code>null</code>의 경우 “object”를 반환하기 때문에 확실히 확인하기 위해서는 <code>===</code> <span style="color: #669966">(일치 비교 연산자)</span>를 사용해 확인해야 합니다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x;</span><br><span class="line"><span class="keyword">const</span> y = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(y === <span class="literal">null</span>); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(y === <span class="literal">undefined</span>); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="동적-타입-언어와-정적-타입-언어의-차이"><a href="#동적-타입-언어와-정적-타입-언어의-차이" class="headerlink" title="동적 타입 언어와 정적 타입 언어의 차이"></a>동적 타입 언어와 정적 타입 언어의 차이</h2><h2 id="자바스크립트의-자료형에-대해서-설명해주세요"><a href="#자바스크립트의-자료형에-대해서-설명해주세요" class="headerlink" title="자바스크립트의 자료형에 대해서 설명해주세요"></a>자바스크립트의 자료형에 대해서 설명해주세요</h2>
       
     </div>
 

@@ -185,6 +185,106 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://bernese-corgi.github.io/2021/05/27/Tech%20Interview/JavaScript/02.%EB%8D%B0%EC%9D%B4%ED%84%B0%20%ED%83%80%EC%9E%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bernese_logo_yellow.png">
+      <meta itemprop="name" content="Bernese-Corgi">
+      <meta itemprop="description" content="초보 프론트엔드 개발자의 개발 공부 이야기">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="녕터디 클럽">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/27/Tech%20Interview/JavaScript/02.%EB%8D%B0%EC%9D%B4%ED%84%B0%20%ED%83%80%EC%9E%85/" class="post-title-link" itemprop="url">데이터 타입 관련 면접 질문</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2021-05-27 16:18:49 / Updated at: 21:25:05" itemprop="dateCreated datePublished" datetime="2021-05-27T16:18:49+09:00">2021-05-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tech-Interview/" itemprop="url" rel="index"><span itemprop="name">Tech Interview</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tech-Interview/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="데이터-타입"><a href="#데이터-타입" class="headerlink" title="데이터 타입"></a>데이터 타입</h1><h2 id="자바스크립트의-원시-타입은-몇가지인가-종류는"><a href="#자바스크립트의-원시-타입은-몇가지인가-종류는" class="headerlink" title="자바스크립트의 원시 타입은 몇가지인가? 종류는?"></a>자바스크립트의 원시 타입은 몇가지인가? 종류는?</h2><h2 id="원시-타입과-객체-타입의-차이점"><a href="#원시-타입과-객체-타입의-차이점" class="headerlink" title="원시 타입과 객체 타입의 차이점"></a>원시 타입과 객체 타입의 차이점</h2><h2 id="자바스크립트의-Number-Type은-다른-언어들과-차이점이-무엇인가-왜-하나만-존재하는가"><a href="#자바스크립트의-Number-Type은-다른-언어들과-차이점이-무엇인가-왜-하나만-존재하는가" class="headerlink" title="자바스크립트의 Number Type은 다른 언어들과 차이점이 무엇인가, 왜 하나만 존재하는가?"></a>자바스크립트의 Number Type은 다른 언어들과 차이점이 무엇인가, 왜 하나만 존재하는가?</h2><h2 id="null과-undefined-그리고-undeclared의-차이점은-무엇인가요"><a href="#null과-undefined-그리고-undeclared의-차이점은-무엇인가요" class="headerlink" title="null과 undefined 그리고 undeclared의 차이점은 무엇인가요?"></a>null과 undefined 그리고 undeclared의 차이점은 무엇인가요?</h2><p><code>undefined</code></p>
+<ul>
+<li><code>undefined</code>는 실제 값이 아직 할당되지 않은 변수를 참조하거나 없는 프로퍼티를 참조하는 등 자바스크립트 엔진이 값이 없다는 상태를 나타낼 때 사용되는 값입니다.</li>
+</ul>
+<p><code>null</code></p>
+<ul>
+<li>변수에 값이 없다는 것을 명시하고 싶을 때 개발자는 의도적으로 <code>null</code>을 할당할 수 있습니다.</li>
+<li>이전에 할당되어 있던 값에 대한 참조를 명시적으로 제거할 때 쓸 수 있습니다.</li>
+</ul>
+<p><code>undeclared</code></p>
+<ul>
+<li><code>undeclared</code>는 <code>var</code>, <code>let</code>, <code>const</code> 키워드를 사용해 선언되지 않은 변수를 말합니다.</li>
+<li>아무 값도 할당되지 않은 경우 참조하려고 하면 참조 에러가 납니다.</li>
+<li><code>typeof</code> 연산자를 이용해 데이터 타입을 검사하면 <code>undefined</code>를 반환합니다.</li>
+<li>선언되지 않은 변수에 값을 할당할 경우, 스코프에 상관없이 무조건 전역 변수가 됩니다.</li>
+<li>strict mode인 경우 값이 할당되었다 해도 선언되지 않은 변수를 참조하면 참조에러가 납니다.</li>
+</ul>
+<h2 id="null과-undefined-두개를-구분하기-위해서는-어떻게-하면-될까요"><a href="#null과-undefined-두개를-구분하기-위해서는-어떻게-하면-될까요" class="headerlink" title="null과 undefined 두개를 구분하기 위해서는 어떻게 하면 될까요?"></a>null과 undefined 두개를 구분하기 위해서는 어떻게 하면 될까요?</h2><p><code>null</code>과 <code>undefined</code>인지 구분하기 위해서는 <code>typeof</code> 연산자를 이용해 구분할 수 있습니다.</p>
+<p><code>typeof</code> 연산자</p>
+<ul>
+<li><code>undefined</code> : “<strong>undefined</strong>“를 반환</li>
+<li><code>null</code> : “<strong>object</strong>“를 반환</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x;</span><br><span class="line"><span class="keyword">const</span> y = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> x); <span class="comment">// undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> y); <span class="comment">// object</span></span><br></pre></td></tr></table></figure>
+
+<p>만약, 특정 값이 <code>null</code>인지 확인하고 싶다면 <code>===</code> <span style="color: #669966">(일치 비교 연산자)</span>를 사용해 확인합니다.</p>
+<p><code>undefined</code>의 경우 typeof 연산자를 이용하면 “undefined”를 반환하지만,<br><code>null</code>의 경우 “object”를 반환하기 때문에 확실히 확인하기 위해서는 <code>===</code> <span style="color: #669966">(일치 비교 연산자)</span>를 사용해 확인해야 합니다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x;</span><br><span class="line"><span class="keyword">const</span> y = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(y === <span class="literal">null</span>); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(y === <span class="literal">undefined</span>); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="동적-타입-언어와-정적-타입-언어의-차이"><a href="#동적-타입-언어와-정적-타입-언어의-차이" class="headerlink" title="동적 타입 언어와 정적 타입 언어의 차이"></a>동적 타입 언어와 정적 타입 언어의 차이</h2><h2 id="자바스크립트의-자료형에-대해서-설명해주세요"><a href="#자바스크립트의-자료형에-대해서-설명해주세요" class="headerlink" title="자바스크립트의 자료형에 대해서 설명해주세요"></a>자바스크립트의 자료형에 대해서 설명해주세요</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ko">
     <link itemprop="mainEntityOfPage" href="https://bernese-corgi.github.io/2021/05/27/Tech%20Interview/JavaScript/01.%EB%B3%80%EC%88%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
